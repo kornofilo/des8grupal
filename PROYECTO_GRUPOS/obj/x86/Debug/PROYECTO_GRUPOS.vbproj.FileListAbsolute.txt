@@ -1,0 +1,12 @@
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\bin\Debug\PROYECTO_GRUPOS.exe
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\bin\Debug\PROYECTO_GRUPOS.pdb
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\bin\Debug\PROYECTO_GRUPOS.xml
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form1.resources
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form2.resources
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Resources.resources
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.vbproj.GenerateResource.Cache
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.exe
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.xml
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.pdb
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form3.resources
+C:\Users\kevin\Desktop\develoment V\PROYECTO_GRUPOS\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form4.resources
