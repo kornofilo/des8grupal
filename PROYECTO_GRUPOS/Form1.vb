@@ -9,4 +9,9 @@
     Private Sub PROVEEDORToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PROVEEDORToolStripMenuItem.Click
 
     End Sub
+
+    Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
+        Form2.Show()
+
+    End Sub
 End Class
