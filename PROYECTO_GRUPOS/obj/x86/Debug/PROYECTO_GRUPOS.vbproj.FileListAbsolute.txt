@@ -24,3 +24,6 @@ C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.v
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.exe
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.xml
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.pdb
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.exe
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.xml
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.pdb

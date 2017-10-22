@@ -30,19 +30,19 @@ Partial Class Form3
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox8 = New System.Windows.Forms.TextBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.GroupBox1.SuspendLayout()
+        Me.cmtipo = New System.Windows.Forms.ComboBox()
+        Me.PROVEEDOR = New System.Windows.Forms.GroupBox()
+        Me.txtema = New System.Windows.Forms.TextBox()
+        Me.txtdire = New System.Windows.Forms.TextBox()
+        Me.txtfax = New System.Windows.Forms.TextBox()
+        Me.txtele = New System.Windows.Forms.TextBox()
+        Me.txtnom = New System.Windows.Forms.TextBox()
+        Me.txtdv = New System.Windows.Forms.TextBox()
+        Me.txtruc = New System.Windows.Forms.TextBox()
+        Me.txtcodigo = New System.Windows.Forms.TextBox()
+        Me.btregi = New System.Windows.Forms.Button()
+        Me.btsal = New System.Windows.Forms.Button()
+        Me.PROVEEDOR.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -117,128 +117,128 @@ Partial Class Form3
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "EMAIL"
         '
-        'ComboBox1
+        'cmtipo
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA"})
-        Me.ComboBox1.Location = New System.Drawing.Point(138, 369)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(185, 21)
-        Me.ComboBox1.TabIndex = 8
-        Me.ComboBox1.Text = "TIPO PROVEEDOR"
+        Me.cmtipo.FormattingEnabled = True
+        Me.cmtipo.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA"})
+        Me.cmtipo.Location = New System.Drawing.Point(138, 369)
+        Me.cmtipo.Name = "cmtipo"
+        Me.cmtipo.Size = New System.Drawing.Size(185, 21)
+        Me.cmtipo.TabIndex = 8
+        Me.cmtipo.Text = "TIPO PROVEEDOR"
         '
-        'GroupBox1
+        'PROVEEDOR
         '
-        Me.GroupBox1.Controls.Add(Me.TextBox8)
-        Me.GroupBox1.Controls.Add(Me.TextBox7)
-        Me.GroupBox1.Controls.Add(Me.TextBox6)
-        Me.GroupBox1.Controls.Add(Me.TextBox5)
-        Me.GroupBox1.Controls.Add(Me.TextBox4)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.ComboBox1)
-        Me.GroupBox1.Controls.Add(Me.Label8)
-        Me.GroupBox1.Controls.Add(Me.Label7)
-        Me.GroupBox1.Controls.Add(Me.Label6)
-        Me.GroupBox1.Controls.Add(Me.Label5)
-        Me.GroupBox1.Controls.Add(Me.Label4)
-        Me.GroupBox1.Controls.Add(Me.Label3)
-        Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(37, 29)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(501, 422)
-        Me.GroupBox1.TabIndex = 9
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "GroupBox1"
+        Me.PROVEEDOR.Controls.Add(Me.txtema)
+        Me.PROVEEDOR.Controls.Add(Me.txtdire)
+        Me.PROVEEDOR.Controls.Add(Me.txtfax)
+        Me.PROVEEDOR.Controls.Add(Me.txtele)
+        Me.PROVEEDOR.Controls.Add(Me.txtnom)
+        Me.PROVEEDOR.Controls.Add(Me.txtdv)
+        Me.PROVEEDOR.Controls.Add(Me.txtruc)
+        Me.PROVEEDOR.Controls.Add(Me.txtcodigo)
+        Me.PROVEEDOR.Controls.Add(Me.cmtipo)
+        Me.PROVEEDOR.Controls.Add(Me.Label8)
+        Me.PROVEEDOR.Controls.Add(Me.Label7)
+        Me.PROVEEDOR.Controls.Add(Me.Label6)
+        Me.PROVEEDOR.Controls.Add(Me.Label5)
+        Me.PROVEEDOR.Controls.Add(Me.Label4)
+        Me.PROVEEDOR.Controls.Add(Me.Label3)
+        Me.PROVEEDOR.Controls.Add(Me.Label2)
+        Me.PROVEEDOR.Controls.Add(Me.Label1)
+        Me.PROVEEDOR.Location = New System.Drawing.Point(37, 29)
+        Me.PROVEEDOR.Name = "PROVEEDOR"
+        Me.PROVEEDOR.Size = New System.Drawing.Size(501, 422)
+        Me.PROVEEDOR.TabIndex = 9
+        Me.PROVEEDOR.TabStop = False
+        Me.PROVEEDOR.Text = "PROVEEDORES"
         '
-        'TextBox1
+        'txtema
         '
-        Me.TextBox1.Location = New System.Drawing.Point(174, 31)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(149, 20)
-        Me.TextBox1.TabIndex = 9
+        Me.txtema.Location = New System.Drawing.Point(138, 320)
+        Me.txtema.Name = "txtema"
+        Me.txtema.Size = New System.Drawing.Size(185, 20)
+        Me.txtema.TabIndex = 16
         '
-        'TextBox2
+        'txtdire
         '
-        Me.TextBox2.Location = New System.Drawing.Point(115, 85)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(108, 20)
-        Me.TextBox2.TabIndex = 10
+        Me.txtdire.Location = New System.Drawing.Point(138, 277)
+        Me.txtdire.Name = "txtdire"
+        Me.txtdire.Size = New System.Drawing.Size(185, 20)
+        Me.txtdire.TabIndex = 15
         '
-        'TextBox3
+        'txtfax
         '
-        Me.TextBox3.Location = New System.Drawing.Point(307, 85)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(67, 20)
-        Me.TextBox3.TabIndex = 11
+        Me.txtfax.Location = New System.Drawing.Point(138, 235)
+        Me.txtfax.Name = "txtfax"
+        Me.txtfax.Size = New System.Drawing.Size(185, 20)
+        Me.txtfax.TabIndex = 14
         '
-        'TextBox4
+        'txtele
         '
-        Me.TextBox4.Location = New System.Drawing.Point(138, 137)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox4.TabIndex = 12
+        Me.txtele.Location = New System.Drawing.Point(138, 186)
+        Me.txtele.Name = "txtele"
+        Me.txtele.Size = New System.Drawing.Size(185, 20)
+        Me.txtele.TabIndex = 13
         '
-        'TextBox5
+        'txtnom
         '
-        Me.TextBox5.Location = New System.Drawing.Point(138, 186)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox5.TabIndex = 13
+        Me.txtnom.Location = New System.Drawing.Point(138, 137)
+        Me.txtnom.Name = "txtnom"
+        Me.txtnom.Size = New System.Drawing.Size(185, 20)
+        Me.txtnom.TabIndex = 12
         '
-        'TextBox6
+        'txtdv
         '
-        Me.TextBox6.Location = New System.Drawing.Point(138, 235)
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox6.TabIndex = 14
+        Me.txtdv.Location = New System.Drawing.Point(307, 85)
+        Me.txtdv.Name = "txtdv"
+        Me.txtdv.Size = New System.Drawing.Size(67, 20)
+        Me.txtdv.TabIndex = 11
         '
-        'TextBox7
+        'txtruc
         '
-        Me.TextBox7.Location = New System.Drawing.Point(138, 277)
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox7.TabIndex = 15
+        Me.txtruc.Location = New System.Drawing.Point(115, 85)
+        Me.txtruc.Name = "txtruc"
+        Me.txtruc.Size = New System.Drawing.Size(108, 20)
+        Me.txtruc.TabIndex = 10
         '
-        'TextBox8
+        'txtcodigo
         '
-        Me.TextBox8.Location = New System.Drawing.Point(138, 320)
-        Me.TextBox8.Name = "TextBox8"
-        Me.TextBox8.Size = New System.Drawing.Size(185, 20)
-        Me.TextBox8.TabIndex = 16
+        Me.txtcodigo.Location = New System.Drawing.Point(174, 31)
+        Me.txtcodigo.Name = "txtcodigo"
+        Me.txtcodigo.Size = New System.Drawing.Size(149, 20)
+        Me.txtcodigo.TabIndex = 9
         '
-        'Button1
+        'btregi
         '
-        Me.Button1.Location = New System.Drawing.Point(48, 473)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(106, 39)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Registrar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btregi.Location = New System.Drawing.Point(48, 473)
+        Me.btregi.Name = "btregi"
+        Me.btregi.Size = New System.Drawing.Size(106, 39)
+        Me.btregi.TabIndex = 10
+        Me.btregi.Text = "&Registrar"
+        Me.btregi.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btsal
         '
-        Me.Button2.Location = New System.Drawing.Point(419, 473)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(106, 39)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Salir"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btsal.Location = New System.Drawing.Point(419, 473)
+        Me.btsal.Name = "btsal"
+        Me.btsal.Size = New System.Drawing.Size(106, 39)
+        Me.btsal.TabIndex = 11
+        Me.btsal.Text = "&Salir"
+        Me.btsal.UseVisualStyleBackColor = True
         '
         'Form3
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(587, 536)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.btsal)
+        Me.Controls.Add(Me.btregi)
+        Me.Controls.Add(Me.PROVEEDOR)
         Me.Name = "Form3"
         Me.Text = "Form3"
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
+        Me.PROVEEDOR.ResumeLayout(False)
+        Me.PROVEEDOR.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -250,16 +250,16 @@ Partial Class Form3
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
-    Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
-    Friend WithEvents TextBox8 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox7 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents Button1 As System.Windows.Forms.Button
-    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents cmtipo As System.Windows.Forms.ComboBox
+    Friend WithEvents PROVEEDOR As System.Windows.Forms.GroupBox
+    Friend WithEvents txtema As System.Windows.Forms.TextBox
+    Friend WithEvents txtdire As System.Windows.Forms.TextBox
+    Friend WithEvents txtfax As System.Windows.Forms.TextBox
+    Friend WithEvents txtele As System.Windows.Forms.TextBox
+    Friend WithEvents txtnom As System.Windows.Forms.TextBox
+    Friend WithEvents txtdv As System.Windows.Forms.TextBox
+    Friend WithEvents txtruc As System.Windows.Forms.TextBox
+    Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
+    Friend WithEvents btregi As System.Windows.Forms.Button
+    Friend WithEvents btsal As System.Windows.Forms.Button
 End Class
