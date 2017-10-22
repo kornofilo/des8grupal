@@ -1,10 +1,10 @@
 ﻿Public Class Form2
 
+   
 
 
-
-
-
+   
+   
 
     Private Sub Label5_Click(sender As System.Object, e As System.EventArgs)
 
