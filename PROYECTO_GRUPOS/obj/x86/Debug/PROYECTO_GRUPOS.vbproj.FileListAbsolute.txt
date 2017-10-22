@@ -24,6 +24,11 @@ C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.v
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.exe
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.xml
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.pdb
+<<<<<<< HEAD
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.exe
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.xml
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.pdb
+=======
+C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\bin\Debug\MySql.Data.dll
+C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\bin\Debug\MySql.Data.xml
+>>>>>>> fc098db5b873f5cbed25c20f565ba9bd50407ce8
