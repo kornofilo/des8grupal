@@ -1,6 +1,6 @@
 ﻿Imports MySql.Data.MySqlClient
 
-Module Connection
+Module conexionDB
     Public conn As New MySqlConnection("Server= localhost; User id = root; password=12345;")
     Public datatable As New DataTable
     Public table As New DataSet

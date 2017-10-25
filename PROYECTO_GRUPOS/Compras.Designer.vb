@@ -49,7 +49,10 @@ Partial Class Compras
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusConnectionDB = New System.Windows.Forms.ToolStripStatusLabel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -292,11 +295,28 @@ Partial Class Compras
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusConnectionDB})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 690)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Size = New System.Drawing.Size(1023, 25)
+        Me.StatusStrip1.TabIndex = 24
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusConnectionDB
+        '
+        Me.ToolStripStatusConnectionDB.Name = "ToolStripStatusConnectionDB"
+        Me.ToolStripStatusConnectionDB.Size = New System.Drawing.Size(204, 20)
+        Me.ToolStripStatusConnectionDB.Text = "ToolStripStatusConnectionDB"
+        '
         'Compras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1023, 715)
+        Me.Controls.Add(Me.StatusStrip1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -325,6 +345,8 @@ Partial Class Compras
         Me.Name = "Compras"
         Me.Text = "Compras"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -356,4 +378,6 @@ Partial Class Compras
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents ToolStripStatusConnectionDB As ToolStripStatusLabel
 End Class

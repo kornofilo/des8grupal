@@ -1,6 +1,15 @@
 ﻿Public Class Compras
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim estadoConexionDB As Boolean
+
+        estadoConexionDB = conexionDB.connect("cuentasxpagar")
+        If estadoConexionDB = True Then
+            ToolStripStatusConnectionDB.Text = "Conectado a la Base de Datos."
+        Else
+            ToolStripStatusConnectionDB.Text = "Sin Conexión con la Base de Datos."
+
+        End If
 
     End Sub
 
