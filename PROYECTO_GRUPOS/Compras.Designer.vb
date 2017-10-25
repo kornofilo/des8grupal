@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form2
+Partial Class Compras
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -39,8 +39,16 @@ Partial Class Form2
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.txtffiscal = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Documento = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Proveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -197,11 +205,27 @@ Partial Class Form2
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(36, 319)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Documento, Me.Proveedor, Me.Column1})
+        Me.DataGridView1.Location = New System.Drawing.Point(36, 391)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(965, 290)
         Me.DataGridView1.TabIndex = 16
+        '
+        'Documento
+        '
+        Me.Documento.HeaderText = "Documento"
+        Me.Documento.Name = "Documento"
+        '
+        'Proveedor
+        '
+        Me.Proveedor.HeaderText = "Proveedor"
+        Me.Proveedor.Name = "Proveedor"
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Tipo de Pago"
+        Me.Column1.Name = "Column1"
         '
         'Label8
         '
@@ -223,11 +247,61 @@ Partial Class Form2
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Compras"
         '
-        'Form2
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(860, 361)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(116, 22)
+        Me.TextBox5.TabIndex = 19
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(763, 364)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(85, 17)
+        Me.Label10.TabIndex = 20
+        Me.Label10.Text = "BÚSQUEDA"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(36, 349)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 31)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "Agregar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(117, 349)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(86, 31)
+        Me.Button2.TabIndex = 22
+        Me.Button2.Text = "Modificar"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button3
+        '
+        Me.Button3.Location = New System.Drawing.Point(209, 350)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(75, 31)
+        Me.Button3.TabIndex = 23
+        Me.Button3.Text = "Eliminar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Compras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1023, 694)
+        Me.ClientSize = New System.Drawing.Size(1023, 715)
+        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridView1)
@@ -248,7 +322,7 @@ Partial Class Form2
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(4)
-        Me.Name = "Form2"
+        Me.Name = "Compras"
         Me.Text = "Compras"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -274,4 +348,12 @@ Partial Class Form2
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
+    Friend WithEvents Documento As DataGridViewTextBoxColumn
+    Friend WithEvents Proveedor As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
 End Class

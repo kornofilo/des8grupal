@@ -1,7 +1,8 @@
-﻿Public Class Form1
+﻿
+Public Class Form1
 
     Private Sub REToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles REToolStripMenuItem.Click
-        Form2.Show()
+        Compras.Show()
 
 
     End Sub
@@ -11,7 +12,7 @@
     End Sub
 
     Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
-        Form2.Show()
+        Compras.Show()
 
     End Sub
 End Class
