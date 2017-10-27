@@ -3,11 +3,11 @@
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim estadoConexionDB As Boolean
 
-        estadoConexionDB = conexionDB.connect("cuentasxpagar")
+        estadoConexionDB = DBConnection.connect("cuentasxpagar")
         If estadoConexionDB = True Then
             ToolStripStatusConnectionDB.Text = "Conectado a la Base de Datos."
             ToolStripStatusConnectionDB.Image = My.Resources.Play
-            conexionDB.showDataGridCompras()
+            DBConnection.ShowDataGrid("compras", DataGridView1)
 
         Else
             ToolStripStatusConnectionDB.Text = "Sin Conexión con la Base de Datos."
