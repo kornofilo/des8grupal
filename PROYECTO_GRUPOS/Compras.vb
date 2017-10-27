@@ -6,6 +6,7 @@
         estadoConexionDB = conexionDB.connect("cuentasxpagar")
         If estadoConexionDB = True Then
             ToolStripStatusConnectionDB.Text = "Conectado a la Base de Datos."
+            ToolStripStatusConnectionDB.Image = My.Resources.Play
             conexionDB.showDataGridCompras()
 
         Else
@@ -30,6 +31,10 @@
 
 
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
+
+    End Sub
+
+    Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
 
     End Sub
 End Class

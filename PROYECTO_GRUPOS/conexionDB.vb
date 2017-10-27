@@ -36,7 +36,6 @@ Module conexionDB
                 Dim MyCommand As New MySqlCommand
                 QuerySelect = "SELECT * FROM cuentasxpagar.compras"
                 MyCommand = New MySqlCommand(QuerySelect, connection_db)
-                MsgBox(MyCommand.ExecuteNonQuery)
                 MyDataAdapter.SelectCommand = MyCommand
                 MyDataAdapter.Fill(MyDataTable)
                 MyBindingSource.DataSource = MyDataTable
