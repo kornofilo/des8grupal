@@ -6,6 +6,8 @@
         estadoConexionDB = conexionDB.connect("cuentasxpagar")
         If estadoConexionDB = True Then
             ToolStripStatusConnectionDB.Text = "Conectado a la Base de Datos."
+            conexionDB.showDataGridCompras()
+
         Else
             ToolStripStatusConnectionDB.Text = "Sin Conexión con la Base de Datos."
 

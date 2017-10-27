@@ -39,9 +39,6 @@ Partial Class Compras
         Me.TextBox7 = New System.Windows.Forms.TextBox()
         Me.txtffiscal = New System.Windows.Forms.TextBox()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Documento = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Proveedor = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
@@ -208,27 +205,11 @@ Partial Class Compras
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Documento, Me.Proveedor, Me.Column1})
         Me.DataGridView1.Location = New System.Drawing.Point(36, 391)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(965, 290)
         Me.DataGridView1.TabIndex = 16
-        '
-        'Documento
-        '
-        Me.Documento.HeaderText = "Documento"
-        Me.Documento.Name = "Documento"
-        '
-        'Proveedor
-        '
-        Me.Proveedor.HeaderText = "Proveedor"
-        Me.Proveedor.Name = "Proveedor"
-        '
-        'Column1
-        '
-        Me.Column1.HeaderText = "Tipo de Pago"
-        Me.Column1.Name = "Column1"
         '
         'Label8
         '
@@ -370,9 +351,6 @@ Partial Class Compras
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Label8 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents Documento As DataGridViewTextBoxColumn
-    Friend WithEvents Proveedor As DataGridViewTextBoxColumn
-    Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents TextBox5 As TextBox
     Friend WithEvents Label10 As Label
     Friend WithEvents Button1 As Button
