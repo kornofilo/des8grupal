@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 18, 2017 at 02:21 AM
+-- Generation Time: Oct 28, 2017 at 04:09 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -29,14 +29,16 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `compras` (
-  `id` int(5) NOT NULL,
-  `documento` int(5) NOT NULL,
-  `proveedor` varchar(25) NOT NULL,
-  `fechaRegistro` date NOT NULL,
-  `fechaVencimiento` date NOT NULL,
-  `factura` int(5) NOT NULL,
-  `fechaFiscal` date NOT NULL,
-  `tipoPago` varchar(25) NOT NULL
+  `idCompra` int(7) NOT NULL,
+  `idProveedor` int(7) NOT NULL,
+  `fecha` date NOT NULL,
+  `idProducto` int(7) NOT NULL,
+  `cantidad` int(4) NOT NULL,
+  `cantidadDescuento` decimal(15,2) NOT NULL,
+  `descuento` decimal(15,2) NOT NULL,
+  `itbms` decimal(15,2) NOT NULL,
+  `subtotal` decimal(15,2) NOT NULL,
+  `total` decimal(15,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -58,6 +60,13 @@ CREATE TABLE `proveedores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Dumping data for table `proveedores`
+--
+
+INSERT INTO `proveedores` (`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES
+(1, '1', 1, 'MULTIMAX', '0', '0', 'TERRONAL', 'MULTIMAX@MULTIMAX', 1);
+
+--
 -- Indexes for dumped tables
 --
 
@@ -65,7 +74,7 @@ CREATE TABLE `proveedores` (
 -- Indexes for table `compras`
 --
 ALTER TABLE `compras`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`idCompra`);
 
 --
 -- Indexes for table `proveedores`
@@ -81,12 +90,12 @@ ALTER TABLE `proveedores`
 -- AUTO_INCREMENT for table `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCompra` int(7) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `codigo` int(6) NOT NULL AUTO_INCREMENT;COMMIT;
+  MODIFY `codigo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
