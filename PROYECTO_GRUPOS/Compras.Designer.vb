@@ -43,12 +43,12 @@ Partial Class Compras
         Me.Label9 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusConnectionDB = New System.Windows.Forms.ToolStripStatusLabel()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.ToolStripStatusConnectionDB = New System.Windows.Forms.ToolStripStatusLabel()
         Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
@@ -94,7 +94,7 @@ Partial Class Compras
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(491, 115)
+        Me.Label4.Location = New System.Drawing.Point(607, 121)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(132, 29)
@@ -105,7 +105,7 @@ Partial Class Compras
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(494, 223)
+        Me.Label5.Location = New System.Drawing.Point(610, 229)
         Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(193, 29)
@@ -116,7 +116,7 @@ Partial Class Compras
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(986, 155)
+        Me.RadioButton1.Location = New System.Drawing.Point(1183, 161)
         Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.Size = New System.Drawing.Size(135, 29)
@@ -129,7 +129,7 @@ Partial Class Compras
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(986, 187)
+        Me.RadioButton2.Location = New System.Drawing.Point(1183, 193)
         Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(122, 29)
@@ -153,7 +153,7 @@ Partial Class Compras
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(491, 175)
+        Me.Label7.Location = New System.Drawing.Point(607, 181)
         Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(325, 29)
@@ -190,7 +190,7 @@ Partial Class Compras
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(837, 120)
+        Me.TextBox4.Location = New System.Drawing.Point(953, 126)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(116, 34)
@@ -208,7 +208,7 @@ Partial Class Compras
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(837, 170)
+        Me.TextBox7.Location = New System.Drawing.Point(953, 176)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(116, 34)
@@ -217,7 +217,7 @@ Partial Class Compras
         'txtffiscal
         '
         Me.txtffiscal.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtffiscal.Location = New System.Drawing.Point(837, 219)
+        Me.txtffiscal.Location = New System.Drawing.Point(953, 225)
         Me.txtffiscal.Margin = New System.Windows.Forms.Padding(4)
         Me.txtffiscal.Name = "txtffiscal"
         Me.txtffiscal.Size = New System.Drawing.Size(116, 34)
@@ -229,14 +229,14 @@ Partial Class Compras
         Me.DataGridView1.Location = New System.Drawing.Point(36, 424)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1135, 290)
+        Me.DataGridView1.Size = New System.Drawing.Size(1347, 290)
         Me.DataGridView1.TabIndex = 16
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(963, 120)
+        Me.Label8.Location = New System.Drawing.Point(1160, 126)
         Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(195, 29)
@@ -247,7 +247,7 @@ Partial Class Compras
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Copperplate Gothic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(566, 29)
+        Me.Label9.Location = New System.Drawing.Point(694, 29)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(184, 37)
         Me.Label9.TabIndex = 18
@@ -256,7 +256,7 @@ Partial Class Compras
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(1021, 374)
+        Me.TextBox5.Location = New System.Drawing.Point(1230, 382)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(139, 34)
@@ -268,14 +268,22 @@ Partial Class Compras
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusConnectionDB})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 740)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1204, 33)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1396, 33)
         Me.StatusStrip1.TabIndex = 24
         Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'ToolStripStatusConnectionDB
+        '
+        Me.ToolStripStatusConnectionDB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ToolStripStatusConnectionDB.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources._Stop
+        Me.ToolStripStatusConnectionDB.Name = "ToolStripStatusConnectionDB"
+        Me.ToolStripStatusConnectionDB.Size = New System.Drawing.Size(288, 28)
+        Me.ToolStripStatusConnectionDB.Text = "ToolStripStatusConnectionDB"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Shopping
-        Me.PictureBox3.Location = New System.Drawing.Point(760, 12)
+        Me.PictureBox3.Location = New System.Drawing.Point(888, 12)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(64, 64)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -285,7 +293,7 @@ Partial Class Compras
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Shopping
-        Me.PictureBox2.Location = New System.Drawing.Point(487, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(615, 12)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(64, 64)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -319,20 +327,12 @@ Partial Class Compras
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Search
-        Me.PictureBox1.Location = New System.Drawing.Point(956, 364)
+        Me.PictureBox1.Location = New System.Drawing.Point(1165, 372)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 25
         Me.PictureBox1.TabStop = False
-        '
-        'ToolStripStatusConnectionDB
-        '
-        Me.ToolStripStatusConnectionDB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ToolStripStatusConnectionDB.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources._Stop
-        Me.ToolStripStatusConnectionDB.Name = "ToolStripStatusConnectionDB"
-        Me.ToolStripStatusConnectionDB.Size = New System.Drawing.Size(288, 28)
-        Me.ToolStripStatusConnectionDB.Text = "ToolStripStatusConnectionDB"
         '
         'Button1
         '
@@ -351,7 +351,7 @@ Partial Class Compras
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.ClientSize = New System.Drawing.Size(1204, 773)
+        Me.ClientSize = New System.Drawing.Size(1396, 773)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button3)

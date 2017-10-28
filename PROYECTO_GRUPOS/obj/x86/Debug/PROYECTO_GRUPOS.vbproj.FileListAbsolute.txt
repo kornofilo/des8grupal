@@ -40,3 +40,4 @@ C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECT
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Resources.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Proveedores.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.vbproj.GenerateResource.Cache
+C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Proveedores.resources
