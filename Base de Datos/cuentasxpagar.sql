@@ -2,10 +2,10 @@
 -- version 4.7.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 28, 2017 at 04:09 AM
--- Server version: 10.1.25-MariaDB
--- PHP Version: 7.1.7
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 29-10-2017 a las 23:00:14
+-- Versión del servidor: 10.1.26-MariaDB
+-- Versión de PHP: 7.1.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -19,32 +19,38 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cuentasxpagar`
+-- Base de datos: `cuentasxpagar`
 --
+
+DELIMITER $$
+--
+-- Procedimientos
+--
+CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_PROVEE` (IN `_codigo` INT(6), IN `_ruc` VARCHAR(15), IN `_dv` INT(6), IN `_nombre` VARCHAR(25), IN `_telefono` VARCHAR(25), IN `_fax` VARCHAR(25), IN `_direccion` VARCHAR(30), IN `_email` VARCHAR(25), IN `_tipoproveedor` VARCHAR(25))  INSERT INTO `proveedores`(`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES (_codigo,_ruc,_dv,_nombre,_telefono,_fax,_direccion,_email,_tipoproveedor)$$
+
+DELIMITER ;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `compras`
+-- Estructura de tabla para la tabla `compras`
 --
 
 CREATE TABLE `compras` (
-  `idCompra` int(7) NOT NULL,
-  `idProveedor` int(7) NOT NULL,
-  `fecha` date NOT NULL,
-  `idProducto` int(7) NOT NULL,
-  `cantidad` int(4) NOT NULL,
-  `cantidadDescuento` decimal(15,2) NOT NULL,
-  `descuento` decimal(15,2) NOT NULL,
-  `itbms` decimal(15,2) NOT NULL,
-  `subtotal` decimal(15,2) NOT NULL,
-  `total` decimal(15,2) NOT NULL
+  `id` int(5) NOT NULL,
+  `documento` int(5) NOT NULL,
+  `proveedor` varchar(25) NOT NULL,
+  `fechaRegistro` date NOT NULL,
+  `fechaVencimiento` date NOT NULL,
+  `factura` int(5) NOT NULL,
+  `fechaFiscal` date NOT NULL,
+  `tipoPago` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `proveedores`
+-- Estructura de tabla para la tabla `proveedores`
 --
 
 CREATE TABLE `proveedores` (
@@ -56,46 +62,49 @@ CREATE TABLE `proveedores` (
   `fax` varchar(25) NOT NULL,
   `direccion` varchar(30) NOT NULL,
   `email` varchar(25) NOT NULL,
-  `tipoProveedor` int(25) NOT NULL
+  `tipoProveedor` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `proveedores`
+-- Volcado de datos para la tabla `proveedores`
 --
 
 INSERT INTO `proveedores` (`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES
-(1, '1', 1, 'MULTIMAX', '0', '0', 'TERRONAL', 'MULTIMAX@MULTIMAX', 1);
+(1, '431124', 12, 'Compu Zone', '775-3213', '775-9834', 'Zona Libre', 'compuzone@gmail.com', 'Tecnologia'),
+(4, 'we', 1, 'we', 'ew', 'ew', 'ew', 'ew', 'ew'),
+(5, '23', 23, 'r', 'r', 'r', 'r', 'r', 'r'),
+(6, '12', 12, 'med', '12', '12', 'de', 'de', 'MANTENIMIENTO');
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `compras`
+-- Indices de la tabla `compras`
 --
 ALTER TABLE `compras`
-  ADD PRIMARY KEY (`idCompra`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `proveedores`
+-- Indices de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
   ADD PRIMARY KEY (`codigo`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `compras`
+-- AUTO_INCREMENT de la tabla `compras`
 --
 ALTER TABLE `compras`
-  MODIFY `idCompra` int(7) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `proveedores`
+-- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `codigo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
+  MODIFY `codigo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
