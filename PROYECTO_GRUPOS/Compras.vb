@@ -19,14 +19,6 @@
             DataGridView1.Columns(8).HeaderText = "SUBTOTAL"
             DataGridView1.Columns(9).HeaderText = "TOTAL DE LA COMPRA"
 
-
-
-
-
-
-
-
-
         Else
             ToolStripStatusConnectionDB.Text = "Sin Conexión con la Base de Datos."
 

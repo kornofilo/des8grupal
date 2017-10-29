@@ -35,9 +35,9 @@ C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\bin\Debug\PROYECTO_GR
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.vbprojResolveAssemblyReference.cache
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form1.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Compras.resources
-C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form3.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Form4.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Resources.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Proveedores.resources
 C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.vbproj.GenerateResource.Cache
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Proveedores.resources
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Registro_provee.resources

@@ -76,6 +76,8 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionDB.vb" />
+    <Compile Include="Datos_Provee.vb" />
     <Compile Include="DBConnection.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -90,10 +92,10 @@
     <Compile Include="Compras.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form3.Designer.vb">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <Compile Include="Registro_provee.Designer.vb">
+      <DependentUpon>Registro_provee.vb</DependentUpon>
     </Compile>
-    <Compile Include="Form3.vb">
+    <Compile Include="Registro_provee.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form4.Designer.vb">
@@ -131,8 +133,8 @@
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form3.resx">
-      <DependentUpon>Form3.vb</DependentUpon>
+    <EmbeddedResource Include="Registro_provee.resx">
+      <DependentUpon>Registro_provee.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form4.resx">
       <DependentUpon>Form4.vb</DependentUpon>

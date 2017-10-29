@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form3
+Partial Class Registro_provee
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -30,18 +30,19 @@ Partial Class Form3
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.cmtipo = New System.Windows.Forms.ComboBox()
+        Me.cmtipoprovee = New System.Windows.Forms.ComboBox()
         Me.PROVEEDOR = New System.Windows.Forms.GroupBox()
-        Me.txtema = New System.Windows.Forms.TextBox()
-        Me.txtdire = New System.Windows.Forms.TextBox()
+        Me.txtemail = New System.Windows.Forms.TextBox()
+        Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txtfax = New System.Windows.Forms.TextBox()
-        Me.txtele = New System.Windows.Forms.TextBox()
-        Me.txtnom = New System.Windows.Forms.TextBox()
+        Me.txttelefono = New System.Windows.Forms.TextBox()
+        Me.txtnombre = New System.Windows.Forms.TextBox()
         Me.txtdv = New System.Windows.Forms.TextBox()
         Me.txtruc = New System.Windows.Forms.TextBox()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
         Me.btregi = New System.Windows.Forms.Button()
         Me.btsal = New System.Windows.Forms.Button()
+        Me.ID = New System.Windows.Forms.Label()
         Me.PROVEEDOR.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -117,27 +118,28 @@ Partial Class Form3
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "EMAIL"
         '
-        'cmtipo
+        'cmtipoprovee
         '
-        Me.cmtipo.FormattingEnabled = True
-        Me.cmtipo.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA"})
-        Me.cmtipo.Location = New System.Drawing.Point(138, 369)
-        Me.cmtipo.Name = "cmtipo"
-        Me.cmtipo.Size = New System.Drawing.Size(185, 21)
-        Me.cmtipo.TabIndex = 8
-        Me.cmtipo.Text = "TIPO PROVEEDOR"
+        Me.cmtipoprovee.FormattingEnabled = True
+        Me.cmtipoprovee.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA"})
+        Me.cmtipoprovee.Location = New System.Drawing.Point(138, 369)
+        Me.cmtipoprovee.Name = "cmtipoprovee"
+        Me.cmtipoprovee.Size = New System.Drawing.Size(185, 21)
+        Me.cmtipoprovee.TabIndex = 8
+        Me.cmtipoprovee.Text = "TIPO PROVEEDOR"
         '
         'PROVEEDOR
         '
-        Me.PROVEEDOR.Controls.Add(Me.txtema)
-        Me.PROVEEDOR.Controls.Add(Me.txtdire)
+        Me.PROVEEDOR.Controls.Add(Me.ID)
+        Me.PROVEEDOR.Controls.Add(Me.txtemail)
+        Me.PROVEEDOR.Controls.Add(Me.txtdireccion)
         Me.PROVEEDOR.Controls.Add(Me.txtfax)
-        Me.PROVEEDOR.Controls.Add(Me.txtele)
-        Me.PROVEEDOR.Controls.Add(Me.txtnom)
+        Me.PROVEEDOR.Controls.Add(Me.txttelefono)
+        Me.PROVEEDOR.Controls.Add(Me.txtnombre)
         Me.PROVEEDOR.Controls.Add(Me.txtdv)
         Me.PROVEEDOR.Controls.Add(Me.txtruc)
         Me.PROVEEDOR.Controls.Add(Me.txtcodigo)
-        Me.PROVEEDOR.Controls.Add(Me.cmtipo)
+        Me.PROVEEDOR.Controls.Add(Me.cmtipoprovee)
         Me.PROVEEDOR.Controls.Add(Me.Label8)
         Me.PROVEEDOR.Controls.Add(Me.Label7)
         Me.PROVEEDOR.Controls.Add(Me.Label6)
@@ -153,19 +155,19 @@ Partial Class Form3
         Me.PROVEEDOR.TabStop = False
         Me.PROVEEDOR.Text = "PROVEEDORES"
         '
-        'txtema
+        'txtemail
         '
-        Me.txtema.Location = New System.Drawing.Point(138, 320)
-        Me.txtema.Name = "txtema"
-        Me.txtema.Size = New System.Drawing.Size(185, 20)
-        Me.txtema.TabIndex = 16
+        Me.txtemail.Location = New System.Drawing.Point(138, 320)
+        Me.txtemail.Name = "txtemail"
+        Me.txtemail.Size = New System.Drawing.Size(185, 20)
+        Me.txtemail.TabIndex = 16
         '
-        'txtdire
+        'txtdireccion
         '
-        Me.txtdire.Location = New System.Drawing.Point(138, 277)
-        Me.txtdire.Name = "txtdire"
-        Me.txtdire.Size = New System.Drawing.Size(185, 20)
-        Me.txtdire.TabIndex = 15
+        Me.txtdireccion.Location = New System.Drawing.Point(138, 277)
+        Me.txtdireccion.Name = "txtdireccion"
+        Me.txtdireccion.Size = New System.Drawing.Size(185, 20)
+        Me.txtdireccion.TabIndex = 15
         '
         'txtfax
         '
@@ -174,19 +176,19 @@ Partial Class Form3
         Me.txtfax.Size = New System.Drawing.Size(185, 20)
         Me.txtfax.TabIndex = 14
         '
-        'txtele
+        'txttelefono
         '
-        Me.txtele.Location = New System.Drawing.Point(138, 186)
-        Me.txtele.Name = "txtele"
-        Me.txtele.Size = New System.Drawing.Size(185, 20)
-        Me.txtele.TabIndex = 13
+        Me.txttelefono.Location = New System.Drawing.Point(138, 186)
+        Me.txttelefono.Name = "txttelefono"
+        Me.txttelefono.Size = New System.Drawing.Size(185, 20)
+        Me.txttelefono.TabIndex = 13
         '
-        'txtnom
+        'txtnombre
         '
-        Me.txtnom.Location = New System.Drawing.Point(138, 137)
-        Me.txtnom.Name = "txtnom"
-        Me.txtnom.Size = New System.Drawing.Size(185, 20)
-        Me.txtnom.TabIndex = 12
+        Me.txtnombre.Location = New System.Drawing.Point(138, 137)
+        Me.txtnombre.Name = "txtnombre"
+        Me.txtnombre.Size = New System.Drawing.Size(185, 20)
+        Me.txtnombre.TabIndex = 12
         '
         'txtdv
         '
@@ -227,7 +229,16 @@ Partial Class Form3
         Me.btsal.Text = "&Salir"
         Me.btsal.UseVisualStyleBackColor = True
         '
-        'Form3
+        'ID
+        '
+        Me.ID.AutoSize = True
+        Me.ID.Location = New System.Drawing.Point(444, 31)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(18, 13)
+        Me.ID.TabIndex = 12
+        Me.ID.Text = "ID"
+        '
+        'Registro_provee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -235,7 +246,7 @@ Partial Class Form3
         Me.Controls.Add(Me.btsal)
         Me.Controls.Add(Me.btregi)
         Me.Controls.Add(Me.PROVEEDOR)
-        Me.Name = "Form3"
+        Me.Name = "Registro_provee"
         Me.Text = "Form3"
         Me.PROVEEDOR.ResumeLayout(False)
         Me.PROVEEDOR.PerformLayout()
@@ -250,16 +261,17 @@ Partial Class Form3
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents cmtipo As System.Windows.Forms.ComboBox
+    Friend WithEvents cmtipoprovee As System.Windows.Forms.ComboBox
     Friend WithEvents PROVEEDOR As System.Windows.Forms.GroupBox
-    Friend WithEvents txtema As System.Windows.Forms.TextBox
-    Friend WithEvents txtdire As System.Windows.Forms.TextBox
+    Friend WithEvents txtemail As System.Windows.Forms.TextBox
+    Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
     Friend WithEvents txtfax As System.Windows.Forms.TextBox
-    Friend WithEvents txtele As System.Windows.Forms.TextBox
-    Friend WithEvents txtnom As System.Windows.Forms.TextBox
+    Friend WithEvents txttelefono As System.Windows.Forms.TextBox
+    Friend WithEvents txtnombre As System.Windows.Forms.TextBox
     Friend WithEvents txtdv As System.Windows.Forms.TextBox
     Friend WithEvents txtruc As System.Windows.Forms.TextBox
     Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
     Friend WithEvents btregi As System.Windows.Forms.Button
     Friend WithEvents btsal As System.Windows.Forms.Button
+    Friend WithEvents ID As System.Windows.Forms.Label
 End Class
