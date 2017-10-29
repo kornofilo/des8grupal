@@ -1,7 +1,7 @@
 ﻿Public Class Datos_Provee
     Dim _codigo As Integer
     Dim _ruc As String
-    Dim _dv As Integer
+    Dim _dv As String
     Dim _nombre As String
     Dim _telefono As String
     Dim _fax As String
@@ -25,12 +25,12 @@
             _ruc = value
         End Set
     End Property
-    Public Property DV As Integer
+    Public Property DV As String
 
         Get
             DV = _dv
         End Get
-        Set(value As Integer)
+        Set(value As String)
             _dv = value
         End Set
     End Property

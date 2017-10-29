@@ -33,6 +33,7 @@ Partial Class Proveedores
         Me.dataprovee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dataprovee.Location = New System.Drawing.Point(36, 164)
         Me.dataprovee.Name = "dataprovee"
+        Me.dataprovee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dataprovee.Size = New System.Drawing.Size(699, 307)
         Me.dataprovee.TabIndex = 0
         '

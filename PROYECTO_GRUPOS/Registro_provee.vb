@@ -33,7 +33,37 @@
 
     End Sub
 
-    Private Sub Registro_provee_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+    Private Sub btmodif_Click(sender As System.Object, e As System.EventArgs) Handles btmodif.Click
+        Try
+            Dim dts As New Datos_Provee
+            Dim func As New ConnectionDB
+            dts.codigo = txtcodigo.Text
+            dts.RUC = txtruc.Text
+            dts.DV = txtdv.Text
+            dts.nombre = txtnombre.Text
+            dts.telefono = txttelefono.Text
+            dts.fax = txtfax.Text
+            dts.direccion = txtdireccion.Text
+            dts.email = txtemail.Text
+            dts.tipoproveedor = cmtipoprovee.Text
+
+            If func.modificar_provee(dts) Then
+                MessageBox.Show("Produccion Modificado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                Proveedores.Show()
+
+
+
+            Else
+                MessageBox.Show("Produccion no fue Modificado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
+
 End Class

@@ -43,6 +43,7 @@ Partial Class Registro_provee
         Me.txtcodigo = New System.Windows.Forms.TextBox()
         Me.btregi = New System.Windows.Forms.Button()
         Me.btsal = New System.Windows.Forms.Button()
+        Me.btmodif = New System.Windows.Forms.Button()
         Me.PROVEEDOR.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -231,18 +232,28 @@ Partial Class Registro_provee
         '
         'btsal
         '
-        Me.btsal.Location = New System.Drawing.Point(419, 473)
+        Me.btsal.Location = New System.Drawing.Point(432, 473)
         Me.btsal.Name = "btsal"
         Me.btsal.Size = New System.Drawing.Size(106, 39)
         Me.btsal.TabIndex = 11
         Me.btsal.Text = "&Salir"
         Me.btsal.UseVisualStyleBackColor = True
         '
+        'btmodif
+        '
+        Me.btmodif.Location = New System.Drawing.Point(232, 473)
+        Me.btmodif.Name = "btmodif"
+        Me.btmodif.Size = New System.Drawing.Size(106, 39)
+        Me.btmodif.TabIndex = 12
+        Me.btmodif.Text = "&Modificar"
+        Me.btmodif.UseVisualStyleBackColor = True
+        '
         'Registro_provee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(587, 536)
+        Me.Controls.Add(Me.btmodif)
         Me.Controls.Add(Me.btsal)
         Me.Controls.Add(Me.btregi)
         Me.Controls.Add(Me.PROVEEDOR)
@@ -261,17 +272,18 @@ Partial Class Registro_provee
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents Label8 As System.Windows.Forms.Label
-    Friend WithEvents cmtipoprovee As System.Windows.Forms.ComboBox
     Friend WithEvents PROVEEDOR As System.Windows.Forms.GroupBox
-    Friend WithEvents txtemail As System.Windows.Forms.TextBox
-    Friend WithEvents txtdireccion As System.Windows.Forms.TextBox
-    Friend WithEvents txtfax As System.Windows.Forms.TextBox
-    Friend WithEvents txttelefono As System.Windows.Forms.TextBox
-    Friend WithEvents txtnombre As System.Windows.Forms.TextBox
-    Friend WithEvents txtdv As System.Windows.Forms.TextBox
-    Friend WithEvents txtruc As System.Windows.Forms.TextBox
-    Friend WithEvents txtcodigo As System.Windows.Forms.TextBox
     Friend WithEvents btregi As System.Windows.Forms.Button
     Friend WithEvents btsal As System.Windows.Forms.Button
     Friend WithEvents ID As System.Windows.Forms.Label
+    Friend WithEvents btmodif As System.Windows.Forms.Button
+    Public WithEvents cmtipoprovee As System.Windows.Forms.ComboBox
+    Public WithEvents txtemail As System.Windows.Forms.TextBox
+    Public WithEvents txtdireccion As System.Windows.Forms.TextBox
+    Public WithEvents txtfax As System.Windows.Forms.TextBox
+    Public WithEvents txttelefono As System.Windows.Forms.TextBox
+    Public WithEvents txtnombre As System.Windows.Forms.TextBox
+    Public WithEvents txtdv As System.Windows.Forms.TextBox
+    Public WithEvents txtruc As System.Windows.Forms.TextBox
+    Public WithEvents txtcodigo As System.Windows.Forms.TextBox
 End Class
