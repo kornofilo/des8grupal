@@ -80,4 +80,15 @@ Public Class ConnectionDB
         End Try
 
     End Function
+    Sub busquedaprovee(ByVal no As String, ByVal dataprovee As DataGridView)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("Select * from proveedores where nombre like '" & "%" + no + "%" & "'", connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            dataprovee.DataSource = MyDataTable
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 End Class

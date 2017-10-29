@@ -32,6 +32,7 @@ Partial Class Registro_provee
         Me.Label8 = New System.Windows.Forms.Label()
         Me.cmtipoprovee = New System.Windows.Forms.ComboBox()
         Me.PROVEEDOR = New System.Windows.Forms.GroupBox()
+        Me.ID = New System.Windows.Forms.Label()
         Me.txtemail = New System.Windows.Forms.TextBox()
         Me.txtdireccion = New System.Windows.Forms.TextBox()
         Me.txtfax = New System.Windows.Forms.TextBox()
@@ -42,7 +43,6 @@ Partial Class Registro_provee
         Me.txtcodigo = New System.Windows.Forms.TextBox()
         Me.btregi = New System.Windows.Forms.Button()
         Me.btsal = New System.Windows.Forms.Button()
-        Me.ID = New System.Windows.Forms.Label()
         Me.PROVEEDOR.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -155,6 +155,15 @@ Partial Class Registro_provee
         Me.PROVEEDOR.TabStop = False
         Me.PROVEEDOR.Text = "PROVEEDORES"
         '
+        'ID
+        '
+        Me.ID.AutoSize = True
+        Me.ID.Location = New System.Drawing.Point(444, 31)
+        Me.ID.Name = "ID"
+        Me.ID.Size = New System.Drawing.Size(18, 13)
+        Me.ID.TabIndex = 12
+        Me.ID.Text = "ID"
+        '
         'txtemail
         '
         Me.txtemail.Location = New System.Drawing.Point(138, 320)
@@ -228,15 +237,6 @@ Partial Class Registro_provee
         Me.btsal.TabIndex = 11
         Me.btsal.Text = "&Salir"
         Me.btsal.UseVisualStyleBackColor = True
-        '
-        'ID
-        '
-        Me.ID.AutoSize = True
-        Me.ID.Location = New System.Drawing.Point(444, 31)
-        Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(18, 13)
-        Me.ID.TabIndex = 12
-        Me.ID.Text = "ID"
         '
         'Registro_provee
         '

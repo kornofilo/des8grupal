@@ -26,4 +26,8 @@
         mostrar()
 
     End Sub
+
+    Private Sub txtbuscar_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtbuscar.TextChanged
+        obj.busquedaprovee(txtbuscar.Text, dataprovee)
+    End Sub
 End Class
