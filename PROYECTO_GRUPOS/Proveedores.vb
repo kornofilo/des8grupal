@@ -47,7 +47,7 @@
         Registro_provee.cmtipoprovee.Text = dataprovee.CurrentRow.Cells(8).Value
 
         Me.Visible = False
-        Registro_provee.ShowDialog()
+        Registro_provee.Show()
 
 
     End Sub
