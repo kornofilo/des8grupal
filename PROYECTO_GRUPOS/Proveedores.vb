@@ -16,9 +16,7 @@
     Public Sub mostrar()
         Try
             obj.ShowDataGrid("proveedores", dataprovee)
-
         Catch ex As Exception
-
         End Try
     End Sub
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-10-2017 a las 00:29:30
+-- Tiempo de generación: 01-11-2017 a las 00:45:04
 -- Versión del servidor: 10.1.26-MariaDB
 -- Versión de PHP: 7.1.8
 
@@ -73,11 +73,12 @@ CREATE TABLE `proveedores` (
 
 INSERT INTO `proveedores` (`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES
 (1, '431124', '14', 'Compu Zone', '775-3213', '775-9834', 'Zona Libre', 'compuzone@gmail.com', 'Tecnologia'),
-(4, 'we', '1', 'we', 'ew', 'ew', 'ew', 'ew', 'ew'),
+(4, 'we', '13', 'we', 'ew', 'ew', 'ew', 'ew', 'ew'),
 (5, '23', '23', 'r', 'r', 'r', 'r', 'r', 'r'),
 (6, '12', '12', 'med', '12', '12', 'de', 'de', 'MANTENIMIENTO'),
 (7, 'de', '0', 'ded', 't', 'r', 'j', 't', 'MANTENIMIENTO'),
-(8, 'rR', 'HY', 'Y', 'Y', 'Y', 'Y', 'Y', 'LABORATORIO');
+(8, 'rR', 'HY', 'Y', 'Y', 'Y', 'Y', 'Y', 'LABORATORIO'),
+(9, '23', '23', 'o', 'o', 'o', 'o', 'o', 'DIETETICA');
 
 --
 -- Índices para tablas volcadas
@@ -108,7 +109,7 @@ ALTER TABLE `compras`
 -- AUTO_INCREMENT de la tabla `proveedores`
 --
 ALTER TABLE `proveedores`
-  MODIFY `codigo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;COMMIT;
+  MODIFY `codigo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
