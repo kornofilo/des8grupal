@@ -27,6 +27,8 @@ Partial Class Form1
         Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ARTICULOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BuscarCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,8 +52,8 @@ Partial Class Form1
         'PROVEEDORToolStripMenuItem
         '
         Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
-        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
-        Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
+        Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(121, 24)
+        Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDORES"
         '
         'ARTICULOToolStripMenuItem
         '
@@ -61,9 +63,22 @@ Partial Class Form1
         '
         'ComprasToolStripMenuItem
         '
+        Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BuscarCompraToolStripMenuItem, Me.RegistrarCompraToolStripMenuItem})
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
         Me.ComprasToolStripMenuItem.Text = "COMPRAS"
+        '
+        'BuscarCompraToolStripMenuItem
+        '
+        Me.BuscarCompraToolStripMenuItem.Name = "BuscarCompraToolStripMenuItem"
+        Me.BuscarCompraToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
+        Me.BuscarCompraToolStripMenuItem.Text = "Buscar Compra"
+        '
+        'RegistrarCompraToolStripMenuItem
+        '
+        Me.RegistrarCompraToolStripMenuItem.Name = "RegistrarCompraToolStripMenuItem"
+        Me.RegistrarCompraToolStripMenuItem.Size = New System.Drawing.Size(200, 26)
+        Me.RegistrarCompraToolStripMenuItem.Text = "Registrar Compra"
         '
         'Form1
         '
@@ -72,7 +87,7 @@ Partial Class Form1
         Me.ClientSize = New System.Drawing.Size(1023, 590)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
@@ -86,4 +101,6 @@ Partial Class Form1
     Friend WithEvents PROVEEDORToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ARTICULOToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents BuscarCompraToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarCompraToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -15,7 +15,7 @@ Public Class ConnectionDB
     Sub New()
         Try
             connection_db = New MySqlConnection With {
-                .ConnectionString = "Server=localhost; Database= cuentasxpagar; User id = root;  password=;"
+                .ConnectionString = "Server=localhost; Database= cuentasxpagar; User id = root;  password=12345;"
             }
             connection_db.Open()
 
@@ -127,6 +127,7 @@ Public Class ConnectionDB
         End Try
 
     End Function
+
     Sub busquedaprovee(ByVal no As String, ByVal dataprovee As DataGridView)
         Try
             Dim adaptador As MySqlDataAdapter
@@ -137,5 +138,24 @@ Public Class ConnectionDB
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+    End Sub
+
+    'Subprograma que obtiene los nombres de los proveedores registrados en el sistema y alimenta un combo box los nombres obtenidos.'
+    Sub selectNombreProveedor(ByVal CBox As ComboBox)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("Select nombre from proveedores", connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            If MyDataTable.Rows.Count > 0 Then
+                CBox.DataSource = MyDataTable
+                CBox.DisplayMember = "nombre"
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection_db.Dispose()
+        End Try
+
     End Sub
 End Class

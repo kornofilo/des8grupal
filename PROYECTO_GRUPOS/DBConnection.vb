@@ -14,7 +14,7 @@ Module DBConnection
     Public Function connect(ByVal db As String)
         Try
             connection_db = New MySqlConnection With {
-                .ConnectionString = "Server=localhost; Database= " + db + "; User id = root;  password=;"
+                .ConnectionString = "Server=localhost; Database= " + db + "; User id = root;  password=12345;"
             }
             connection_db.Open()
             Return True
