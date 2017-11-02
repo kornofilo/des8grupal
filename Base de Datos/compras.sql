@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2017 at 02:39 AM
+-- Generation Time: Nov 02, 2017 at 04:32 AM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -35,7 +35,8 @@ CREATE TABLE `compras` (
   `idProducto` int(7) NOT NULL,
   `cantidad` int(4) NOT NULL,
   `costoUnitario` decimal(15,2) NOT NULL,
-  `totalCompra` decimal(15,2) NOT NULL
+  `totalCompra` decimal(15,2) NOT NULL,
+  `tipoCompra` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 COMMIT;
 
