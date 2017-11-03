@@ -22,7 +22,6 @@ Partial Class Compras
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -31,8 +30,7 @@ Partial Class Compras
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtidprovee = New System.Windows.Forms.TextBox()
         Me.TextBox3 = New System.Windows.Forms.TextBox()
         Me.TextBox4 = New System.Windows.Forms.TextBox()
         Me.TextBox6 = New System.Windows.Forms.TextBox()
@@ -50,6 +48,7 @@ Partial Class Compras
         Me.Button2 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.lbn = New System.Windows.Forms.Label()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -57,69 +56,53 @@ Partial Class Compras
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(33, 125)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 29)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "ID CODIGO"
-        '
         'Label2
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(33, 186)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(20, 105)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(181, 29)
+        Me.Label2.Size = New System.Drawing.Size(164, 24)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "DOCUMENTO"
+        Me.Label2.Text = "ID PROVEEDOR"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(31, 234)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(19, 152)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(174, 29)
+        Me.Label3.Size = New System.Drawing.Size(149, 24)
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "PROVEEDOR"
+        Me.Label3.Text = "ID PRODUCTO"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(607, 121)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(455, 101)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(132, 29)
+        Me.Label4.Size = New System.Drawing.Size(86, 24)
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "FACTURA"
+        Me.Label4.Text = "PRECIO"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label5.Location = New System.Drawing.Point(610, 229)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(458, 189)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(193, 29)
+        Me.Label5.Size = New System.Drawing.Size(86, 24)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "FECHA FISCAL"
+        Me.Label5.Text = "FECHA "
         '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton1.Location = New System.Drawing.Point(1183, 161)
-        Me.RadioButton1.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButton1.Location = New System.Drawing.Point(887, 131)
         Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(135, 29)
+        Me.RadioButton1.Size = New System.Drawing.Size(105, 24)
         Me.RadioButton1.TabIndex = 5
         Me.RadioButton1.TabStop = True
         Me.RadioButton1.Text = "CONTADO"
@@ -129,10 +112,9 @@ Partial Class Compras
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(1183, 193)
-        Me.RadioButton2.Margin = New System.Windows.Forms.Padding(4)
+        Me.RadioButton2.Location = New System.Drawing.Point(887, 157)
         Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(122, 29)
+        Me.RadioButton2.Size = New System.Drawing.Size(99, 24)
         Me.RadioButton2.TabIndex = 6
         Me.RadioButton2.TabStop = True
         Me.RadioButton2.Text = "CRÉDITO"
@@ -142,104 +124,85 @@ Partial Class Compras
         '
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(31, 288)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(19, 196)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(280, 29)
+        Me.Label6.Size = New System.Drawing.Size(113, 24)
         Me.Label6.TabIndex = 7
-        Me.Label6.Text = "FECHA DE REGISTRO"
+        Me.Label6.Text = "CANTIDAD"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(607, 181)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(455, 150)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(325, 29)
+        Me.Label7.Size = New System.Drawing.Size(205, 24)
         Me.Label7.TabIndex = 8
-        Me.Label7.Text = "FECHA DE VENCIMIENTO"
+        Me.Label7.Text = "TOTAL DE COMPRA"
         '
-        'TextBox1
+        'txtidprovee
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(358, 120)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(116, 34)
-        Me.TextBox1.TabIndex = 9
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(358, 172)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(116, 34)
-        Me.TextBox2.TabIndex = 10
+        Me.txtidprovee.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtidprovee.Location = New System.Drawing.Point(264, 102)
+        Me.txtidprovee.Name = "txtidprovee"
+        Me.txtidprovee.Size = New System.Drawing.Size(88, 28)
+        Me.txtidprovee.TabIndex = 10
         '
         'TextBox3
         '
         Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(358, 229)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox3.Location = New System.Drawing.Point(264, 148)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(116, 34)
+        Me.TextBox3.Size = New System.Drawing.Size(88, 28)
         Me.TextBox3.TabIndex = 11
         '
         'TextBox4
         '
         Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(953, 126)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox4.Location = New System.Drawing.Point(715, 105)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(116, 34)
+        Me.TextBox4.Size = New System.Drawing.Size(88, 28)
         Me.TextBox4.TabIndex = 12
         '
         'TextBox6
         '
         Me.TextBox6.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox6.Location = New System.Drawing.Point(358, 283)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox6.Location = New System.Drawing.Point(264, 192)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(116, 34)
+        Me.TextBox6.Size = New System.Drawing.Size(88, 28)
         Me.TextBox6.TabIndex = 14
         '
         'TextBox7
         '
         Me.TextBox7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox7.Location = New System.Drawing.Point(953, 176)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox7.Location = New System.Drawing.Point(715, 146)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(116, 34)
+        Me.TextBox7.Size = New System.Drawing.Size(88, 28)
         Me.TextBox7.TabIndex = 15
         '
         'txtffiscal
         '
         Me.txtffiscal.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtffiscal.Location = New System.Drawing.Point(953, 225)
-        Me.txtffiscal.Margin = New System.Windows.Forms.Padding(4)
+        Me.txtffiscal.Location = New System.Drawing.Point(715, 186)
         Me.txtffiscal.Name = "txtffiscal"
-        Me.txtffiscal.Size = New System.Drawing.Size(116, 34)
+        Me.txtffiscal.Size = New System.Drawing.Size(88, 28)
         Me.txtffiscal.TabIndex = 13
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(36, 424)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
+        Me.DataGridView1.Location = New System.Drawing.Point(17, 344)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(1347, 290)
+        Me.DataGridView1.Size = New System.Drawing.Size(1010, 236)
         Me.DataGridView1.TabIndex = 16
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(1160, 126)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(870, 102)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(195, 29)
+        Me.Label8.Size = New System.Drawing.Size(155, 24)
         Me.Label8.TabIndex = 17
         Me.Label8.Text = "TIPO DE PAGO"
         '
@@ -247,28 +210,29 @@ Partial Class Compras
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Copperplate Gothic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(694, 29)
+        Me.Label9.Location = New System.Drawing.Point(520, 24)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(184, 37)
+        Me.Label9.Size = New System.Drawing.Size(150, 30)
         Me.Label9.TabIndex = 18
         Me.Label9.Text = "Compras"
         '
         'TextBox5
         '
         Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(1230, 382)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox5.Location = New System.Drawing.Point(922, 310)
         Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(139, 34)
+        Me.TextBox5.Size = New System.Drawing.Size(105, 28)
         Me.TextBox5.TabIndex = 19
         '
         'StatusStrip1
         '
         Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusConnectionDB})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 740)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 583)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(1396, 33)
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 10, 0)
+        Me.StatusStrip1.Size = New System.Drawing.Size(1033, 26)
         Me.StatusStrip1.TabIndex = 24
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -277,13 +241,14 @@ Partial Class Compras
         Me.ToolStripStatusConnectionDB.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ToolStripStatusConnectionDB.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources._Stop
         Me.ToolStripStatusConnectionDB.Name = "ToolStripStatusConnectionDB"
-        Me.ToolStripStatusConnectionDB.Size = New System.Drawing.Size(288, 28)
+        Me.ToolStripStatusConnectionDB.Size = New System.Drawing.Size(235, 21)
         Me.ToolStripStatusConnectionDB.Text = "ToolStripStatusConnectionDB"
         '
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Shopping
-        Me.PictureBox3.Location = New System.Drawing.Point(888, 12)
+        Me.PictureBox3.Location = New System.Drawing.Point(666, 10)
+        Me.PictureBox3.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(64, 64)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -293,7 +258,8 @@ Partial Class Compras
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Shopping
-        Me.PictureBox2.Location = New System.Drawing.Point(615, 12)
+        Me.PictureBox2.Location = New System.Drawing.Point(461, 10)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(64, 64)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
@@ -305,9 +271,10 @@ Partial Class Compras
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Delete
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(391, 360)
+        Me.Button3.Location = New System.Drawing.Point(293, 292)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(159, 48)
+        Me.Button3.Size = New System.Drawing.Size(119, 39)
         Me.Button3.TabIndex = 27
         Me.Button3.Text = "    Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
@@ -317,9 +284,10 @@ Partial Class Compras
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Edit
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(213, 360)
+        Me.Button2.Location = New System.Drawing.Point(160, 292)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(160, 48)
+        Me.Button2.Size = New System.Drawing.Size(120, 39)
         Me.Button2.TabIndex = 26
         Me.Button2.Text = "     Modificar"
         Me.Button2.UseVisualStyleBackColor = True
@@ -327,9 +295,10 @@ Partial Class Compras
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Search
-        Me.PictureBox1.Location = New System.Drawing.Point(1165, 372)
+        Me.PictureBox1.Location = New System.Drawing.Point(874, 302)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
+        Me.PictureBox1.Size = New System.Drawing.Size(36, 39)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 25
         Me.PictureBox1.TabStop = False
@@ -339,19 +308,31 @@ Partial Class Compras
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Add
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(38, 360)
+        Me.Button1.Location = New System.Drawing.Point(28, 292)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(154, 48)
+        Me.Button1.Size = New System.Drawing.Size(116, 39)
         Me.Button1.TabIndex = 21
         Me.Button1.Text = "    Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'lbn
+        '
+        Me.lbn.AutoSize = True
+        Me.lbn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbn.Location = New System.Drawing.Point(559, 306)
+        Me.lbn.Name = "lbn"
+        Me.lbn.Size = New System.Drawing.Size(154, 25)
+        Me.lbn.TabIndex = 30
+        Me.lbn.Text = "PROVEEDOR"
+        '
         'Compras
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
-        Me.ClientSize = New System.Drawing.Size(1396, 773)
+        Me.ClientSize = New System.Drawing.Size(1033, 609)
+        Me.Controls.Add(Me.lbn)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Button3)
@@ -368,8 +349,7 @@ Partial Class Compras
         Me.Controls.Add(Me.txtffiscal)
         Me.Controls.Add(Me.TextBox4)
         Me.Controls.Add(Me.TextBox3)
-        Me.Controls.Add(Me.TextBox2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtidprovee)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.RadioButton2)
@@ -378,8 +358,6 @@ Partial Class Compras
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.Label1)
-        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Compras"
         Me.Text = "Compras"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -392,7 +370,6 @@ Partial Class Compras
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
@@ -401,8 +378,7 @@ Partial Class Compras
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents txtidprovee As System.Windows.Forms.TextBox
     Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
     Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
@@ -420,4 +396,5 @@ Partial Class Compras
     Friend WithEvents Button3 As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents lbn As System.Windows.Forms.Label
 End Class

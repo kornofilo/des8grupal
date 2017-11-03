@@ -78,7 +78,7 @@
   <ItemGroup>
     <Compile Include="ConnectionDB.vb" />
     <Compile Include="Datos_Provee.vb" />
-    <Compile Include="DBConnection.vb" />
+    <Compile Include="fcompras.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +92,7 @@
     <Compile Include="Compras.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="fproveedor.vb" />
     <Compile Include="Registro_provee.Designer.vb">
       <DependentUpon>Registro_provee.vb</DependentUpon>
     </Compile>

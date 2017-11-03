@@ -1,5 +1,7 @@
 ﻿Public Class Proveedores
     Dim obj As New ConnectionDB
+    Dim subprog As New fproveedor
+
    
     Private Sub dataprovee_CellContentDoubleClick(sender As Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dataprovee.CellContentDoubleClick
         Registro_provee.ID.Text = dataprovee.CurrentRow.Cells(0).Value
@@ -26,7 +28,7 @@
     End Sub
 
     Private Sub txtbuscar_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtbuscar.TextChanged
-        obj.busquedaprovee(txtbuscar.Text, dataprovee)
+        subprog.busquedaprovee(txtbuscar.Text, dataprovee)
     End Sub
 
     Private Sub dataprovee_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles dataprovee.CellContentClick

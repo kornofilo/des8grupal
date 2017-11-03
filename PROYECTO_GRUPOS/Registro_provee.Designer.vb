@@ -122,7 +122,7 @@ Partial Class Registro_provee
         'cmtipoprovee
         '
         Me.cmtipoprovee.FormattingEnabled = True
-        Me.cmtipoprovee.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA"})
+        Me.cmtipoprovee.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA", "TECNOLOGIA"})
         Me.cmtipoprovee.Location = New System.Drawing.Point(138, 369)
         Me.cmtipoprovee.Name = "cmtipoprovee"
         Me.cmtipoprovee.Size = New System.Drawing.Size(185, 21)

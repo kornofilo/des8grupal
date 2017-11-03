@@ -4,7 +4,7 @@
         Try
 
             Dim dts As New Datos_Provee
-            Dim func As New ConnectionDB
+            Dim func As New fproveedor
 
             dts.RUC = txtruc.Text
             dts.DV = txtdv.Text
@@ -37,7 +37,7 @@
     Private Sub btmodif_Click(sender As System.Object, e As System.EventArgs) Handles btmodif.Click
         Try
             Dim dts As New Datos_Provee
-            Dim func As New ConnectionDB
+            Dim func As New fproveedor
             dts.codigo = txtcodigo.Text
             dts.RUC = txtruc.Text
             dts.DV = txtdv.Text
@@ -66,4 +66,11 @@
 
     End Sub
 
+    Private Sub PROVEEDOR_Enter(sender As System.Object, e As System.EventArgs) Handles PROVEEDOR.Enter
+
+    End Sub
+
+    Private Sub Registro_provee_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
+
+    End Sub
 End Class
