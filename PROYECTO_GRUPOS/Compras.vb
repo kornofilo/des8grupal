@@ -1,6 +1,8 @@
 ﻿Public Class Compras
     Dim obj As New ConnectionDB
     Dim funcion As New fcompras
+    Dim compra As Double
+
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         
@@ -31,7 +33,51 @@
 
     End Sub
 
-    Private Sub txtidprovee_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtidprovee.TextChanged
+
+
+    Private Sub btagregar_Click(sender As System.Object, e As System.EventArgs) Handles btagregar.Click
+        Try
+
+            Dim dts As New Datos_Compras
+            Dim func As New fcompras
+           
+            dts.idproveedor = txtidprovee.Text
+            dts.nombre = lbn.Text
+            dts.idproducto = txtidproduc.Text
+            dts.producto = txtnomb.Text
+            dts.cantidad = txtcant.Text
+            dts.costounidad = txtprecio.Text
+            If rbconta.Checked = True Then
+                rbconta.Text = "Contado"
+                dts.tipocompra = rbconta.Text
+                compra = Val(txtcant.Text) * Val(txtprecio.Text)
+                txtcompra.Text = compra
+                dts.totalcompra = txtcompra.Text
+            Else
+                rbcredi.Checked = True
+                rbcredi.Text = "Credito"
+                dts.tipocompra = rbconta.Text
+                compra = Val(txtcant.Text) * Val(txtprecio.Text)
+                txtcompra.Text = compra
+                dts.totalcompra = txtcompra.Text
+            End If
+
+
+
+
+            If func.insert_comp(dts) Then
+                MessageBox.Show("Compra Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+
+            Else
+                MessageBox.Show("Compra Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
 
     End Sub
 End Class

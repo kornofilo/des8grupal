@@ -30,7 +30,7 @@ Public Class fproveedor
             MsgBox(ex.Message)
             Return False
         Finally
-
+            desconectado()
         End Try
 
     End Function

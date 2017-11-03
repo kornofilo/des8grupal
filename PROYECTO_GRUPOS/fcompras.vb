@@ -1,6 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Public Class fcompras
     Inherits ConnectionDB
+    Dim cmd As New MySqlCommand
 
     Public Sub Consulta()
 
@@ -26,4 +27,36 @@ Public Class fcompras
 
         End Try
     End Sub
+    Public Function insert_comp(ByVal dts As Datos_Compras) As Boolean
+        Try
+
+            cmd = New MySqlCommand("INSERT_COMP")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = connection_db
+
+            cmd.Parameters.AddWithValue("@_idcompra", dts.idcompra)
+            cmd.Parameters.AddWithValue("@_idprovee", dts.idproveedor)
+            cmd.Parameters.AddWithValue("@_nombre", dts.nombre)
+            cmd.Parameters.AddWithValue("@_fecha", dts.fecha)
+            cmd.Parameters.AddWithValue("@_idproduc", dts.idproducto)
+            cmd.Parameters.AddWithValue("@_produc", dts.producto)
+            cmd.Parameters.AddWithValue("@_cant", dts.cantidad)
+            cmd.Parameters.AddWithValue("@_costouni", dts.costounidad)
+            cmd.Parameters.AddWithValue("@_totalcompr", dts.totalcompra)
+            cmd.Parameters.AddWithValue("@_tipocompr", dts.tipocompra)
+            cmd.Parameters.AddWithValue("@_cxp", dts.cxp)
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectado()
+        End Try
+
+    End Function
 End Class

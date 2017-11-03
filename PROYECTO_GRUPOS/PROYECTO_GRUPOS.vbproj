@@ -77,13 +77,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConnectionDB.vb" />
+    <Compile Include="Datos_Compras.vb" />
     <Compile Include="Datos_Provee.vb" />
     <Compile Include="fcompras.vb" />
-    <Compile Include="Form1.vb">
+    <Compile Include="Menu.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.vb">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <Compile Include="Menu.Designer.vb">
+      <DependentUpon>Menu.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Compras.Designer.vb">
@@ -97,12 +98,6 @@
       <DependentUpon>Registro_provee.vb</DependentUpon>
     </Compile>
     <Compile Include="Registro_provee.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form4.Designer.vb">
-      <DependentUpon>Form4.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form4.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -128,17 +123,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.vb</DependentUpon>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro_provee.resx">
       <DependentUpon>Registro_provee.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form4.resx">
-      <DependentUpon>Form4.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
