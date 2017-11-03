@@ -7,3 +7,7 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_PROVEE`(IN `_codigo` INT(6), IN `_ruc` VARCHAR(15), IN `_dv` VARCHAR(6), IN `_nombre` VARCHAR(25), IN `_telefono` VARCHAR(25), IN `_fax` VARCHAR(25), IN `_direccion` VARCHAR(30), IN `_email` VARCHAR(25), IN `_tipoproveedor` VARCHAR(25))
 INSERT INTO `proveedores`(`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES (_codigo,_ruc,_dv,_nombre,_telefono,_fax,_direccion,_email,_tipoproveedor)$$
 DELIMITER ;
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_COMP`(IN `_idcompra` INT(7), IN `_idprovee` INT(7), IN `_nombre` VARCHAR(25), IN `_idproduc` INT(7), IN `_produc` VARCHAR(25), IN `_cant` INT(4), IN `_costouni` DECIMAL(15,2), IN `_totalcompr` DECIMAL(15,2), IN `_tipocompr` VARCHAR(20), IN `_cxp` INT(6))
+INSERT INTO `compras`(`idCompra`, `idproveedor`, `nombre`, `fecha`, `idProducto`, `producto`, `cantidad`, `costoUnitario`, `totalCompra`, `tipoCompra`, `cxp`)VALUES (_idcompra,_idprovee,_nombre,NOW(),_idproduc,_produc,_cant,_costouni,_totalcompr,_tipocompr,_cxp)$$
+DELIMITER ;
