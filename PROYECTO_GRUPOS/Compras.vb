@@ -75,4 +75,11 @@
    
 
 
+    Private Sub txtbuscar_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtbuscar.TextChanged
+        funcion.busquedaprovee(txtbuscar.Text, DataGridViewCompras)
+    End Sub
+
+    Private Sub DataGridViewCompras_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCompras.CellContentClick
+
+    End Sub
 End Class

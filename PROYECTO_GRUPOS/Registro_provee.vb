@@ -17,15 +17,13 @@
             dts.email = txtemail.Text
             dts.tipoproveedor = cmtipoprovee.Text
 
-
-
             If func.insertar(dts) Then
                 MessageBox.Show("Produccion Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Proveedores.Show()
                 obj.limpiarcampos(Me)
 
             Else
-                MessageBox.Show("Produccion Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                MessageBox.Show("Produccion   Registrado", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
 
             End If
@@ -64,10 +62,6 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-
-    End Sub
-
-    Private Sub btsal_Click(sender As System.Object, e As System.EventArgs) Handles btsal.Click
 
     End Sub
     Public Sub mostrar()
