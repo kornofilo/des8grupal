@@ -1,4 +1,5 @@
-﻿Public Class Datos_Compras
+﻿
+Public Class Datos_Compras
     Dim _idcompra As Integer
     Dim _idprovee As Integer
     Dim _nombre As String
@@ -7,7 +8,7 @@
     Dim _produc As String
     Dim _cant As Integer
     Dim _costouni As Double
-    Dim _totalcompr As double
+    Dim _totalcompr As Double
     Dim _tipocompr As String
     Dim _cxp As Integer
 

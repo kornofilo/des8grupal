@@ -5,13 +5,12 @@
 
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        
         mostrar()
-
     End Sub
+
     Public Sub mostrar()
         Try
-            obj.ShowDataGrid("compras", DataGridView1)
+            obj.ShowDataGrid("compras", DataGridViewCompras)
         Catch ex As Exception
         End Try
     End Sub
@@ -20,20 +19,12 @@
         If Asc(e.KeyChar) = 13 Then
             Try
                 funcion.Consulta()
-
-
             Catch ex As Exception
 
             End Try
         End If
 
-
-
-
-
     End Sub
-
-
 
     Private Sub btagregar_Click(sender As System.Object, e As System.EventArgs) Handles btagregar.Click
         Try
@@ -69,16 +60,13 @@
                 MessageBox.Show("Compra Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 obj.limpiarcampos(Me)
 
-
-            
-
-
             Else
                 MessageBox.Show("Compra Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-
-
             End If
+
+            'Refrescamos el Datagridview con la compra registrada'
+            mostrar()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try

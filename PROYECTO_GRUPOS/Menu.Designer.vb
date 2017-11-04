@@ -65,15 +65,15 @@ Partial Class Menu
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
         Me.ComprasToolStripMenuItem.Text = "COMPRAS"
         '
-        'Form1
+        'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1023, 590)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.Name = "Form1"
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "Menu"
         Me.Text = "Form1"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
