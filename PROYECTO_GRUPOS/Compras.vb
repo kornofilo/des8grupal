@@ -11,17 +11,11 @@
     Public Sub mostrar()
         Try
             obj.ShowDataGrid("compras", DataGridViewCompras)
-
-            'Alimentamos el combo box de proveedores con los que están registrados en la base de datos'
-            obj.GetNombreProveedores(ComboBoxProveedores)
-
-            'Alimentamos el combo box de productos con los que están registrados en la base de datos'
-            obj.GetNombreProductos(ComboBoxProductos)
         Catch ex As Exception
         End Try
     End Sub
 
-    Private Sub txtidprovee_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs)
+    Private Sub txtidprovee_KeyPress(sender As Object, e As System.Windows.Forms.KeyPressEventArgs) Handles txtidprovee.KeyPress
         If Asc(e.KeyChar) = 13 Then
             Try
                 funcion.Consulta()
@@ -34,21 +28,29 @@
 
     Private Sub btagregar_Click(sender As System.Object, e As System.EventArgs) Handles btagregar.Click
         Try
+
             Dim dts As New Datos_Compras
             Dim func As New fcompras
-
-            dts.idproveedor = ComboBoxProveedores.SelectedValue.ToString
-            dts.nombre = ComboBoxProveedores.Text
-            dts.idproducto = ComboBoxProductos.SelectedValue.ToString
-            dts.producto = ComboBoxProductos.Text
-            dts.cantidad = NumericUpDownCantidad.Text
+           
+            dts.idproveedor = txtidprovee.Text
+            dts.nombre = lbn.Text
+            dts.idproducto = txtidproduc.Text
+            dts.producto = txtnomb.Text
+            dts.cantidad = txtcant.Text
             dts.costounidad = txtprecio.Text
-            dts.totalcompra = txtcompra.Text
             If rbconta.Checked = True Then
+                rbconta.Text = "Contado"
                 dts.tipocompra = rbconta.Text
+                compra = Val(txtcant.Text) * Val(txtprecio.Text)
+                txtcompra.Text = compra
+                dts.totalcompra = txtcompra.Text
             Else
                 rbcredi.Checked = True
-                dts.tipocompra = rbcredi.Text
+                rbcredi.Text = "Credito"
+                dts.tipocompra = rbconta.Text
+                compra = Val(txtcant.Text) * Val(txtprecio.Text)
+                txtcompra.Text = compra
+                dts.totalcompra = txtcompra.Text
             End If
 
 
@@ -68,25 +70,16 @@
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
+
     End Sub
+   
 
 
-<<<<<<< HEAD
-
-    Private Sub ComboBoxProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxProductos.SelectedIndexChanged
-        obj.GetPrecio(ComboBoxProductos.SelectedValue.ToString)
-        txtcompra.Text = FormatCurrency(Val(txtprecio.Text) * NumericUpDownCantidad.Value)
-    End Sub
-
-    Private Sub NumericUpDownCantidad_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDownCantidad.ValueChanged
-        txtcompra.Text = FormatCurrency(Val(txtprecio.Text) * NumericUpDownCantidad.Value)
-=======
     Private Sub txtbuscar_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtbuscar.TextChanged
         funcion.busquedaprovee(txtbuscar.Text, DataGridViewCompras)
     End Sub
 
     Private Sub DataGridViewCompras_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCompras.CellContentClick
 
->>>>>>> master
     End Sub
 End Class

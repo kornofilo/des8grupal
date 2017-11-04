@@ -22,12 +22,17 @@ Partial Class Compras
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.rbconta = New System.Windows.Forms.RadioButton()
         Me.rbcredi = New System.Windows.Forms.RadioButton()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.txtidprovee = New System.Windows.Forms.TextBox()
+        Me.txtidproduc = New System.Windows.Forms.TextBox()
         Me.txtprecio = New System.Windows.Forms.TextBox()
+        Me.txtnomb = New System.Windows.Forms.TextBox()
         Me.txtcompra = New System.Windows.Forms.TextBox()
         Me.DataGridViewCompras = New System.Windows.Forms.DataGridView()
         Me.Label8 = New System.Windows.Forms.Label()
@@ -42,21 +47,15 @@ Partial Class Compras
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btagregar = New System.Windows.Forms.Button()
         Me.lbn = New System.Windows.Forms.Label()
+        Me.txtcant = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBoxProveedores = New System.Windows.Forms.ComboBox()
-        Me.ComboBoxProductos = New System.Windows.Forms.ComboBox()
-        Me.NumericUpDownCantidad = New System.Windows.Forms.NumericUpDown()
         CType(Me.DataGridViewCompras, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.StatusStrip1.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.NumericUpDownCantidad, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-<<<<<<< HEAD
-=======
         'Label2
         '
         Me.Label2.AutoSize = True
@@ -67,51 +66,31 @@ Partial Class Compras
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "ID PROVEEDOR"
         '
->>>>>>> master
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.Label3.Location = New System.Drawing.Point(769, 129)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(159, 29)
-=======
         Me.Label3.Location = New System.Drawing.Point(19, 152)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(149, 24)
->>>>>>> master
         Me.Label3.TabIndex = 2
-        Me.Label3.Text = "PRODUCTO"
+        Me.Label3.Text = "ID PRODUCTO"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.Label4.Location = New System.Drawing.Point(769, 242)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(239, 29)
-=======
         Me.Label4.Location = New System.Drawing.Point(455, 145)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(86, 24)
->>>>>>> master
         Me.Label4.TabIndex = 3
-        Me.Label4.Text = "PRECIO UNITARIO"
+        Me.Label4.Text = "PRECIO"
         '
         'rbconta
         '
         Me.rbconta.AutoSize = True
         Me.rbconta.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.rbconta.Location = New System.Drawing.Point(247, 200)
-        Me.rbconta.Margin = New System.Windows.Forms.Padding(4)
-=======
         Me.rbconta.Location = New System.Drawing.Point(887, 131)
->>>>>>> master
         Me.rbconta.Name = "rbconta"
         Me.rbconta.Size = New System.Drawing.Size(105, 24)
         Me.rbconta.TabIndex = 5
@@ -123,12 +102,7 @@ Partial Class Compras
         '
         Me.rbcredi.AutoSize = True
         Me.rbcredi.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.rbcredi.Location = New System.Drawing.Point(247, 232)
-        Me.rbcredi.Margin = New System.Windows.Forms.Padding(4)
-=======
         Me.rbcredi.Location = New System.Drawing.Point(887, 157)
->>>>>>> master
         Me.rbcredi.Name = "rbcredi"
         Me.rbcredi.Size = New System.Drawing.Size(99, 24)
         Me.rbcredi.TabIndex = 6
@@ -136,8 +110,6 @@ Partial Class Compras
         Me.rbcredi.Text = "CRÉDITO"
         Me.rbcredi.UseVisualStyleBackColor = True
         '
-<<<<<<< HEAD
-=======
         'Label6
         '
         Me.Label6.AutoSize = True
@@ -148,19 +120,10 @@ Partial Class Compras
         Me.Label6.TabIndex = 7
         Me.Label6.Text = "NOMBRE"
         '
->>>>>>> master
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.Label7.Location = New System.Drawing.Point(769, 298)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(97, 29)
-        Me.Label7.TabIndex = 8
-        Me.Label7.Text = "TOTAL"
-=======
         Me.Label7.Location = New System.Drawing.Point(455, 196)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(205, 24)
@@ -182,20 +145,10 @@ Partial Class Compras
         Me.txtidproduc.Name = "txtidproduc"
         Me.txtidproduc.Size = New System.Drawing.Size(88, 28)
         Me.txtidproduc.TabIndex = 11
->>>>>>> master
         '
         'txtprecio
         '
-        Me.txtprecio.Enabled = False
         Me.txtprecio.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.txtprecio.Location = New System.Drawing.Point(1013, 242)
-        Me.txtprecio.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtprecio.Name = "txtprecio"
-        Me.txtprecio.Size = New System.Drawing.Size(165, 34)
-        Me.txtprecio.TabIndex = 12
-        '
-=======
         Me.txtprecio.Location = New System.Drawing.Point(715, 149)
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.Size = New System.Drawing.Size(88, 28)
@@ -209,32 +162,18 @@ Partial Class Compras
         Me.txtnomb.Size = New System.Drawing.Size(88, 28)
         Me.txtnomb.TabIndex = 14
         '
->>>>>>> master
         'txtcompra
         '
-        Me.txtcompra.Enabled = False
         Me.txtcompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.txtcompra.Location = New System.Drawing.Point(1013, 295)
-        Me.txtcompra.Margin = New System.Windows.Forms.Padding(4)
-        Me.txtcompra.Name = "txtcompra"
-        Me.txtcompra.Size = New System.Drawing.Size(165, 34)
-=======
         Me.txtcompra.Location = New System.Drawing.Point(715, 192)
         Me.txtcompra.Name = "txtcompra"
         Me.txtcompra.Size = New System.Drawing.Size(88, 28)
->>>>>>> master
         Me.txtcompra.TabIndex = 15
         '
         'DataGridViewCompras
         '
         Me.DataGridViewCompras.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-<<<<<<< HEAD
-        Me.DataGridViewCompras.Location = New System.Drawing.Point(23, 423)
-        Me.DataGridViewCompras.Margin = New System.Windows.Forms.Padding(4)
-=======
         Me.DataGridViewCompras.Location = New System.Drawing.Point(17, 344)
->>>>>>> master
         Me.DataGridViewCompras.Name = "DataGridViewCompras"
         Me.DataGridViewCompras.Size = New System.Drawing.Size(1010, 236)
         Me.DataGridViewCompras.TabIndex = 16
@@ -243,12 +182,7 @@ Partial Class Compras
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.Label8.Location = New System.Drawing.Point(27, 199)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
         Me.Label8.Location = New System.Drawing.Point(870, 102)
->>>>>>> master
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(155, 24)
         Me.Label8.TabIndex = 17
@@ -267,20 +201,11 @@ Partial Class Compras
         '
         'txtbuscar
         '
-<<<<<<< HEAD
-        Me.TextBox5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox5.Location = New System.Drawing.Point(1229, 382)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(139, 34)
-        Me.TextBox5.TabIndex = 19
-=======
         Me.txtbuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtbuscar.Location = New System.Drawing.Point(859, 310)
         Me.txtbuscar.Name = "txtbuscar"
         Me.txtbuscar.Size = New System.Drawing.Size(152, 28)
         Me.txtbuscar.TabIndex = 19
->>>>>>> master
         '
         'StatusStrip1
         '
@@ -288,13 +213,8 @@ Partial Class Compras
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusConnectionDB})
         Me.StatusStrip1.Location = New System.Drawing.Point(0, 583)
         Me.StatusStrip1.Name = "StatusStrip1"
-<<<<<<< HEAD
-        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 13, 0)
-        Me.StatusStrip1.Size = New System.Drawing.Size(1395, 33)
-=======
         Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 10, 0)
         Me.StatusStrip1.Size = New System.Drawing.Size(1023, 26)
->>>>>>> master
         Me.StatusStrip1.TabIndex = 24
         Me.StatusStrip1.Text = "StatusStrip1"
         '
@@ -382,19 +302,12 @@ Partial Class Compras
         '
         Me.lbn.AutoSize = True
         Me.lbn.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.lbn.Location = New System.Drawing.Point(961, 383)
-        Me.lbn.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
         Me.lbn.Location = New System.Drawing.Point(576, 298)
->>>>>>> master
         Me.lbn.Name = "lbn"
         Me.lbn.Size = New System.Drawing.Size(154, 25)
         Me.lbn.TabIndex = 30
         Me.lbn.Text = "PROVEEDOR"
         '
-<<<<<<< HEAD
-=======
         'txtcant
         '
         Me.txtcant.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -403,75 +316,23 @@ Partial Class Compras
         Me.txtcant.Size = New System.Drawing.Size(88, 28)
         Me.txtcant.TabIndex = 32
         '
->>>>>>> master
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-<<<<<<< HEAD
-        Me.Label1.Location = New System.Drawing.Point(769, 199)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-=======
         Me.Label1.Location = New System.Drawing.Point(455, 111)
->>>>>>> master
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(113, 24)
         Me.Label1.TabIndex = 31
         Me.Label1.Text = "CANTIDAD"
-        '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(27, 129)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(174, 29)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "PROVEEDOR"
-        '
-        'ComboBoxProveedores
-        '
-        Me.ComboBoxProveedores.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBoxProveedores.FormattingEnabled = True
-        Me.ComboBoxProveedores.Location = New System.Drawing.Point(247, 121)
-        Me.ComboBoxProveedores.Name = "ComboBoxProveedores"
-        Me.ComboBoxProveedores.Size = New System.Drawing.Size(368, 37)
-        Me.ComboBoxProveedores.TabIndex = 33
-        '
-        'ComboBoxProductos
-        '
-        Me.ComboBoxProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBoxProductos.FormattingEnabled = True
-        Me.ComboBoxProductos.Location = New System.Drawing.Point(1015, 129)
-        Me.ComboBoxProductos.Name = "ComboBoxProductos"
-        Me.ComboBoxProductos.Size = New System.Drawing.Size(368, 37)
-        Me.ComboBoxProductos.TabIndex = 34
-        '
-        'NumericUpDownCantidad
-        '
-        Me.NumericUpDownCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDownCantidad.Location = New System.Drawing.Point(1015, 195)
-        Me.NumericUpDownCantidad.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
-        Me.NumericUpDownCantidad.Name = "NumericUpDownCantidad"
-        Me.NumericUpDownCantidad.Size = New System.Drawing.Size(120, 34)
-        Me.NumericUpDownCantidad.TabIndex = 35
-        Me.NumericUpDownCantidad.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Compras
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.MenuBar
-<<<<<<< HEAD
-        Me.ClientSize = New System.Drawing.Size(1395, 750)
-        Me.Controls.Add(Me.NumericUpDownCantidad)
-        Me.Controls.Add(Me.ComboBoxProductos)
-        Me.Controls.Add(Me.ComboBoxProveedores)
-=======
         Me.ClientSize = New System.Drawing.Size(1023, 609)
         Me.Controls.Add(Me.txtcant)
->>>>>>> master
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lbn)
         Me.Controls.Add(Me.PictureBox3)
@@ -486,17 +347,17 @@ Partial Class Compras
         Me.Controls.Add(Me.Label8)
         Me.Controls.Add(Me.DataGridViewCompras)
         Me.Controls.Add(Me.txtcompra)
+        Me.Controls.Add(Me.txtnomb)
         Me.Controls.Add(Me.txtprecio)
+        Me.Controls.Add(Me.txtidproduc)
+        Me.Controls.Add(Me.txtidprovee)
         Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.rbcredi)
         Me.Controls.Add(Me.rbconta)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-<<<<<<< HEAD
-        Me.Margin = New System.Windows.Forms.Padding(4)
-=======
->>>>>>> master
         Me.Name = "Compras"
         Me.Text = "Compras"
         CType(Me.DataGridViewCompras, System.ComponentModel.ISupportInitialize).EndInit()
@@ -505,17 +366,21 @@ Partial Class Compras
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.NumericUpDownCantidad, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents rbconta As System.Windows.Forms.RadioButton
     Friend WithEvents rbcredi As System.Windows.Forms.RadioButton
+    Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents txtidprovee As System.Windows.Forms.TextBox
+    Friend WithEvents txtidproduc As System.Windows.Forms.TextBox
     Friend WithEvents txtprecio As System.Windows.Forms.TextBox
+    Friend WithEvents txtnomb As System.Windows.Forms.TextBox
     Friend WithEvents txtcompra As System.Windows.Forms.TextBox
     Friend WithEvents DataGridViewCompras As System.Windows.Forms.DataGridView
     Friend WithEvents Label8 As Label
@@ -530,9 +395,6 @@ Partial Class Compras
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents lbn As System.Windows.Forms.Label
+    Friend WithEvents txtcant As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBoxProveedores As ComboBox
-    Friend WithEvents ComboBoxProductos As ComboBox
-    Friend WithEvents NumericUpDownCantidad As NumericUpDown
 End Class

@@ -8,7 +8,7 @@ Public Class fcompras
         Try
             Dim sql As String = "SELECT nombre FROM proveedores where idproveedor = ?ident"
             Dim cmd As New MySqlCommand(sql, connection_db)
-            cmd.Parameters.AddWithValue("?ident", Compras.ComboBoxProveedores.SelectedValue.Text)
+            cmd.Parameters.AddWithValue("?ident", Compras.txtidprovee.Text)
 
             Dim DataAdapter As New MySqlDataAdapter(cmd)
             Dim dt As New DataTable
@@ -45,23 +45,6 @@ Public Class fcompras
             cmd.Parameters.AddWithValue("@_totalcompr", dts.totalcompra)
             cmd.Parameters.AddWithValue("@_tipocompr", dts.tipocompra)
             cmd.Parameters.AddWithValue("@_cxp", dts.cxp)
-<<<<<<< HEAD
-            If cmd.ExecuteNonQuery Then
-                Return True
-            Else
-                Return False
-            End If
-        Catch ex As Exception
-
-            MsgBox(ex.Message)
-            Return False
-        Finally
-            desconectado()
-        End Try
-
-    End Function
-End Class
-=======
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -89,4 +72,3 @@ End Class
         End Try
     End Sub
 End Class
->>>>>>> master
