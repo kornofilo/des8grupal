@@ -45,6 +45,7 @@ Public Class fcompras
             cmd.Parameters.AddWithValue("@_totalcompr", dts.totalcompra)
             cmd.Parameters.AddWithValue("@_tipocompr", dts.tipocompra)
             cmd.Parameters.AddWithValue("@_cxp", dts.cxp)
+<<<<<<< HEAD
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
@@ -60,3 +61,32 @@ Public Class fcompras
 
     End Function
 End Class
+=======
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+            End If
+        Catch ex As Exception
+
+            MsgBox(ex.Message)
+            Return False
+        Finally
+            desconectado()
+        End Try
+
+    End Function
+
+    Sub busquedaprovee(ByVal no As String, ByVal DataGridViewCompras As DataGridView)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("Select * from compras where nombre like '" & "%" + no + "%" & "'", connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            DataGridViewCompras.DataSource = MyDataTable
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+End Class
+>>>>>>> master

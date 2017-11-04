@@ -15,7 +15,7 @@ Public Class ConnectionDB
     Sub New()
         Try
             connection_db = New MySqlConnection With {
-                .ConnectionString = "Server=localhost; Database= cuentasxpagar; User id = root;  password=12345;"
+                .ConnectionString = "Server=localhost; Database= cuentasxpagar; User id = root;  password=;"
             }
             connection_db.Open()
 

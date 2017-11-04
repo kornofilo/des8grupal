@@ -71,6 +71,7 @@
     End Sub
 
 
+<<<<<<< HEAD
 
     Private Sub ComboBoxProductos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBoxProductos.SelectedIndexChanged
         obj.GetPrecio(ComboBoxProductos.SelectedValue.ToString)
@@ -79,5 +80,13 @@
 
     Private Sub NumericUpDownCantidad_ValueChanged(sender As Object, e As EventArgs) Handles NumericUpDownCantidad.ValueChanged
         txtcompra.Text = FormatCurrency(Val(txtprecio.Text) * NumericUpDownCantidad.Value)
+=======
+    Private Sub txtbuscar_TextChanged(sender As System.Object, e As System.EventArgs) Handles txtbuscar.TextChanged
+        funcion.busquedaprovee(txtbuscar.Text, DataGridViewCompras)
+    End Sub
+
+    Private Sub DataGridViewCompras_CellContentClick(sender As System.Object, e As System.Windows.Forms.DataGridViewCellEventArgs) Handles DataGridViewCompras.CellContentClick
+
+>>>>>>> master
     End Sub
 End Class
