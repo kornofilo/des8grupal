@@ -52,7 +52,7 @@
 
             If func.modificar_provee(dts) Then
                 MessageBox.Show("Produccion Modificado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
-
+                Proveedores.Show()
 
 
             Else
@@ -60,6 +60,7 @@
 
 
             End If
+            mostrar()
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
@@ -67,6 +68,12 @@
     End Sub
 
     Private Sub btsal_Click(sender As System.Object, e As System.EventArgs) Handles btsal.Click
-        Proveedores.Show()
+
+    End Sub
+    Public Sub mostrar()
+        Try
+            obj.ShowDataGrid("proveedores", Proveedores.dataprovee)
+        Catch ex As Exception
+        End Try
     End Sub
 End Class
