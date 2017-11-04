@@ -94,6 +94,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fproveedor.vb" />
+    <Compile Include="PagoBuscar.Designer.vb">
+      <DependentUpon>PagoBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PagoBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PagoRegistrar.Designer.vb">
+      <DependentUpon>PagoRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PagoRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Registro_provee.Designer.vb">
       <DependentUpon>Registro_provee.vb</DependentUpon>
     </Compile>
@@ -128,6 +140,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoBuscar.resx">
+      <DependentUpon>PagoBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PagoRegistrar.resx">
+      <DependentUpon>PagoRegistrar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registro_provee.resx">
       <DependentUpon>Registro_provee.vb</DependentUpon>

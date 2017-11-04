@@ -16,7 +16,14 @@ Public Class Menu
 
     End Sub
 
-    Private Sub Menu_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+
+    Private Sub RegistrarPagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarPagoToolStripMenuItem.Click
+        PagoRegistrar.Show()
+
+    End Sub
+
+    Private Sub ConsultarPagosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarPagosToolStripMenuItem.Click
+        PagoBuscar.Show()
     End Sub
 End Class

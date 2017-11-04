@@ -27,13 +27,16 @@ Partial Class Menu
         Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ARTICULOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PAGOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrarPagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarPagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REToolStripMenuItem, Me.PROVEEDORToolStripMenuItem, Me.ARTICULOToolStripMenuItem, Me.ComprasToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REToolStripMenuItem, Me.PROVEEDORToolStripMenuItem, Me.ARTICULOToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.PAGOSToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
@@ -65,6 +68,25 @@ Partial Class Menu
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
         Me.ComprasToolStripMenuItem.Text = "COMPRAS"
         '
+        'PAGOSToolStripMenuItem
+        '
+        Me.PAGOSToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegistrarPagoToolStripMenuItem, Me.ConsultarPagosToolStripMenuItem})
+        Me.PAGOSToolStripMenuItem.Name = "PAGOSToolStripMenuItem"
+        Me.PAGOSToolStripMenuItem.Size = New System.Drawing.Size(67, 24)
+        Me.PAGOSToolStripMenuItem.Text = "PAGOS"
+        '
+        'RegistrarPagoToolStripMenuItem
+        '
+        Me.RegistrarPagoToolStripMenuItem.Name = "RegistrarPagoToolStripMenuItem"
+        Me.RegistrarPagoToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
+        Me.RegistrarPagoToolStripMenuItem.Text = "Registrar Pago"
+        '
+        'ConsultarPagosToolStripMenuItem
+        '
+        Me.ConsultarPagosToolStripMenuItem.Name = "ConsultarPagosToolStripMenuItem"
+        Me.ConsultarPagosToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
+        Me.ConsultarPagosToolStripMenuItem.Text = "Consultar Pagos"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -86,4 +108,7 @@ Partial Class Menu
     Friend WithEvents PROVEEDORToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ARTICULOToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents PAGOSToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents RegistrarPagoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarPagosToolStripMenuItem As ToolStripMenuItem
 End Class
