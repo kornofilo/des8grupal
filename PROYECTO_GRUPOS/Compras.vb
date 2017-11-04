@@ -67,11 +67,15 @@
 
             If func.insert_comp(dts) Then
                 MessageBox.Show("Compra Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                obj.limpiarcampos(Me)
 
+
+            
 
 
             Else
                 MessageBox.Show("Compra Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
 
 
             End If
@@ -80,4 +84,7 @@
         End Try
 
     End Sub
+   
+
+
 End Class

@@ -1,4 +1,6 @@
 ﻿Public Class Registro_provee
+    Dim obj As New ConnectionDB
+
 
     Private Sub btregi_Click(sender As System.Object, e As System.EventArgs) Handles btregi.Click
         Try
@@ -20,7 +22,7 @@
             If func.insertar(dts) Then
                 MessageBox.Show("Produccion Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Proveedores.Show()
-
+                obj.limpiarcampos(Me)
 
             Else
                 MessageBox.Show("Produccion Registrado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -51,8 +53,6 @@
             If func.modificar_provee(dts) Then
                 MessageBox.Show("Produccion Modificado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-                Proveedores.Show()
-
 
 
             Else
@@ -66,11 +66,7 @@
 
     End Sub
 
-    Private Sub PROVEEDOR_Enter(sender As System.Object, e As System.EventArgs) Handles PROVEEDOR.Enter
-
-    End Sub
-
-    Private Sub Registro_provee_Load(sender As System.Object, e As System.EventArgs) Handles MyBase.Load
-
+    Private Sub btsal_Click(sender As System.Object, e As System.EventArgs) Handles btsal.Click
+        Proveedores.Show()
     End Sub
 End Class

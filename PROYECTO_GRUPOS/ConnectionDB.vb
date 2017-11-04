@@ -64,6 +64,26 @@ Public Class ConnectionDB
         End Try
     End Sub
 
-  
-    
+    Public Sub limpiarcampos(ByVal form As Form)
+        Dim text As Object
+        Dim combo As Object
+        Dim radiob As Object
+
+        For Each text In form.Controls
+            If TypeOf text Is TextBox Then
+                Dim txttemp As TextBox = CType(text, TextBox)
+                txttemp.Text = ""
+            ElseIf TypeOf combo Is ComboBox Then
+                Dim cmbtemp As ComboBox = CType(combo, ComboBox)
+                cmbtemp.Text = ""
+            ElseIf TypeOf radiob Is RadioButton Then
+                Dim rdbtemp As RadioButton = CType(radiob, RadioButton)
+                rdbtemp.Checked = False
+            End If
+
+        Next
+
+
+    End Sub
+
 End Class
