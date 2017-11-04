@@ -8,7 +8,7 @@ Public Class fcompras
         Try
             Dim sql As String = "SELECT nombre FROM proveedores where idproveedor = ?ident"
             Dim cmd As New MySqlCommand(sql, connection_db)
-            cmd.Parameters.AddWithValue("?ident", Compras.txtidprovee.Text)
+            cmd.Parameters.AddWithValue("?ident", Compras.ComboBoxProveedores.SelectedValue.Text)
 
             Dim DataAdapter As New MySqlDataAdapter(cmd)
             Dim dt As New DataTable
