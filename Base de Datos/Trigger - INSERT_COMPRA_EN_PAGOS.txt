@@ -1,0 +1,8 @@
+CREATE TRIGGER `INSERT_COMPRA_EN_PAGOS` AFTER INSERT ON `compras`
+ FOR EACH ROW BEGIN 
+	IF NEW.tipoCompra = 'Crédito' THEN
+		INSERT INTO pagos VALUES (NULL,NEW.idproveedor,NEW.totalCompra, NEW.fecha, NEW.idCompra, NEW.totalCompra);
+    ELSE
+    INSERT INTO pagos VALUES (NULL,NEW.idproveedor,NEW.totalCompra, NEW.fecha, NEW.idCompra, 0);
+	END IF;
+END
