@@ -47,7 +47,7 @@
             Else
                 rbcredi.Checked = True
                 rbcredi.Text = "Credito"
-                dts.tipocompra = rbconta.Text
+                dts.tipocompra = rbcredi.Text
                 compra = Val(txtcant.Text) * Val(txtprecio.Text)
                 txtcompra.Text = compra
                 dts.totalcompra = txtcompra.Text
