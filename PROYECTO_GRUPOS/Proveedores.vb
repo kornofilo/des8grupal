@@ -51,4 +51,35 @@
 
 
     End Sub
+
+    Private Sub bteliminar_Click(sender As System.Object, e As System.EventArgs) Handles bteliminar.Click
+        Dim rest As DialogResult
+        rest = MessageBox.Show("Realmente quiere eliminar Proveedores selecionados", "Eliminar Registro", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+        If rest = DialogResult.OK Then
+            Try
+                For Each row As DataGridViewRow In dataprovee.Rows
+                    Dim marcado As Boolean = Convert.ToBoolean(row.Cells("ELIMINAR").Value)
+
+                    If marcado Then
+                        Dim onekey As Integer = Convert.ToInt32(row.Cells("idproveedor").Value)
+                        Dim vdb As New Datos_Provee
+                        Dim func As New fproveedor
+                        vdb.codigo = onekey
+
+
+                        If func.delete_provee(vdb) Then
+                        Else
+                            MessageBox.Show("Proveedor fue eliminado", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                        End If
+                    End If
+                Next
+                Call mostrar()
+            Catch ex As Exception
+                MsgBox(ex.Message)
+            End Try
+        Else
+            MessageBox.Show("Cancelado eliminacion del registro", "Eliminar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Call mostrar()
+        End If
+    End Sub
 End Class

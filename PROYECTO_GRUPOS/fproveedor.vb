@@ -68,7 +68,25 @@ Public Class fproveedor
         End Try
 
     End Function
+    Public Function delete_provee(ByVal dts As Datos_Provee) As Boolean
+        Try
 
+            cmd = New MySqlCommand("DELETE_PROVEE")
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Connection = connection_db
+            cmd.Parameters.AddWithValue("@_codigo", dts.codigo)
+            If cmd.ExecuteNonQuery Then
+                Return True
+            Else
+                Return False
+
+            End If
+
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            Return False
+        End Try
+    End Function
     Sub busquedaprovee(ByVal no As String, ByVal dataprovee As DataGridView)
         Try
             Dim adaptador As MySqlDataAdapter

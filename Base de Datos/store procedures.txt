@@ -11,3 +11,10 @@ DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_COMP`(IN `_idcompra` INT(7), IN `_idprovee` INT(7), IN `_nombre` VARCHAR(25), IN `_idproduc` INT(7), IN `_produc` VARCHAR(25), IN `_cant` INT(4), IN `_costouni` DECIMAL(15,2), IN `_totalcompr` DECIMAL(15,2), IN `_tipocompr` VARCHAR(20), IN `_cxp` INT(6))
 INSERT INTO `compras`(`idCompra`, `idproveedor`, `nombre`, `fecha`, `idProducto`, `producto`, `cantidad`, `costoUnitario`, `totalCompra`, `tipoCompra`, `cxp`)VALUES (_idcompra,_idprovee,_nombre,NOW(),_idproduc,_produc,_cant,_costouni,_totalcompr,_tipocompr,_cxp)$$
 DELIMITER ;
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `DELETE_PROVEE`(
+_codigo int(6)
+
+)
+DELETE FROM  `proveedores` WHERE idproveedor = _codigo$$
+DELIMITER ;

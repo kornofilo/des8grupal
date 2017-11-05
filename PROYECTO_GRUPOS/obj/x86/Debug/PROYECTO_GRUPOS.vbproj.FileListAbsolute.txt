@@ -41,3 +41,5 @@ C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECT
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.Menu.resources
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.PagoBuscar.resources
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.PagoRegistrar.resources
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.PagoBuscar.resources
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.PagoRegistrar.resources

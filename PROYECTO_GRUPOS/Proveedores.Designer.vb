@@ -24,13 +24,18 @@ Partial Class Proveedores
     Private Sub InitializeComponent()
         Me.dataprovee = New System.Windows.Forms.DataGridView()
         Me.txtbuscar = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.ELIMINAR = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.bteliminar = New System.Windows.Forms.Button()
+        Me.Label9 = New System.Windows.Forms.Label()
         CType(Me.dataprovee, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dataprovee
         '
         Me.dataprovee.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dataprovee.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ELIMINAR})
         Me.dataprovee.Location = New System.Drawing.Point(36, 164)
         Me.dataprovee.Name = "dataprovee"
         Me.dataprovee.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
@@ -39,36 +44,68 @@ Partial Class Proveedores
         '
         'txtbuscar
         '
-        Me.txtbuscar.Location = New System.Drawing.Point(131, 121)
+        Me.txtbuscar.Location = New System.Drawing.Point(90, 127)
         Me.txtbuscar.Name = "txtbuscar"
         Me.txtbuscar.Size = New System.Drawing.Size(213, 20)
         Me.txtbuscar.TabIndex = 1
         '
-        'Label1
+        'PictureBox1
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(53, 124)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(51, 13)
-        Me.Label1.TabIndex = 2
-        Me.Label1.Text = "BUSCAR"
+        Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Search
+        Me.PictureBox1.Location = New System.Drawing.Point(36, 110)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
+        '
+        'ELIMINAR
+        '
+        Me.ELIMINAR.HeaderText = "ELIMINAR"
+        Me.ELIMINAR.Name = "ELIMINAR"
+        '
+        'bteliminar
+        '
+        Me.bteliminar.Location = New System.Drawing.Point(617, 119)
+        Me.bteliminar.Name = "bteliminar"
+        Me.bteliminar.Size = New System.Drawing.Size(100, 34)
+        Me.bteliminar.TabIndex = 3
+        Me.bteliminar.Text = "&Eliminar"
+        Me.bteliminar.UseVisualStyleBackColor = True
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.Font = New System.Drawing.Font("Copperplate Gothic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(297, 37)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(250, 30)
+        Me.Label9.TabIndex = 19
+        Me.Label9.Text = "PROVEEDORES"
         '
         'Proveedores
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(778, 483)
-        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.bteliminar)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.txtbuscar)
         Me.Controls.Add(Me.dataprovee)
         Me.Name = "Proveedores"
         Me.Text = "Proveedores"
         CType(Me.dataprovee, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
     Friend WithEvents dataprovee As System.Windows.Forms.DataGridView
     Friend WithEvents txtbuscar As System.Windows.Forms.TextBox
-    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ELIMINAR As System.Windows.Forms.DataGridViewCheckBoxColumn
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents bteliminar As System.Windows.Forms.Button
+    Friend WithEvents Label9 As System.Windows.Forms.Label
 End Class
