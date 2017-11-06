@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2017 at 12:28 AM
+-- Generation Time: Nov 06, 2017 at 10:23 PM
 -- Server version: 10.1.25-MariaDB
 -- PHP Version: 7.1.7
 
@@ -25,48 +25,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `devoluciones`
+-- Table structure for table `saldos`
 --
 
-CREATE TABLE `devoluciones` (
-  `IDDevolucion` int(5) NOT NULL,
-  `IDproveedor` varchar(25) NOT NULL,
-  `IDproducto` varchar(25) NOT NULL,
-  `fechaDevolucion` datetime NOT NULL,
-  `cantProductos` int(11) NOT NULL,
-  `idCompra` int(11) NOT NULL,
-  `costoUnitario` decimal(15,2) NOT NULL,
-  `montoDev` decimal(15,2) NOT NULL,
-  `saldo` decimal(15,2) NOT NULL
+CREATE TABLE `saldos` (
+  `idSaldo` int(6) NOT NULL,
+  `idCompra` int(6) NOT NULL,
+  `idProveedor` int(11) NOT NULL,
+  `saldoActual` decimal(15,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Triggers `devoluciones`
+-- Dumping data for table `saldos`
 --
-DELIMITER $$
-CREATE TRIGGER `UPDATE_SALDO_DEVOLUCION` AFTER INSERT ON `devoluciones` FOR EACH ROW UPDATE `saldos` SET `saldoActual`=NEW.saldo WHERE saldos.idCompra = NEW.idCompra
-$$
-DELIMITER ;
+
+
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `devoluciones`
+-- Indexes for table `saldos`
 --
-ALTER TABLE `devoluciones`
-  ADD PRIMARY KEY (`IDDevolucion`);
+ALTER TABLE `saldos`
+  ADD PRIMARY KEY (`idSaldo`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `devoluciones`
+-- AUTO_INCREMENT for table `saldos`
 --
-ALTER TABLE `devoluciones`
-  MODIFY `IDDevolucion` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;COMMIT;
+ALTER TABLE `saldos`
+  MODIFY `idSaldo` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
