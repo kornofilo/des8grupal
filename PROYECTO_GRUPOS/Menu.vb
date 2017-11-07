@@ -26,4 +26,13 @@ Public Class Menu
     Private Sub ConsultarPagosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarPagosToolStripMenuItem.Click
         PagoBuscar.Show()
     End Sub
+
+    Private Sub NuevaDevoluciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaDevoluciónToolStripMenuItem.Click
+        DevolucionesRegistrar.Show()
+
+    End Sub
+
+    Private Sub ConsultarDevoluciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarDevoluciónToolStripMenuItem.Click
+        DevolucionesBuscar.Show()
+    End Sub
 End Class

@@ -32,6 +32,11 @@ PROYECTO_GRUPOS
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Box">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Delete">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.

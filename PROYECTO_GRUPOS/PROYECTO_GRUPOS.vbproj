@@ -81,6 +81,18 @@
     <Compile Include="Datos_Devoluciones.vb" />
     <Compile Include="Datos_Pagos.vb" />
     <Compile Include="Datos_Provee.vb" />
+    <Compile Include="DevolucionesBuscar.Designer.vb">
+      <DependentUpon>DevolucionesBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DevolucionesBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DevolucionesRegistrar.Designer.vb">
+      <DependentUpon>DevolucionesRegistrar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DevolucionesRegistrar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="fcompras.vb" />
     <Compile Include="fdevoluciones.vb" />
     <Compile Include="fpagos.vb" />
@@ -139,6 +151,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DevolucionesBuscar.resx">
+      <DependentUpon>DevolucionesBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DevolucionesRegistrar.resx">
+      <DependentUpon>DevolucionesRegistrar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +222,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Money-64a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Box.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
