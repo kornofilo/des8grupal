@@ -48,4 +48,8 @@
         End If
 
     End Sub
+
+    Private Sub GroupBoxDatosCompra_Enter(sender As Object, e As EventArgs) Handles GroupBoxDatosCompra.Enter
+
+    End Sub
 End Class

@@ -22,6 +22,7 @@ Partial Class PagoRegistrar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PagoRegistrar))
         Me.ButtonRegistrarPago = New System.Windows.Forms.Button()
         Me.GroupBoxDatosCompra = New System.Windows.Forms.GroupBox()
         Me.LabelSaldoActual = New System.Windows.Forms.Label()
@@ -68,7 +69,7 @@ Partial Class PagoRegistrar
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProveedorCompra)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFechaCompra)
         Me.GroupBoxDatosCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(39, 150)
+        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(45, 148)
         Me.GroupBoxDatosCompra.Name = "GroupBoxDatosCompra"
         Me.GroupBoxDatosCompra.Size = New System.Drawing.Size(847, 339)
         Me.GroupBoxDatosCompra.TabIndex = 16
@@ -88,7 +89,7 @@ Partial Class PagoRegistrar
         'LabelFormaDePago
         '
         Me.LabelFormaDePago.AutoSize = True
-        Me.LabelFormaDePago.Location = New System.Drawing.Point(481, 84)
+        Me.LabelFormaDePago.Location = New System.Drawing.Point(481, 108)
         Me.LabelFormaDePago.Name = "LabelFormaDePago"
         Me.LabelFormaDePago.Size = New System.Drawing.Size(166, 25)
         Me.LabelFormaDePago.TabIndex = 7
@@ -115,7 +116,7 @@ Partial Class PagoRegistrar
         'LabelCantidadCompra
         '
         Me.LabelCantidadCompra.AutoSize = True
-        Me.LabelCantidadCompra.Location = New System.Drawing.Point(481, 153)
+        Me.LabelCantidadCompra.Location = New System.Drawing.Point(481, 158)
         Me.LabelCantidadCompra.Name = "LabelCantidadCompra"
         Me.LabelCantidadCompra.Size = New System.Drawing.Size(106, 25)
         Me.LabelCantidadCompra.TabIndex = 4
@@ -124,7 +125,7 @@ Partial Class PagoRegistrar
         'LabelProductoCompra
         '
         Me.LabelProductoCompra.AutoSize = True
-        Me.LabelProductoCompra.Location = New System.Drawing.Point(36, 153)
+        Me.LabelProductoCompra.Location = New System.Drawing.Point(6, 108)
         Me.LabelProductoCompra.Name = "LabelProductoCompra"
         Me.LabelProductoCompra.Size = New System.Drawing.Size(105, 25)
         Me.LabelProductoCompra.TabIndex = 3
@@ -133,7 +134,7 @@ Partial Class PagoRegistrar
         'LabelProveedorCompra
         '
         Me.LabelProveedorCompra.AutoSize = True
-        Me.LabelProveedorCompra.Location = New System.Drawing.Point(36, 84)
+        Me.LabelProveedorCompra.Location = New System.Drawing.Point(6, 53)
         Me.LabelProveedorCompra.Name = "LabelProveedorCompra"
         Me.LabelProveedorCompra.Size = New System.Drawing.Size(118, 25)
         Me.LabelProveedorCompra.TabIndex = 2
@@ -142,7 +143,7 @@ Partial Class PagoRegistrar
         'LabelFechaCompra
         '
         Me.LabelFechaCompra.AutoSize = True
-        Me.LabelFechaCompra.Location = New System.Drawing.Point(481, 26)
+        Me.LabelFechaCompra.Location = New System.Drawing.Point(481, 53)
         Me.LabelFechaCompra.Name = "LabelFechaCompra"
         Me.LabelFechaCompra.Size = New System.Drawing.Size(79, 25)
         Me.LabelFechaCompra.TabIndex = 1
@@ -151,7 +152,7 @@ Partial Class PagoRegistrar
         'ButtonBuscar
         '
         Me.ButtonBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonBuscar.Location = New System.Drawing.Point(648, 102)
+        Me.ButtonBuscar.Location = New System.Drawing.Point(639, 105)
         Me.ButtonBuscar.Name = "ButtonBuscar"
         Me.ButtonBuscar.Size = New System.Drawing.Size(106, 40)
         Me.ButtonBuscar.TabIndex = 15
@@ -170,7 +171,7 @@ Partial Class PagoRegistrar
         'TextBoxBuscarCompra
         '
         Me.TextBoxBuscarCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxBuscarCompra.Location = New System.Drawing.Point(437, 105)
+        Me.TextBoxBuscarCompra.Location = New System.Drawing.Point(428, 108)
         Me.TextBoxBuscarCompra.Name = "TextBoxBuscarCompra"
         Me.TextBoxBuscarCompra.Size = New System.Drawing.Size(198, 34)
         Me.TextBoxBuscarCompra.TabIndex = 14
@@ -179,7 +180,7 @@ Partial Class PagoRegistrar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(173, 105)
+        Me.Label2.Location = New System.Drawing.Point(164, 108)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(249, 29)
         Me.Label2.TabIndex = 13
@@ -199,7 +200,7 @@ Partial Class PagoRegistrar
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Money_64a
-        Me.PictureBox1.Location = New System.Drawing.Point(659, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(647, 18)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(64, 64)
@@ -210,7 +211,7 @@ Partial Class PagoRegistrar
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Money_64a
-        Me.PictureBox2.Location = New System.Drawing.Point(222, 11)
+        Me.PictureBox2.Location = New System.Drawing.Point(210, 18)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(64, 64)
@@ -222,7 +223,7 @@ Partial Class PagoRegistrar
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Copperplate Gothic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(315, 25)
+        Me.Label4.Location = New System.Drawing.Point(303, 32)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(311, 37)
         Me.Label4.TabIndex = 31
@@ -243,8 +244,10 @@ Partial Class PagoRegistrar
         Me.Controls.Add(Me.TextBoxBuscarCompra)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label3)
+        Me.ForeColor = System.Drawing.SystemColors.ControlText
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "PagoRegistrar"
-        Me.Text = "S"
+        Me.Text = "Registrar Pago"
         Me.GroupBoxDatosCompra.ResumeLayout(False)
         Me.GroupBoxDatosCompra.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()

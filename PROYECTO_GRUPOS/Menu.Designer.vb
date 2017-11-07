@@ -22,6 +22,7 @@ Partial Class Menu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Menu))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -99,10 +100,10 @@ Partial Class Menu
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Lucida Calligraphy", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(53, 60)
+        Me.Label1.Font = New System.Drawing.Font("Bahnschrift", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(121, 59)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(857, 103)
+        Me.Label1.Size = New System.Drawing.Size(691, 95)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Cuentas por Pagar"
         '
@@ -113,6 +114,7 @@ Partial Class Menu
         Me.ClientSize = New System.Drawing.Size(976, 205)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Menu"

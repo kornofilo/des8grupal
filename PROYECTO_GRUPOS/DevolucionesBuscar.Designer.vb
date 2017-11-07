@@ -22,6 +22,7 @@ Partial Class DevolucionesBuscar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DevolucionesBuscar))
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
@@ -49,7 +50,7 @@ Partial Class DevolucionesBuscar
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Copperplate Gothic Bold", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(363, 27)
+        Me.Label1.Location = New System.Drawing.Point(315, 24)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(382, 37)
         Me.Label1.TabIndex = 34
@@ -58,7 +59,7 @@ Partial Class DevolucionesBuscar
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Box
-        Me.PictureBox1.Location = New System.Drawing.Point(768, 11)
+        Me.PictureBox1.Location = New System.Drawing.Point(720, 8)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(64, 64)
@@ -69,7 +70,7 @@ Partial Class DevolucionesBuscar
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Box
-        Me.PictureBox2.Location = New System.Drawing.Point(283, 11)
+        Me.PictureBox2.Location = New System.Drawing.Point(235, 8)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(64, 64)
@@ -81,7 +82,7 @@ Partial Class DevolucionesBuscar
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(417, 491)
+        Me.Label3.Location = New System.Drawing.Point(370, 501)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(312, 29)
         Me.Label3.TabIndex = 42
@@ -90,7 +91,7 @@ Partial Class DevolucionesBuscar
         'DataGridViewHistorialPagos
         '
         Me.DataGridViewHistorialPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewHistorialPagos.Location = New System.Drawing.Point(119, 533)
+        Me.DataGridViewHistorialPagos.Location = New System.Drawing.Point(93, 533)
         Me.DataGridViewHistorialPagos.Name = "DataGridViewHistorialPagos"
         Me.DataGridViewHistorialPagos.RowTemplate.Height = 24
         Me.DataGridViewHistorialPagos.Size = New System.Drawing.Size(847, 212)
@@ -109,7 +110,7 @@ Partial Class DevolucionesBuscar
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProveedorCompra)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFechaCompra)
         Me.GroupBoxDatosCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(119, 139)
+        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(93, 139)
         Me.GroupBoxDatosCompra.Name = "GroupBoxDatosCompra"
         Me.GroupBoxDatosCompra.Size = New System.Drawing.Size(847, 339)
         Me.GroupBoxDatosCompra.TabIndex = 40
@@ -156,7 +157,7 @@ Partial Class DevolucionesBuscar
         'LabelCantidadCompra
         '
         Me.LabelCantidadCompra.AutoSize = True
-        Me.LabelCantidadCompra.Location = New System.Drawing.Point(481, 153)
+        Me.LabelCantidadCompra.Location = New System.Drawing.Point(481, 128)
         Me.LabelCantidadCompra.Name = "LabelCantidadCompra"
         Me.LabelCantidadCompra.Size = New System.Drawing.Size(106, 25)
         Me.LabelCantidadCompra.TabIndex = 4
@@ -165,7 +166,7 @@ Partial Class DevolucionesBuscar
         'LabelProductoCompra
         '
         Me.LabelProductoCompra.AutoSize = True
-        Me.LabelProductoCompra.Location = New System.Drawing.Point(36, 153)
+        Me.LabelProductoCompra.Location = New System.Drawing.Point(6, 84)
         Me.LabelProductoCompra.Name = "LabelProductoCompra"
         Me.LabelProductoCompra.Size = New System.Drawing.Size(105, 25)
         Me.LabelProductoCompra.TabIndex = 3
@@ -174,7 +175,7 @@ Partial Class DevolucionesBuscar
         'LabelProveedorCompra
         '
         Me.LabelProveedorCompra.AutoSize = True
-        Me.LabelProveedorCompra.Location = New System.Drawing.Point(36, 84)
+        Me.LabelProveedorCompra.Location = New System.Drawing.Point(6, 47)
         Me.LabelProveedorCompra.Name = "LabelProveedorCompra"
         Me.LabelProveedorCompra.Size = New System.Drawing.Size(118, 25)
         Me.LabelProveedorCompra.TabIndex = 2
@@ -183,7 +184,7 @@ Partial Class DevolucionesBuscar
         'LabelFechaCompra
         '
         Me.LabelFechaCompra.AutoSize = True
-        Me.LabelFechaCompra.Location = New System.Drawing.Point(481, 26)
+        Me.LabelFechaCompra.Location = New System.Drawing.Point(481, 47)
         Me.LabelFechaCompra.Name = "LabelFechaCompra"
         Me.LabelFechaCompra.Size = New System.Drawing.Size(79, 25)
         Me.LabelFechaCompra.TabIndex = 1
@@ -231,6 +232,7 @@ Partial Class DevolucionesBuscar
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "DevolucionesBuscar"
         Me.Text = "Consulta de Devoluciones"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
