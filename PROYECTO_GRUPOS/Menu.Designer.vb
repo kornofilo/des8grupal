@@ -23,44 +23,34 @@ Partial Class Menu
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
-        Me.REToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PROVEEDORToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ARTICULOToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PAGOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarPagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarPagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DEVOLUCIONESToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NuevaDevoluciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ConsultarDevoluciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.REToolStripMenuItem, Me.PROVEEDORToolStripMenuItem, Me.ARTICULOToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.PAGOSToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.PROVEEDORToolStripMenuItem, Me.ComprasToolStripMenuItem, Me.PAGOSToolStripMenuItem, Me.DEVOLUCIONESToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(8, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1023, 28)
+        Me.MenuStrip1.Size = New System.Drawing.Size(976, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
-        '
-        'REToolStripMenuItem
-        '
-        Me.REToolStripMenuItem.Name = "REToolStripMenuItem"
-        Me.REToolStripMenuItem.Size = New System.Drawing.Size(98, 24)
-        Me.REToolStripMenuItem.Text = "RECEPCION"
         '
         'PROVEEDORToolStripMenuItem
         '
         Me.PROVEEDORToolStripMenuItem.Name = "PROVEEDORToolStripMenuItem"
         Me.PROVEEDORToolStripMenuItem.Size = New System.Drawing.Size(105, 24)
         Me.PROVEEDORToolStripMenuItem.Text = "PROVEEDOR"
-        '
-        'ARTICULOToolStripMenuItem
-        '
-        Me.ARTICULOToolStripMenuItem.Name = "ARTICULOToolStripMenuItem"
-        Me.ARTICULOToolStripMenuItem.Size = New System.Drawing.Size(87, 24)
-        Me.ARTICULOToolStripMenuItem.Text = "ARTICULO"
         '
         'ComprasToolStripMenuItem
         '
@@ -79,7 +69,7 @@ Partial Class Menu
         '
         Me.RegistrarPagoToolStripMenuItem.Name = "RegistrarPagoToolStripMenuItem"
         Me.RegistrarPagoToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
-        Me.RegistrarPagoToolStripMenuItem.Text = "Registrar Pago"
+        Me.RegistrarPagoToolStripMenuItem.Text = "Nuevo Pago"
         '
         'ConsultarPagosToolStripMenuItem
         '
@@ -87,16 +77,46 @@ Partial Class Menu
         Me.ConsultarPagosToolStripMenuItem.Size = New System.Drawing.Size(189, 26)
         Me.ConsultarPagosToolStripMenuItem.Text = "Consultar Pagos"
         '
+        'DEVOLUCIONESToolStripMenuItem
+        '
+        Me.DEVOLUCIONESToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaDevoluciónToolStripMenuItem, Me.ConsultarDevoluciónToolStripMenuItem})
+        Me.DEVOLUCIONESToolStripMenuItem.Name = "DEVOLUCIONESToolStripMenuItem"
+        Me.DEVOLUCIONESToolStripMenuItem.Size = New System.Drawing.Size(128, 24)
+        Me.DEVOLUCIONESToolStripMenuItem.Text = "DEVOLUCIONES"
+        '
+        'NuevaDevoluciónToolStripMenuItem
+        '
+        Me.NuevaDevoluciónToolStripMenuItem.Name = "NuevaDevoluciónToolStripMenuItem"
+        Me.NuevaDevoluciónToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
+        Me.NuevaDevoluciónToolStripMenuItem.Text = "Nueva Devolución"
+        '
+        'ConsultarDevoluciónToolStripMenuItem
+        '
+        Me.ConsultarDevoluciónToolStripMenuItem.Name = "ConsultarDevoluciónToolStripMenuItem"
+        Me.ConsultarDevoluciónToolStripMenuItem.Size = New System.Drawing.Size(225, 26)
+        Me.ConsultarDevoluciónToolStripMenuItem.Text = "Consultar Devolución"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Lucida Calligraphy", 48.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(53, 60)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(857, 103)
+        Me.Label1.TabIndex = 1
+        Me.Label1.Text = "Cuentas por Pagar"
+        '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1023, 590)
+        Me.ClientSize = New System.Drawing.Size(976, 205)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MenuStrip1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Menu"
-        Me.Text = "Form1"
+        Me.Text = "Menú Principal"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
@@ -104,11 +124,13 @@ Partial Class Menu
 
     End Sub
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
-    Friend WithEvents REToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents PROVEEDORToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents ARTICULOToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ComprasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PAGOSToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarPagoToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ConsultarPagosToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents DEVOLUCIONESToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NuevaDevoluciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ConsultarDevoluciónToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Label1 As Label
 End Class

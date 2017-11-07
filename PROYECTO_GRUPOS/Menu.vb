@@ -1,7 +1,7 @@
 ﻿
 Public Class Menu
 
-    Private Sub REToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles REToolStripMenuItem.Click
+    Private Sub REToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs)
         Compras.Show()
 
 

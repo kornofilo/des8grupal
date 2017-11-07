@@ -78,8 +78,12 @@
   <ItemGroup>
     <Compile Include="ConnectionDB.vb" />
     <Compile Include="Datos_Compras.vb" />
+    <Compile Include="Datos_Devoluciones.vb" />
+    <Compile Include="Datos_Pagos.vb" />
     <Compile Include="Datos_Provee.vb" />
     <Compile Include="fcompras.vb" />
+    <Compile Include="fdevoluciones.vb" />
+    <Compile Include="fpagos.vb" />
     <Compile Include="Menu.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +98,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fproveedor.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="PagoBuscar.Designer.vb">
       <DependentUpon>PagoBuscar.vb</DependentUpon>
     </Compile>
@@ -116,11 +125,6 @@
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -152,9 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Proveedores.resx">
       <DependentUpon>Proveedores.vb</DependentUpon>
@@ -191,6 +195,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Money-64a.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

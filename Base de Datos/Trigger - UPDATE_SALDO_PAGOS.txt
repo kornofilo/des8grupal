@@ -1,0 +1,4 @@
+DELIMITER $$
+CREATE TRIGGER `UPDATE_SALDO_PAGOS` AFTER INSERT ON `pagos` FOR EACH ROW UPDATE `saldos` SET `saldoActual`=NEW.saldo WHERE saldos.idCompra = NEW.id_compra
+$$
+DELIMITER ;
