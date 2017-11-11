@@ -4,12 +4,8 @@ Public Class Datos_Compras
     Dim _idprovee As Integer
     Dim _nombre As String
     Dim _fecha As Date
-    Dim _idproduc As Integer
-    Dim _produc As String
-    Dim _cant As Integer
-    Dim _costouni As Double
     Dim _totalcompr As Double
-    Dim _tipocompr As String
+    Dim _tipocompra As String
     Dim _cxp As Integer
 
     Public Property idcompra As Integer
@@ -45,41 +41,7 @@ Public Class Datos_Compras
             _fecha = value
         End Set
     End Property
-    Public Property idproducto As Integer
-        Get
-            idproducto = _idproduc
-        End Get
-        Set(value As Integer)
-            _idproduc = value
-        End Set
-    End Property
-    Public Property producto As String
-        Get
-            producto = _produc
-        End Get
-        Set(value As String)
-            _produc = value
-        End Set
 
-    End Property
-    Public Property cantidad As Integer
-        Get
-            cantidad = _cant
-        End Get
-        Set(value As Integer)
-            _cant = value
-        End Set
-
-    End Property
-    Public Property costounidad As Double
-        Get
-            costounidad = _costouni
-        End Get
-        Set(value As Double)
-            _costouni = value
-        End Set
-
-    End Property
     Public Property totalcompra As String
         Get
             totalcompra = _totalcompr
@@ -91,10 +53,10 @@ Public Class Datos_Compras
     End Property
     Public Property tipocompra As String
         Get
-            tipocompra = _tipocompr
+            tipocompra = _tipocompra
         End Get
         Set(value As String)
-            _tipocompr = value
+            _tipocompra = value
         End Set
 
     End Property

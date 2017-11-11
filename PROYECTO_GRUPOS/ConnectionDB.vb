@@ -301,4 +301,25 @@ Public Class ConnectionDB
         End Try
 
     End Sub
+
+    Public Sub GetNumFactura(ByVal LabelNumFac As Label)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("SELECT MAX(idCompra) FROM compras;", connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            'Si encontramos una compra con el código ingresado'
+            If MyDataTable.Rows.Count > 0 Then
+                'Hacemos visible el groupbox con los elementos que muestran los datos de la comora'
+                LabelNumFac.Text = "Factura: #" & (Val(MyDataTable.Rows(0).Item("MAX(idCompra)").ToString) + 1)
+                Compras.IDCompra = Val(MyDataTable.Rows(0).Item("MAX(idCompra)").ToString) + 1
+            Else
+                MsgBox("El número de la orden ingresada no se encuentra registrada.", 16)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection_db.Dispose()
+        End Try
+    End Sub
 End Class

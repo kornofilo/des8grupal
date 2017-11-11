@@ -17,7 +17,7 @@ Public Class fcompras
             If dt.Rows.Count > 0 Then
 
                 Dim row As DataRow = dt.Rows(0)
-                Compras.NombreProveedor = CStr(row("Nombre"))
+                Compras.NombreProveedor = CStr(row("nombre"))
             Else
                 MsgBox("El código de proveedor ingresado no se encuentra registrado en la base de datos. Por favor, intente con otro código.", 48, "No se encontró proveedor")
             End If
@@ -69,19 +69,15 @@ Public Class fcompras
             cmd.Parameters.AddWithValue("@_idprovee", dts.idproveedor)
             cmd.Parameters.AddWithValue("@_nombre", dts.nombre)
             cmd.Parameters.AddWithValue("@_fecha", dts.fecha)
-            cmd.Parameters.AddWithValue("@_idproduc", dts.idproducto)
-            cmd.Parameters.AddWithValue("@_produc", dts.producto)
-            cmd.Parameters.AddWithValue("@_cant", dts.cantidad)
-            cmd.Parameters.AddWithValue("@_costouni", dts.costounidad)
-            cmd.Parameters.AddWithValue("@_totalcompr", dts.totalcompra)
-            cmd.Parameters.AddWithValue("@_tipocompr", dts.tipocompra)
+            cmd.Parameters.AddWithValue("@_totalcompra", dts.totalcompra)
+            cmd.Parameters.AddWithValue("@_tipocompra", dts.tipocompra)
             cmd.Parameters.AddWithValue("@_cxp", dts.cxp)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
                 Return False
             End If
-        Catch ex As Exception
+        Catch ex As MySqlException
 
             MsgBox(ex.Message)
             Return False
