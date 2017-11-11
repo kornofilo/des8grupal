@@ -20,7 +20,8 @@ Public Class ConnectionDB
             connection_db.Open()
 
         Catch ex As Exception
-            MsgBox(ex.ToString, 16, "Connection Error")
+            MsgBox(ex.Message, 16, "Connection Error")
+
 
         End Try
     End Sub

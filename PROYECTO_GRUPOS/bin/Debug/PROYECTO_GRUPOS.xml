@@ -37,6 +37,16 @@ PROYECTO_GRUPOS
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Checkmark">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Checkmark2">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Delete">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
@@ -58,6 +68,16 @@ PROYECTO_GRUPOS
 </summary>
 </member>
 <member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money_64a">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.paying">
+<summary>
+  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.PayOptions">
 <summary>
   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
 </summary>

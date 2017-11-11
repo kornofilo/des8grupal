@@ -53,6 +53,7 @@
                 Proveedores.Show()
 
 
+
             Else
                 MessageBox.Show("Produccion no fue Modificado Correctamente", "Guardar Registro", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
@@ -69,5 +70,13 @@
             obj.ShowDataGrid("proveedores", Proveedores.dataprovee)
         Catch ex As Exception
         End Try
+    End Sub
+
+    Private Sub Registro_provee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub btsal_Click(sender As Object, e As EventArgs) Handles btsal.Click
+        Proveedores.Show()
     End Sub
 End Class

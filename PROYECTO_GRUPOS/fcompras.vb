@@ -6,7 +6,7 @@ Public Class fcompras
     Public Sub Consulta()
 
         Try
-            Dim sql As String = "SELECT nombre FROM proveedores where idproveedor = ?ident"
+            Dim sql As String = "SELECT nombre FROM proveedores where codigo = ?ident"
             Dim cmd As New MySqlCommand(sql, connection_db)
             cmd.Parameters.AddWithValue("?ident", Compras.txtidprovee.Text)
 
@@ -17,9 +17,11 @@ Public Class fcompras
             If dt.Rows.Count > 0 Then
 
                 Dim row As DataRow = dt.Rows(0)
-                Compras.lbn.Text = CStr(row("Nombre"))
-
+                Compras.NombreProveedor = CStr(row("Nombre"))
+            Else
+                MsgBox("El código de proveedor ingresado no se encuentra registrado en la base de datos. Por favor, intente con otro código.", 48, "No se encontró proveedor")
             End If
+
         Catch ex As MySqlException
             MsgBox(ex.ToString)
         Finally
@@ -27,6 +29,35 @@ Public Class fcompras
 
         End Try
     End Sub
+
+    Public Sub ConsultaProducto()
+
+        Try
+            Dim sql As String = "SELECT id_articulo,nombre_art,precio FROM articulos where id_articulo = ?ident"
+            Dim cmd As New MySqlCommand(sql, connection_db)
+            cmd.Parameters.AddWithValue("?ident", Compras.txtidproduc.Text)
+
+            Dim DataAdapter As New MySqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            DataAdapter.Fill(dt)
+
+            If dt.Rows.Count > 0 Then
+
+                Dim row As DataRow = dt.Rows(0)
+                Compras.NombreProducto = CStr(row("nombre_art"))
+                Compras.PrecioProducto = CStr(row("precio"))
+            Else
+                MsgBox("El código del artículo ingresado no se encuentra registrado en la base de datos. Por favor, intente con otro código.", 48, "No se encontró artículo")
+            End If
+
+        Catch ex As MySqlException
+            MsgBox(ex.ToString)
+        Finally
+            connection_db.Dispose()
+
+        End Try
+    End Sub
+
     Public Function insert_comp(ByVal dts As Datos_Compras) As Boolean
         Try
 
