@@ -83,7 +83,7 @@
             Dim funcCDetalle As New fcomprasDetalles
             For index As Integer = 0 To DataGridViewCompras.Rows.Count - 2
                 dtsCompraDetalle.idcompra = IDCompra
-                dtsCompraDetalle.idproveedor = txtidprovee.Text
+                dtsCompraDetalle.idproveedor = DataGridViewCompras.Rows(index).Cells(0).Value.ToString
                 dtsCompraDetalle.producto = DataGridViewCompras.Rows(index).Cells(1).Value.ToString
                 dtsCompraDetalle.cantidad = DataGridViewCompras.Rows(index).Cells(2).Value.ToString
                 dtsCompraDetalle.costounidad = DataGridViewCompras.Rows(index).Cells(3).Value

@@ -29,7 +29,6 @@ Partial Class Menu
         Me.GestiónDeProveedoresToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ComprasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NuevaCompraToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ConsultarFacturaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PAGOSToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarPagoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarPagosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -74,7 +73,7 @@ Partial Class Menu
         '
         'ComprasToolStripMenuItem
         '
-        Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaCompraToolStripMenuItem, Me.ConsultarFacturaToolStripMenuItem})
+        Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaCompraToolStripMenuItem})
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
         Me.ComprasToolStripMenuItem.Text = "COMPRAS"
@@ -82,14 +81,8 @@ Partial Class Menu
         'NuevaCompraToolStripMenuItem
         '
         Me.NuevaCompraToolStripMenuItem.Name = "NuevaCompraToolStripMenuItem"
-        Me.NuevaCompraToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
+        Me.NuevaCompraToolStripMenuItem.Size = New System.Drawing.Size(183, 26)
         Me.NuevaCompraToolStripMenuItem.Text = "Nueva Compra"
-        '
-        'ConsultarFacturaToolStripMenuItem
-        '
-        Me.ConsultarFacturaToolStripMenuItem.Name = "ConsultarFacturaToolStripMenuItem"
-        Me.ConsultarFacturaToolStripMenuItem.Size = New System.Drawing.Size(197, 26)
-        Me.ConsultarFacturaToolStripMenuItem.Text = "Consultar Factura"
         '
         'PAGOSToolStripMenuItem
         '
@@ -185,6 +178,5 @@ Partial Class Menu
     Friend WithEvents NuevoProveedorToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents GestiónDeProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevaCompraToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ConsultarFacturaToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
 End Class
