@@ -46,3 +46,6 @@ C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECT
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.DevolucionesRegistrar.resources
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.DevolucionesBuscar.resources
 C:\Users\wsses\Github\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.CompraBuscar.resources
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.CompraBuscar.resources
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.DevolucionesBuscar.resources
+C:\Users\kevin\Documents\GitHub\des8grupal\PROYECTO_GRUPOS\obj\x86\Debug\PROYECTO_GRUPOS.DevolucionesRegistrar.resources

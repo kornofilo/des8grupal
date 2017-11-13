@@ -23,11 +23,11 @@ Partial Class Proveedores
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.dataprovee = New System.Windows.Forms.DataGridView()
-        Me.txtbuscar = New System.Windows.Forms.TextBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.ELIMINAR = New System.Windows.Forms.DataGridViewCheckBoxColumn()
+        Me.txtbuscar = New System.Windows.Forms.TextBox()
         Me.bteliminar = New System.Windows.Forms.Button()
         Me.Label9 = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         CType(Me.dataprovee, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -42,6 +42,11 @@ Partial Class Proveedores
         Me.dataprovee.Size = New System.Drawing.Size(699, 307)
         Me.dataprovee.TabIndex = 0
         '
+        'ELIMINAR
+        '
+        Me.ELIMINAR.HeaderText = "ELIMINAR"
+        Me.ELIMINAR.Name = "ELIMINAR"
+        '
         'txtbuscar
         '
         Me.txtbuscar.Location = New System.Drawing.Point(90, 127)
@@ -49,28 +54,16 @@ Partial Class Proveedores
         Me.txtbuscar.Size = New System.Drawing.Size(213, 20)
         Me.txtbuscar.TabIndex = 1
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Search
-        Me.PictureBox1.Location = New System.Drawing.Point(36, 110)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.PictureBox1.TabIndex = 2
-        Me.PictureBox1.TabStop = False
-        '
-        'ELIMINAR
-        '
-        Me.ELIMINAR.HeaderText = "ELIMINAR"
-        Me.ELIMINAR.Name = "ELIMINAR"
-        '
         'bteliminar
         '
-        Me.bteliminar.Location = New System.Drawing.Point(617, 119)
+        Me.bteliminar.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Delete
+        Me.bteliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.bteliminar.Location = New System.Drawing.Point(617, 110)
         Me.bteliminar.Name = "bteliminar"
-        Me.bteliminar.Size = New System.Drawing.Size(100, 34)
+        Me.bteliminar.Size = New System.Drawing.Size(100, 43)
         Me.bteliminar.TabIndex = 3
         Me.bteliminar.Text = "&Eliminar"
+        Me.bteliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.bteliminar.UseVisualStyleBackColor = True
         '
         'Label9
@@ -83,6 +76,16 @@ Partial Class Proveedores
         Me.Label9.Size = New System.Drawing.Size(250, 30)
         Me.Label9.TabIndex = 19
         Me.Label9.Text = "PROVEEDORES"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Search
+        Me.PictureBox1.Location = New System.Drawing.Point(36, 110)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(48, 48)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.PictureBox1.TabIndex = 2
+        Me.PictureBox1.TabStop = False
         '
         'Proveedores
         '

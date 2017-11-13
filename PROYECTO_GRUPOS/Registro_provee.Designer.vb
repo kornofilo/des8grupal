@@ -44,86 +44,80 @@ Partial Class Registro_provee
         Me.btregi = New System.Windows.Forms.Button()
         Me.btsal = New System.Windows.Forms.Button()
         Me.btmodif = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PROVEEDOR.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(149, 42)
-        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label1.Location = New System.Drawing.Point(204, 64)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(63, 17)
+        Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "CODIGO"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(89, 108)
-        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label2.Location = New System.Drawing.Point(60, 130)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(37, 17)
+        Me.Label2.Size = New System.Drawing.Size(30, 13)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "RUC"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(372, 108)
-        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label3.Location = New System.Drawing.Point(272, 130)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(27, 17)
+        Me.Label3.Size = New System.Drawing.Size(22, 13)
         Me.Label3.TabIndex = 2
         Me.Label3.Text = "DV"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(55, 177)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Location = New System.Drawing.Point(44, 173)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(68, 17)
+        Me.Label4.Size = New System.Drawing.Size(54, 13)
         Me.Label4.TabIndex = 3
         Me.Label4.Text = "NOMBRE"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(57, 238)
-        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label5.Location = New System.Drawing.Point(46, 222)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(83, 17)
+        Me.Label5.Size = New System.Drawing.Size(64, 13)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "TELEFONO"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(55, 298)
-        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label6.Location = New System.Drawing.Point(44, 271)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(34, 17)
+        Me.Label6.Size = New System.Drawing.Size(27, 13)
         Me.Label6.TabIndex = 5
         Me.Label6.Text = "FAX"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(55, 350)
-        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Location = New System.Drawing.Point(44, 313)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(82, 17)
+        Me.Label7.Size = New System.Drawing.Size(66, 13)
         Me.Label7.TabIndex = 6
         Me.Label7.Text = "DIRECCIÒN"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(55, 402)
-        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label8.Location = New System.Drawing.Point(44, 356)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(48, 17)
+        Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 7
         Me.Label8.Text = "EMAIL"
         '
@@ -131,15 +125,15 @@ Partial Class Registro_provee
         '
         Me.cmtipoprovee.FormattingEnabled = True
         Me.cmtipoprovee.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA", "TECNOLOGIA"})
-        Me.cmtipoprovee.Location = New System.Drawing.Point(184, 460)
-        Me.cmtipoprovee.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cmtipoprovee.Location = New System.Drawing.Point(141, 387)
         Me.cmtipoprovee.Name = "cmtipoprovee"
-        Me.cmtipoprovee.Size = New System.Drawing.Size(245, 24)
+        Me.cmtipoprovee.Size = New System.Drawing.Size(185, 21)
         Me.cmtipoprovee.TabIndex = 8
         Me.cmtipoprovee.Text = "TIPO PROVEEDOR"
         '
         'PROVEEDOR
         '
+        Me.PROVEEDOR.Controls.Add(Me.PictureBox1)
         Me.PROVEEDOR.Controls.Add(Me.ID)
         Me.PROVEEDOR.Controls.Add(Me.txtemail)
         Me.PROVEEDOR.Controls.Add(Me.txtdireccion)
@@ -158,11 +152,9 @@ Partial Class Registro_provee
         Me.PROVEEDOR.Controls.Add(Me.Label3)
         Me.PROVEEDOR.Controls.Add(Me.Label2)
         Me.PROVEEDOR.Controls.Add(Me.Label1)
-        Me.PROVEEDOR.Location = New System.Drawing.Point(49, 36)
-        Me.PROVEEDOR.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PROVEEDOR.Location = New System.Drawing.Point(37, 29)
         Me.PROVEEDOR.Name = "PROVEEDOR"
-        Me.PROVEEDOR.Padding = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.PROVEEDOR.Size = New System.Drawing.Size(668, 519)
+        Me.PROVEEDOR.Size = New System.Drawing.Size(501, 422)
         Me.PROVEEDOR.TabIndex = 9
         Me.PROVEEDOR.TabStop = False
         Me.PROVEEDOR.Text = "PROVEEDORES"
@@ -170,121 +162,119 @@ Partial Class Registro_provee
         'ID
         '
         Me.ID.AutoSize = True
-        Me.ID.Location = New System.Drawing.Point(592, 38)
-        Me.ID.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.ID.Location = New System.Drawing.Point(444, 31)
         Me.ID.Name = "ID"
-        Me.ID.Size = New System.Drawing.Size(21, 17)
+        Me.ID.Size = New System.Drawing.Size(18, 13)
         Me.ID.TabIndex = 12
         Me.ID.Text = "ID"
         '
         'txtemail
         '
-        Me.txtemail.Location = New System.Drawing.Point(184, 394)
-        Me.txtemail.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtemail.Location = New System.Drawing.Point(141, 349)
         Me.txtemail.Name = "txtemail"
-        Me.txtemail.Size = New System.Drawing.Size(245, 22)
+        Me.txtemail.Size = New System.Drawing.Size(185, 20)
         Me.txtemail.TabIndex = 16
         '
         'txtdireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(184, 341)
-        Me.txtdireccion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtdireccion.Location = New System.Drawing.Point(141, 306)
         Me.txtdireccion.Name = "txtdireccion"
-        Me.txtdireccion.Size = New System.Drawing.Size(245, 22)
+        Me.txtdireccion.Size = New System.Drawing.Size(185, 20)
         Me.txtdireccion.TabIndex = 15
         '
         'txtfax
         '
-        Me.txtfax.Location = New System.Drawing.Point(184, 289)
-        Me.txtfax.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtfax.Location = New System.Drawing.Point(141, 264)
         Me.txtfax.Name = "txtfax"
-        Me.txtfax.Size = New System.Drawing.Size(245, 22)
+        Me.txtfax.Size = New System.Drawing.Size(185, 20)
         Me.txtfax.TabIndex = 14
         '
         'txttelefono
         '
-        Me.txttelefono.Location = New System.Drawing.Point(184, 229)
-        Me.txttelefono.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txttelefono.Location = New System.Drawing.Point(141, 215)
         Me.txttelefono.Name = "txttelefono"
-        Me.txttelefono.Size = New System.Drawing.Size(245, 22)
+        Me.txttelefono.Size = New System.Drawing.Size(185, 20)
         Me.txttelefono.TabIndex = 13
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(184, 169)
-        Me.txtnombre.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtnombre.Location = New System.Drawing.Point(141, 166)
         Me.txtnombre.Name = "txtnombre"
-        Me.txtnombre.Size = New System.Drawing.Size(245, 22)
+        Me.txtnombre.Size = New System.Drawing.Size(185, 20)
         Me.txtnombre.TabIndex = 12
         '
         'txtdv
         '
-        Me.txtdv.Location = New System.Drawing.Point(409, 105)
-        Me.txtdv.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtdv.Location = New System.Drawing.Point(300, 127)
         Me.txtdv.Name = "txtdv"
-        Me.txtdv.Size = New System.Drawing.Size(88, 22)
+        Me.txtdv.Size = New System.Drawing.Size(67, 20)
         Me.txtdv.TabIndex = 11
         '
         'txtruc
         '
-        Me.txtruc.Location = New System.Drawing.Point(153, 105)
-        Me.txtruc.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtruc.Location = New System.Drawing.Point(108, 127)
         Me.txtruc.Name = "txtruc"
-        Me.txtruc.Size = New System.Drawing.Size(143, 22)
+        Me.txtruc.Size = New System.Drawing.Size(108, 20)
         Me.txtruc.TabIndex = 10
         '
         'txtcodigo
         '
-        Me.txtcodigo.Location = New System.Drawing.Point(232, 38)
-        Me.txtcodigo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtcodigo.Location = New System.Drawing.Point(275, 64)
         Me.txtcodigo.Name = "txtcodigo"
-        Me.txtcodigo.Size = New System.Drawing.Size(197, 22)
+        Me.txtcodigo.Size = New System.Drawing.Size(149, 20)
         Me.txtcodigo.TabIndex = 9
         '
         'btregi
         '
-        Me.btregi.Location = New System.Drawing.Point(64, 582)
-        Me.btregi.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btregi.Location = New System.Drawing.Point(48, 473)
         Me.btregi.Name = "btregi"
-        Me.btregi.Size = New System.Drawing.Size(141, 48)
+        Me.btregi.Size = New System.Drawing.Size(106, 39)
         Me.btregi.TabIndex = 10
         Me.btregi.Text = "&Registrar"
         Me.btregi.UseVisualStyleBackColor = True
         '
         'btsal
         '
-        Me.btsal.Location = New System.Drawing.Point(576, 582)
-        Me.btsal.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btsal.Location = New System.Drawing.Point(432, 473)
         Me.btsal.Name = "btsal"
-        Me.btsal.Size = New System.Drawing.Size(141, 48)
+        Me.btsal.Size = New System.Drawing.Size(106, 39)
         Me.btsal.TabIndex = 11
         Me.btsal.Text = "&Monstrar"
         Me.btsal.UseVisualStyleBackColor = True
         '
         'btmodif
         '
-        Me.btmodif.Location = New System.Drawing.Point(309, 582)
-        Me.btmodif.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btmodif.Location = New System.Drawing.Point(232, 473)
         Me.btmodif.Name = "btmodif"
-        Me.btmodif.Size = New System.Drawing.Size(141, 48)
+        Me.btmodif.Size = New System.Drawing.Size(106, 39)
         Me.btmodif.TabIndex = 12
         Me.btmodif.Text = "&Modificar"
         Me.btmodif.UseVisualStyleBackColor = True
         '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.proveedores
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(137, 112)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
+        '
         'Registro_provee
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(783, 660)
+        Me.ClientSize = New System.Drawing.Size(587, 536)
         Me.Controls.Add(Me.btmodif)
         Me.Controls.Add(Me.btsal)
         Me.Controls.Add(Me.btregi)
         Me.Controls.Add(Me.PROVEEDOR)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "Registro_provee"
         Me.Text = "Form3"
         Me.PROVEEDOR.ResumeLayout(False)
         Me.PROVEEDOR.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -310,4 +300,5 @@ Partial Class Registro_provee
     Public WithEvents txtdv As System.Windows.Forms.TextBox
     Public WithEvents txtruc As System.Windows.Forms.TextBox
     Public WithEvents txtcodigo As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

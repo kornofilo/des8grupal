@@ -73,10 +73,16 @@
     End Sub
 
     Private Sub Registro_provee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        txtcodigo.Visible = False
+        Label1.Visible = False
+        ID.Visible = False
     End Sub
 
     Private Sub btsal_Click(sender As Object, e As EventArgs) Handles btsal.Click
         Proveedores.Show()
+    End Sub
+
+    Private Sub PROVEEDOR_Enter(sender As System.Object, e As System.EventArgs) Handles PROVEEDOR.Enter
+
     End Sub
 End Class
