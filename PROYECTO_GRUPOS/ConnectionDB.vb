@@ -119,6 +119,33 @@ Public Class ConnectionDB
         End Try
     End Sub
 
+    Public Sub ShowDataGridBuscarCompra(ByVal DatagridContenedor As DataGridView, ByVal Filtro As Integer)
+
+        Try
+            Dim QuerySelect As String
+            Dim MyDataAdapter As New MySqlDataAdapter
+            Dim MyCommand As New MySqlCommand
+            Dim MyBindingSource As New BindingSource
+            Dim MyDataTable As New DataTable
+            QuerySelect = "SELECT idCompra,idProducto,nombreProducto,cantidad,precioUnitario,itbms,precioTotal FROM comprasdetalle WHERE idCompra = " & Filtro
+            MyCommand = New MySqlCommand(QuerySelect, connection_db)
+            MyDataAdapter.SelectCommand = MyCommand
+            MyDataAdapter.Fill(MyDataTable)
+            MyBindingSource.DataSource = MyDataTable
+            DatagridContenedor.DataSource = MyBindingSource
+            MyDataAdapter.Update(MyDataTable)
+            DatagridContenedor.Visible = True
+            connection_db.Close()
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.ToString)
+        Finally
+            connection_db.Dispose()
+
+        End Try
+    End Sub
+
     Public Sub limpiarcampos(ByVal form As Form)
         Dim text As Object
         Dim combo As Object
@@ -320,6 +347,34 @@ Public Class ConnectionDB
             If MyDataTable.Rows.Count > 0 Then
 
                 DevolucionesRegistrar.NumericUpDownCantDevoluciones.Maximum = MyDataTable.Rows(0).Item("cantidad")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection_db.Dispose()
+        End Try
+
+    End Sub
+
+    Public Sub BuscarCompra(ByVal IdCompra As Integer)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, comprasdetalle.cantidad,compras.nombre, comprasdetalle.idProducto,comprasdetalle.nombreProducto, comprasdetalle.precioUnitario, comprasdetalle.precioTotal, compras.tipoCompra,compras.totalCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & " INNER JOIN comprasdetalle ON compras.idCompra = comprasdetalle.idCompra AND compras.idCompra = " & IdCompra, connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            'Si encontramos una compra con el código ingresado'
+            If MyDataTable.Rows.Count > 0 Then
+                'Hacemos visible el groupbox con los elementos que muestran los datos de la comora'
+                CompraBuscar.GroupBoxDatosCompra.Visible = True
+
+                'Compras.txtprecio.Text = MyDataTable.Rows(0).Item("precio").ToString
+                CompraBuscar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
+                CompraBuscar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
+                CompraBuscar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
+                CompraBuscar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
+                CompraBuscar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
+            Else
+                MsgBox("El número de la orden ingresada no se encuentra registrada.", 16)
             End If
         Catch ex As Exception
             MsgBox(ex.Message)

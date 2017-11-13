@@ -36,6 +36,7 @@ Partial Class Menu
         Me.NuevaDevoluciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConsultarDevoluciónToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.BuscarFacturaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -73,7 +74,7 @@ Partial Class Menu
         '
         'ComprasToolStripMenuItem
         '
-        Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaCompraToolStripMenuItem})
+        Me.ComprasToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NuevaCompraToolStripMenuItem, Me.BuscarFacturaToolStripMenuItem})
         Me.ComprasToolStripMenuItem.Name = "ComprasToolStripMenuItem"
         Me.ComprasToolStripMenuItem.Size = New System.Drawing.Size(89, 24)
         Me.ComprasToolStripMenuItem.Text = "COMPRAS"
@@ -132,6 +133,12 @@ Partial Class Menu
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Cuentas por Pagar"
         '
+        'BuscarFacturaToolStripMenuItem
+        '
+        Me.BuscarFacturaToolStripMenuItem.Name = "BuscarFacturaToolStripMenuItem"
+        Me.BuscarFacturaToolStripMenuItem.Size = New System.Drawing.Size(183, 26)
+        Me.BuscarFacturaToolStripMenuItem.Text = "Buscar Factura"
+        '
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.paying
@@ -179,4 +186,5 @@ Partial Class Menu
     Friend WithEvents GestiónDeProveedoresToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents NuevaCompraToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents BuscarFacturaToolStripMenuItem As ToolStripMenuItem
 End Class

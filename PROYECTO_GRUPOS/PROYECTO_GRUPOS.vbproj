@@ -76,6 +76,12 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompraBuscar.Designer.vb">
+      <DependentUpon>CompraBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CompraBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConnectionDB.vb" />
     <Compile Include="DatosCompraDetalle.vb" />
     <Compile Include="Datos_Compras.vb" />
@@ -153,6 +159,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CompraBuscar.resx">
+      <DependentUpon>CompraBuscar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DevolucionesBuscar.resx">
       <DependentUpon>DevolucionesBuscar.vb</DependentUpon>
     </EmbeddedResource>

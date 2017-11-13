@@ -38,5 +38,8 @@ Public Class Menu
         Compras.Show()
     End Sub
 
+    Private Sub BuscarFacturaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarFacturaToolStripMenuItem.Click
+        CompraBuscar.Show()
 
+    End Sub
 End Class
