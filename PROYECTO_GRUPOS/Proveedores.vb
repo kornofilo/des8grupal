@@ -52,6 +52,7 @@
         Registro_provee.Show()
         Registro_provee.txtcodigo.Visible = True
         Registro_provee.Label1.Visible = True
+        Registro_provee.txtcodigo.ReadOnly = True
     End Sub
 
     Private Sub bteliminar_Click(sender As System.Object, e As System.EventArgs) Handles bteliminar.Click

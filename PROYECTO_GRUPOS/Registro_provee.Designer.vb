@@ -41,10 +41,10 @@ Partial Class Registro_provee
         Me.txtdv = New System.Windows.Forms.TextBox()
         Me.txtruc = New System.Windows.Forms.TextBox()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
-        Me.btregi = New System.Windows.Forms.Button()
-        Me.btsal = New System.Windows.Forms.Button()
         Me.btmodif = New System.Windows.Forms.Button()
+        Me.btregi = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btsal = New System.Windows.Forms.Button()
         Me.PROVEEDOR.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -134,6 +134,7 @@ Partial Class Registro_provee
         'PROVEEDOR
         '
         Me.PROVEEDOR.Controls.Add(Me.PictureBox1)
+        Me.PROVEEDOR.Controls.Add(Me.btsal)
         Me.PROVEEDOR.Controls.Add(Me.ID)
         Me.PROVEEDOR.Controls.Add(Me.txtemail)
         Me.PROVEEDOR.Controls.Add(Me.txtdireccion)
@@ -221,35 +222,31 @@ Partial Class Registro_provee
         '
         Me.txtcodigo.Location = New System.Drawing.Point(275, 64)
         Me.txtcodigo.Name = "txtcodigo"
-        Me.txtcodigo.Size = New System.Drawing.Size(149, 20)
+        Me.txtcodigo.Size = New System.Drawing.Size(59, 20)
         Me.txtcodigo.TabIndex = 9
-        '
-        'btregi
-        '
-        Me.btregi.Location = New System.Drawing.Point(48, 473)
-        Me.btregi.Name = "btregi"
-        Me.btregi.Size = New System.Drawing.Size(106, 39)
-        Me.btregi.TabIndex = 10
-        Me.btregi.Text = "&Registrar"
-        Me.btregi.UseVisualStyleBackColor = True
-        '
-        'btsal
-        '
-        Me.btsal.Location = New System.Drawing.Point(432, 473)
-        Me.btsal.Name = "btsal"
-        Me.btsal.Size = New System.Drawing.Size(106, 39)
-        Me.btsal.TabIndex = 11
-        Me.btsal.Text = "&Monstrar"
-        Me.btsal.UseVisualStyleBackColor = True
         '
         'btmodif
         '
-        Me.btmodif.Location = New System.Drawing.Point(232, 473)
+        Me.btmodif.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Edit
+        Me.btmodif.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btmodif.Location = New System.Drawing.Point(322, 465)
         Me.btmodif.Name = "btmodif"
-        Me.btmodif.Size = New System.Drawing.Size(106, 39)
+        Me.btmodif.Size = New System.Drawing.Size(112, 55)
         Me.btmodif.TabIndex = 12
         Me.btmodif.Text = "&Modificar"
+        Me.btmodif.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btmodif.UseVisualStyleBackColor = True
+        '
+        'btregi
+        '
+        Me.btregi.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Add
+        Me.btregi.Location = New System.Drawing.Point(100, 465)
+        Me.btregi.Name = "btregi"
+        Me.btregi.Size = New System.Drawing.Size(118, 55)
+        Me.btregi.TabIndex = 10
+        Me.btregi.Text = "&Registrar"
+        Me.btregi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btregi.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -261,13 +258,22 @@ Partial Class Registro_provee
         Me.PictureBox1.TabIndex = 17
         Me.PictureBox1.TabStop = False
         '
+        'btsal
+        '
+        Me.btsal.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Box
+        Me.btsal.Location = New System.Drawing.Point(389, 356)
+        Me.btsal.Name = "btsal"
+        Me.btsal.Size = New System.Drawing.Size(106, 55)
+        Me.btsal.TabIndex = 11
+        Me.btsal.Text = "&Monstrar"
+        Me.btsal.UseVisualStyleBackColor = True
+        '
         'Registro_provee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(587, 536)
         Me.Controls.Add(Me.btmodif)
-        Me.Controls.Add(Me.btsal)
         Me.Controls.Add(Me.btregi)
         Me.Controls.Add(Me.PROVEEDOR)
         Me.Name = "Registro_provee"

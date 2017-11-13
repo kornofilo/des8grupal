@@ -67,6 +67,10 @@ PROYECTO_GRUPOS
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.prove_phixr">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.proveedores">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
