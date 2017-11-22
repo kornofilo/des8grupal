@@ -7,17 +7,6 @@ Public Class Menu
 
     End Sub
 
-    Private Sub PROVEEDORToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles PROVEEDORToolStripMenuItem.Click
-
-    End Sub
-
-    Private Sub ComprasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ComprasToolStripMenuItem.Click
-        Compras.Show()
-
-    End Sub
-
-
-
     Private Sub RegistrarPagoToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegistrarPagoToolStripMenuItem.Click
         PagoRegistrar.Show()
 
@@ -34,5 +23,23 @@ Public Class Menu
 
     Private Sub ConsultarDevoluciónToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ConsultarDevoluciónToolStripMenuItem.Click
         DevolucionesBuscar.Show()
+    End Sub
+
+    Private Sub NuevoProveedorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevoProveedorToolStripMenuItem.Click
+        Registro_provee.Show()
+
+    End Sub
+
+    Private Sub GestiónDeProveedoresToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles GestiónDeProveedoresToolStripMenuItem.Click
+        Proveedores.Show()
+    End Sub
+
+    Private Sub NuevaCompraToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NuevaCompraToolStripMenuItem.Click
+        Compras.Show()
+    End Sub
+
+    Private Sub BuscarFacturaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles BuscarFacturaToolStripMenuItem.Click
+        CompraBuscar.Show()
+
     End Sub
 End Class

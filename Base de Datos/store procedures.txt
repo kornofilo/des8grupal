@@ -1,11 +1,16 @@
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_DEV`(IN `_idProveedor` INT(7), IN `_idProducto` INT(7), IN `_cantidadProduct` INT(7), IN `_id_compra` INT(7), IN `_costoUnitario` DECIMAL(15,2), IN `_montoDev` DECIMAL(15,2), IN `_saldo` DECIMAL(15,2))
-INSERT INTO `devoluciones`(`IDDevolucion`, `IDproveedor`, `IDproducto`, `fechaDevolucion`, `cantProductos`, `idCompra`, `costoUnitario`, `montoDev`, `saldo`) VALUES (NULL,_idProveedor,_idProducto,NOW(),_cantidadProduct,_id_compra,_costoUnitario,_montoDev,_saldo)$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_COMP`(IN `_idcompra` INT(7), IN `_idprovee` INT(7), IN `_nombre` VARCHAR(25), IN `_totalcompra` DECIMAL(15,2), IN `_tipocompra` VARCHAR(20), IN `_cxp` INT(6))
+INSERT INTO `compras`(`idCompra`, `idproveedor`, `nombre`, `fecha`, `totalCompra`, `tipoCompra`, `cxp`)VALUES (_idcompra,_idprovee,_nombre,NOW(),_totalcompra,_tipocompra,_cxp)$$
 DELIMITER ;
 
 DELIMITER $$
-CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_COMP`(IN `_idcompra` INT(7), IN `_idprovee` INT(7), IN `_nombre` VARCHAR(25), IN `_idproduc` INT(7), IN `_produc` VARCHAR(25), IN `_cant` INT(4), IN `_costouni` DECIMAL(15,2), IN `_totalcompr` DECIMAL(15,2), IN `_tipocompr` VARCHAR(20), IN `_cxp` INT(6))
-INSERT INTO `compras`(`idCompra`, `idproveedor`, `nombre`, `fecha`, `idProducto`, `producto`, `cantidad`, `costoUnitario`, `totalCompra`, `tipoCompra`, `cxp`)VALUES (_idcompra,_idprovee,_nombre,NOW(),_idproduc,_produc,_cant,_costouni,_totalcompr,_tipocompr,_cxp)$$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_COMPDETALLE`(IN `_idcompra` INT(7), IN `_idprovee` INT(7), IN `_idproduc` INT(7), IN `_produc` VARCHAR(40), IN `_cant` INT(7), IN `_costounidad` DECIMAL(15,2), IN `_itbms` DECIMAL(15,2), IN `_totalcompr` DECIMAL(15,2))
+INSERT INTO `comprasdetalle` VALUES (NULL,_idcompra,_idprovee,_produc,_cant,_costounidad,_itbms,_totalcompr)$$
+DELIMITER ;
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_DEV`(IN `_idProveedor` INT(7), IN `_idProducto` INT(7), IN `_cantidadProduct` INT(7), IN `_id_compra` INT(7), IN `_costoUnitario` DECIMAL(15,2), IN `_montoDev` DECIMAL(15,2), IN `_saldo` DECIMAL(15,2))
+INSERT INTO `devoluciones`(`IDDevolucion`, `IDproveedor`, `IDproducto`, `fechaDevolucion`, `cantProductos`, `idCompra`, `costoUnitario`, `montoDev`, `saldo`) VALUES (NULL,_idProveedor,_idProducto,NOW(),_cantidadProduct,_id_compra,_costoUnitario,_montoDev,_saldo)$$
 DELIMITER ;
 
 DELIMITER $$
@@ -20,5 +25,5 @@ DELIMITER ;
 
 DELIMITER $$
 CREATE DEFINER=`root`@`localhost` PROCEDURE `INSERT_PROVEE`(IN `_codigo` INT(6), IN `_ruc` VARCHAR(15), IN `_dv` VARCHAR(6), IN `_nombre` VARCHAR(25), IN `_telefono` VARCHAR(25), IN `_fax` VARCHAR(25), IN `_direccion` VARCHAR(30), IN `_email` VARCHAR(25), IN `_tipoproveedor` VARCHAR(25))
-INSERT INTO `proveedores`(`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES (_codigo,_ruc,_dv,_nombre,_telefono,_fax,_direccion,_email,_tipoproveedor)$$
+INSERT INTO `proveedores`(`codigo`, `RUC`, `DV`, `nombre`, `telefono`, `fax`, `direccion`, `email`, `tipoProveedor`) VALUES (NULL,_ruc,_dv,_nombre,_telefono,_fax,_direccion,_email,_tipoproveedor)$$
 DELIMITER ;

@@ -26,13 +26,9 @@ Partial Class DevolucionesRegistrar
         Me.TextBoxBuscarCompra = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.GroupBoxDatosCompra = New System.Windows.Forms.GroupBox()
-        Me.Label4 = New System.Windows.Forms.Label()
         Me.LabelSaldoActual = New System.Windows.Forms.Label()
         Me.LabelFormaDePago = New System.Windows.Forms.Label()
         Me.LabelCostoTotal = New System.Windows.Forms.Label()
-        Me.LabelCostoUnitario = New System.Windows.Forms.Label()
-        Me.LabelCantidadCompra = New System.Windows.Forms.Label()
-        Me.LabelProductoCompra = New System.Windows.Forms.Label()
         Me.LabelProveedorCompra = New System.Windows.Forms.Label()
         Me.LabelFechaCompra = New System.Windows.Forms.Label()
         Me.ButtonRegistrarDevolución = New System.Windows.Forms.Button()
@@ -41,6 +37,8 @@ Partial Class DevolucionesRegistrar
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.ComboBoxProductos = New System.Windows.Forms.ComboBox()
         Me.GroupBoxDatosCompra.SuspendLayout()
         CType(Me.NumericUpDownCantDevoluciones, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +48,7 @@ Partial Class DevolucionesRegistrar
         'ButtonBuscar
         '
         Me.ButtonBuscar.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonBuscar.Location = New System.Drawing.Point(696, 83)
+        Me.ButtonBuscar.Location = New System.Drawing.Point(704, 112)
         Me.ButtonBuscar.Name = "ButtonBuscar"
         Me.ButtonBuscar.Size = New System.Drawing.Size(106, 40)
         Me.ButtonBuscar.TabIndex = 16
@@ -60,7 +58,7 @@ Partial Class DevolucionesRegistrar
         'TextBoxBuscarCompra
         '
         Me.TextBoxBuscarCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBoxBuscarCompra.Location = New System.Drawing.Point(484, 86)
+        Me.TextBoxBuscarCompra.Location = New System.Drawing.Point(492, 115)
         Me.TextBoxBuscarCompra.Name = "TextBoxBuscarCompra"
         Me.TextBoxBuscarCompra.Size = New System.Drawing.Size(198, 34)
         Me.TextBoxBuscarCompra.TabIndex = 15
@@ -69,7 +67,7 @@ Partial Class DevolucionesRegistrar
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(221, 86)
+        Me.Label2.Location = New System.Drawing.Point(229, 115)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(249, 29)
         Me.Label2.TabIndex = 14
@@ -78,37 +76,24 @@ Partial Class DevolucionesRegistrar
         'GroupBoxDatosCompra
         '
         Me.GroupBoxDatosCompra.BackColor = System.Drawing.Color.Gainsboro
-        Me.GroupBoxDatosCompra.Controls.Add(Me.Label4)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelSaldoActual)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFormaDePago)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCostoTotal)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCostoUnitario)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCantidadCompra)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProductoCompra)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProveedorCompra)
         Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFechaCompra)
         Me.GroupBoxDatosCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(109, 129)
+        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(107, 158)
         Me.GroupBoxDatosCompra.Name = "GroupBoxDatosCompra"
-        Me.GroupBoxDatosCompra.Size = New System.Drawing.Size(847, 339)
+        Me.GroupBoxDatosCompra.Size = New System.Drawing.Size(847, 226)
         Me.GroupBoxDatosCompra.TabIndex = 17
         Me.GroupBoxDatosCompra.TabStop = False
         Me.GroupBoxDatosCompra.Text = "Datos de la Compra"
         Me.GroupBoxDatosCompra.Visible = False
         '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(481, 161)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(129, 25)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Existencias:"
-        '
         'LabelSaldoActual
         '
         Me.LabelSaldoActual.AutoSize = True
-        Me.LabelSaldoActual.Location = New System.Drawing.Point(319, 299)
+        Me.LabelSaldoActual.Location = New System.Drawing.Point(310, 175)
         Me.LabelSaldoActual.Name = "LabelSaldoActual"
         Me.LabelSaldoActual.Size = New System.Drawing.Size(142, 25)
         Me.LabelSaldoActual.TabIndex = 8
@@ -117,7 +102,7 @@ Partial Class DevolucionesRegistrar
         'LabelFormaDePago
         '
         Me.LabelFormaDePago.AutoSize = True
-        Me.LabelFormaDePago.Location = New System.Drawing.Point(481, 84)
+        Me.LabelFormaDePago.Location = New System.Drawing.Point(474, 44)
         Me.LabelFormaDePago.Name = "LabelFormaDePago"
         Me.LabelFormaDePago.Size = New System.Drawing.Size(166, 25)
         Me.LabelFormaDePago.TabIndex = 7
@@ -126,43 +111,16 @@ Partial Class DevolucionesRegistrar
         'LabelCostoTotal
         '
         Me.LabelCostoTotal.AutoSize = True
-        Me.LabelCostoTotal.Location = New System.Drawing.Point(319, 262)
+        Me.LabelCostoTotal.Location = New System.Drawing.Point(310, 138)
         Me.LabelCostoTotal.Name = "LabelCostoTotal"
         Me.LabelCostoTotal.Size = New System.Drawing.Size(131, 25)
         Me.LabelCostoTotal.TabIndex = 6
         Me.LabelCostoTotal.Text = "Costo Total:"
         '
-        'LabelCostoUnitario
-        '
-        Me.LabelCostoUnitario.AutoSize = True
-        Me.LabelCostoUnitario.Location = New System.Drawing.Point(319, 225)
-        Me.LabelCostoUnitario.Name = "LabelCostoUnitario"
-        Me.LabelCostoUnitario.Size = New System.Drawing.Size(156, 25)
-        Me.LabelCostoUnitario.TabIndex = 5
-        Me.LabelCostoUnitario.Text = "Costo Unitario:"
-        '
-        'LabelCantidadCompra
-        '
-        Me.LabelCantidadCompra.AutoSize = True
-        Me.LabelCantidadCompra.Location = New System.Drawing.Point(481, 123)
-        Me.LabelCantidadCompra.Name = "LabelCantidadCompra"
-        Me.LabelCantidadCompra.Size = New System.Drawing.Size(106, 25)
-        Me.LabelCantidadCompra.TabIndex = 4
-        Me.LabelCantidadCompra.Text = "Cantidad:"
-        '
-        'LabelProductoCompra
-        '
-        Me.LabelProductoCompra.AutoSize = True
-        Me.LabelProductoCompra.Location = New System.Drawing.Point(6, 84)
-        Me.LabelProductoCompra.Name = "LabelProductoCompra"
-        Me.LabelProductoCompra.Size = New System.Drawing.Size(105, 25)
-        Me.LabelProductoCompra.TabIndex = 3
-        Me.LabelProductoCompra.Text = "Producto:"
-        '
         'LabelProveedorCompra
         '
         Me.LabelProveedorCompra.AutoSize = True
-        Me.LabelProveedorCompra.Location = New System.Drawing.Point(6, 44)
+        Me.LabelProveedorCompra.Location = New System.Drawing.Point(103, 44)
         Me.LabelProveedorCompra.Name = "LabelProveedorCompra"
         Me.LabelProveedorCompra.Size = New System.Drawing.Size(118, 25)
         Me.LabelProveedorCompra.TabIndex = 2
@@ -171,7 +129,7 @@ Partial Class DevolucionesRegistrar
         'LabelFechaCompra
         '
         Me.LabelFechaCompra.AutoSize = True
-        Me.LabelFechaCompra.Location = New System.Drawing.Point(481, 44)
+        Me.LabelFechaCompra.Location = New System.Drawing.Point(523, 0)
         Me.LabelFechaCompra.Name = "LabelFechaCompra"
         Me.LabelFechaCompra.Size = New System.Drawing.Size(79, 25)
         Me.LabelFechaCompra.TabIndex = 1
@@ -180,7 +138,7 @@ Partial Class DevolucionesRegistrar
         'ButtonRegistrarDevolución
         '
         Me.ButtonRegistrarDevolución.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonRegistrarDevolución.Location = New System.Drawing.Point(622, 493)
+        Me.ButtonRegistrarDevolución.Location = New System.Drawing.Point(657, 472)
         Me.ButtonRegistrarDevolución.Name = "ButtonRegistrarDevolución"
         Me.ButtonRegistrarDevolución.Size = New System.Drawing.Size(271, 40)
         Me.ButtonRegistrarDevolución.TabIndex = 20
@@ -192,7 +150,7 @@ Partial Class DevolucionesRegistrar
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(175, 499)
+        Me.Label3.Location = New System.Drawing.Point(210, 478)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(262, 29)
         Me.Label3.TabIndex = 18
@@ -202,7 +160,7 @@ Partial Class DevolucionesRegistrar
         'NumericUpDownCantDevoluciones
         '
         Me.NumericUpDownCantDevoluciones.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.NumericUpDownCantDevoluciones.Location = New System.Drawing.Point(455, 497)
+        Me.NumericUpDownCantDevoluciones.Location = New System.Drawing.Point(490, 476)
         Me.NumericUpDownCantDevoluciones.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.NumericUpDownCantDevoluciones.Name = "NumericUpDownCantDevoluciones"
         Me.NumericUpDownCantDevoluciones.Size = New System.Drawing.Size(120, 34)
@@ -243,11 +201,34 @@ Partial Class DevolucionesRegistrar
         Me.PictureBox2.TabIndex = 32
         Me.PictureBox2.TabStop = False
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(210, 420)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(125, 29)
+        Me.Label5.TabIndex = 34
+        Me.Label5.Text = "Producto:"
+        Me.Label5.Visible = False
+        '
+        'ComboBoxProductos
+        '
+        Me.ComboBoxProductos.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBoxProductos.FormattingEnabled = True
+        Me.ComboBoxProductos.Location = New System.Drawing.Point(490, 412)
+        Me.ComboBoxProductos.Name = "ComboBoxProductos"
+        Me.ComboBoxProductos.Size = New System.Drawing.Size(409, 37)
+        Me.ComboBoxProductos.TabIndex = 35
+        Me.ComboBoxProductos.Visible = False
+        '
         'DevolucionesRegistrar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1061, 553)
+        Me.ClientSize = New System.Drawing.Size(1061, 521)
+        Me.Controls.Add(Me.ComboBoxProductos)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.GroupBoxDatosCompra)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
@@ -277,16 +258,14 @@ Partial Class DevolucionesRegistrar
     Friend WithEvents LabelSaldoActual As Label
     Friend WithEvents LabelFormaDePago As Label
     Friend WithEvents LabelCostoTotal As Label
-    Friend WithEvents LabelCostoUnitario As Label
-    Friend WithEvents LabelCantidadCompra As Label
-    Friend WithEvents LabelProductoCompra As Label
     Friend WithEvents LabelProveedorCompra As Label
     Friend WithEvents LabelFechaCompra As Label
     Friend WithEvents ButtonRegistrarDevolución As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents NumericUpDownCantDevoluciones As NumericUpDown
-    Friend WithEvents Label4 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents ComboBoxProductos As ComboBox
 End Class

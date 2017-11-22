@@ -15,12 +15,13 @@ Public Class ConnectionDB
     Sub New()
         Try
             connection_db = New MySqlConnection With {
-                .ConnectionString = "Server=localhost; Database= cuentasxpagar; User id = root;  password=12345;"
+                .ConnectionString = "Server=localhost; Database= cuentasxpagar; User id = root;  password=;"
             }
             connection_db.Open()
 
         Catch ex As Exception
-            MsgBox(ex.ToString, 16, "Connection Error")
+            MsgBox(ex.Message, 16, "Connection Error")
+
 
         End Try
     End Sub
@@ -118,6 +119,33 @@ Public Class ConnectionDB
         End Try
     End Sub
 
+    Public Sub ShowDataGridBuscarCompra(ByVal DatagridContenedor As DataGridView, ByVal Filtro As Integer)
+
+        Try
+            Dim QuerySelect As String
+            Dim MyDataAdapter As New MySqlDataAdapter
+            Dim MyCommand As New MySqlCommand
+            Dim MyBindingSource As New BindingSource
+            Dim MyDataTable As New DataTable
+            QuerySelect = "SELECT idCompra,idProducto,nombreProducto,cantidad,precioUnitario,itbms,precioTotal FROM comprasdetalle WHERE idCompra = " & Filtro
+            MyCommand = New MySqlCommand(QuerySelect, connection_db)
+            MyDataAdapter.SelectCommand = MyCommand
+            MyDataAdapter.Fill(MyDataTable)
+            MyBindingSource.DataSource = MyDataTable
+            DatagridContenedor.DataSource = MyBindingSource
+            MyDataAdapter.Update(MyDataTable)
+            DatagridContenedor.Visible = True
+            connection_db.Close()
+
+
+        Catch ex As MySqlException
+            MsgBox(ex.ToString)
+        Finally
+            connection_db.Dispose()
+
+        End Try
+    End Sub
+
     Public Sub limpiarcampos(ByVal form As Form)
         Dim text As Object
         Dim combo As Object
@@ -144,7 +172,7 @@ Public Class ConnectionDB
     Public Sub BuscarCompraRegistroPago(ByVal IdCompra As Integer)
         Try
             Dim adaptador As MySqlDataAdapter
-            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, compras.cantidad,compras.nombre, compras.producto, compras.costoUnitario, compras.totalCompra, compras.tipoCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & ";", connection_db)
+            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, comprasdetalle.cantidad,compras.nombre, comprasdetalle.idProducto,comprasdetalle.nombreProducto, comprasdetalle.precioUnitario, comprasdetalle.precioTotal, compras.tipoCompra,compras.totalCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & " INNER JOIN comprasdetalle ON compras.idCompra = comprasdetalle.idCompra AND compras.idCompra = " & IdCompra, connection_db)
             MyDataTable = New DataTable
             adaptador.Fill(MyDataTable)
             'Si encontramos una compra con el código ingresado'
@@ -158,9 +186,6 @@ Public Class ConnectionDB
                 PagoRegistrar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
                 PagoRegistrar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
                 PagoRegistrar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
-                PagoRegistrar.LabelProductoCompra.Text = "Producto: " & MyDataTable.Rows(0).Item("producto").ToString
-                PagoRegistrar.LabelCantidadCompra.Text = "Cantidad: " & MyDataTable.Rows(0).Item("cantidad").ToString
-                PagoRegistrar.LabelCostoUnitario.Text = "Costo Unitario: " & FormatCurrency(MyDataTable.Rows(0).Item("costoUnitario").ToString)
                 PagoRegistrar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
                 PagoRegistrar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
                 PagoRegistrar.IDProveedor = MyDataTable.Rows(0).Item("idproveedor").ToString
@@ -187,7 +212,7 @@ Public Class ConnectionDB
     Public Sub BuscarCompraPago(ByVal IdCompra As Integer)
         Try
             Dim adaptador As MySqlDataAdapter
-            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, compras.cantidad,compras.nombre, compras.producto, compras.costoUnitario, compras.totalCompra, compras.tipoCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & ";", connection_db)
+            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, comprasdetalle.cantidad,compras.nombre, comprasdetalle.idProducto,comprasdetalle.nombreProducto, comprasdetalle.precioUnitario, comprasdetalle.precioTotal, compras.tipoCompra,compras.totalCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & " INNER JOIN comprasdetalle ON compras.idCompra = comprasdetalle.idCompra AND compras.idCompra = " & IdCompra, connection_db)
             MyDataTable = New DataTable
             adaptador.Fill(MyDataTable)
             'Si encontramos una compra con el código ingresado'
@@ -201,9 +226,6 @@ Public Class ConnectionDB
                 PagoBuscar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
                 PagoBuscar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
                 PagoBuscar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
-                PagoBuscar.LabelProductoCompra.Text = "Producto: " & MyDataTable.Rows(0).Item("producto").ToString
-                PagoBuscar.LabelCantidadCompra.Text = "Cantidad: " & MyDataTable.Rows(0).Item("cantidad").ToString
-                PagoBuscar.LabelCostoUnitario.Text = "Costo Unitario: " & FormatCurrency(MyDataTable.Rows(0).Item("costoUnitario").ToString)
                 PagoBuscar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
                 PagoBuscar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
             Else
@@ -220,7 +242,7 @@ Public Class ConnectionDB
     Public Sub BuscarCompraRegistroDevolucion(ByVal IdCompra As Integer)
         Try
             Dim adaptador As MySqlDataAdapter
-            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, compras.cantidad,compras.nombre, compras.idProducto,compras.producto, compras.costoUnitario, compras.totalCompra, compras.tipoCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & ";", connection_db)
+            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, comprasdetalle.cantidad,compras.nombre, comprasdetalle.idProducto,comprasdetalle.nombreProducto, comprasdetalle.precioUnitario, comprasdetalle.precioTotal, compras.tipoCompra,compras.totalCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & " INNER JOIN comprasdetalle ON compras.idCompra = comprasdetalle.idCompra AND compras.idCompra = " & IdCompra, connection_db)
             MyDataTable = New DataTable
             adaptador.Fill(MyDataTable)
             'Si encontramos una compra con el código ingresado'
@@ -234,29 +256,56 @@ Public Class ConnectionDB
                 DevolucionesRegistrar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
                 DevolucionesRegistrar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
                 DevolucionesRegistrar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
-                DevolucionesRegistrar.LabelProductoCompra.Text = "Producto: " & MyDataTable.Rows(0).Item("producto").ToString
-                DevolucionesRegistrar.LabelCantidadCompra.Text = "Cantidad: " & MyDataTable.Rows(0).Item("cantidad").ToString
-                DevolucionesRegistrar.LabelCostoUnitario.Text = "Costo Unitario: " & FormatCurrency(MyDataTable.Rows(0).Item("costoUnitario").ToString)
                 DevolucionesRegistrar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
                 DevolucionesRegistrar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
-
                 DevolucionesRegistrar.IDProveedor = MyDataTable.Rows(0).Item("idproveedor").ToString
                 DevolucionesRegistrar.SaldoActual = MyDataTable.Rows(0).Item("saldoActual").ToString
                 DevolucionesRegistrar.IDProveedor = MyDataTable.Rows(0).Item("idproveedor").ToString
                 DevolucionesRegistrar.IDProducto = MyDataTable.Rows(0).Item("idProducto").ToString
-                DevolucionesRegistrar.CostoUnitario = MyDataTable.Rows(0).Item("costoUnitario").ToString
+                DevolucionesRegistrar.CostoUnitario = MyDataTable.Rows(0).Item("precioUnitario").ToString
 
                 DevolucionesRegistrar.CantidadProductos = MyDataTable.Rows(0).Item("cantidad").ToString
 
 
                 'Si hay un saldo pendiente en la compra, habilitamos los controles de registro de pago.'
                 If Val(MyDataTable.Rows(0).Item("saldoActual").ToString) > 0 Then
+                    DevolucionesRegistrar.ComboBoxProductos.Visible = True
+                    DevolucionesRegistrar.Label5.Visible = True
+                    DevolucionesRegistrar.ComboBoxProductos.DisplayMember = "nombreProducto"
+                    DevolucionesRegistrar.ComboBoxProductos.ValueMember = "idProducto"
+                    DevolucionesRegistrar.ComboBoxProductos.DataSource = MyDataTable
                     DevolucionesRegistrar.Label3.Visible = True
                     DevolucionesRegistrar.NumericUpDownCantDevoluciones.Visible = True
-                    DevolucionesRegistrar.NumericUpDownCantDevoluciones.Maximum = MyDataTable.Rows(0).Item("cantidad").ToString
                     DevolucionesRegistrar.ButtonRegistrarDevolución.Visible = True
-
                 End If
+            Else
+                MsgBox("El número de la orden ingresada no se encuentra registrada.", 16)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.StackTrace)
+        Finally
+            connection_db.Dispose()
+        End Try
+
+    End Sub
+
+    Public Sub BuscarCompraDevolucion(ByVal IdCompra As Integer)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, comprasdetalle.cantidad,compras.nombre, comprasdetalle.idProducto,comprasdetalle.nombreProducto, comprasdetalle.precioUnitario, comprasdetalle.precioTotal, compras.tipoCompra,compras.totalCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & " INNER JOIN comprasdetalle ON compras.idCompra = comprasdetalle.idCompra AND compras.idCompra = " & IdCompra, connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            'Si encontramos una compra con el código ingresado'
+            If MyDataTable.Rows.Count > 0 Then
+                'Hacemos visible el groupbox con los elementos que muestran los datos de la comora'
+                DevolucionesBuscar.GroupBoxDatosCompra.Visible = True
+
+                'Compras.txtprecio.Text = MyDataTable.Rows(0).Item("precio").ToString
+                DevolucionesBuscar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
+                DevolucionesBuscar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
+                DevolucionesBuscar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
+                DevolucionesBuscar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
+                DevolucionesBuscar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
             Else
                 MsgBox("El número de la orden ingresada no se encuentra registrada.", 16)
             End If
@@ -268,28 +317,62 @@ Public Class ConnectionDB
 
     End Sub
 
-    Public Sub BuscarCompraDevolucion(ByVal IdCompra As Integer)
+    Public Sub GetNumFactura(ByVal LabelNumFac As Label)
         Try
             Dim adaptador As MySqlDataAdapter
-            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, compras.cantidad,compras.nombre, compras.producto, compras.costoUnitario, compras.totalCompra, compras.tipoCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & ";", connection_db)
+            adaptador = New MySqlDataAdapter("SELECT MAX(idCompra) FROM compras;", connection_db)
             MyDataTable = New DataTable
             adaptador.Fill(MyDataTable)
             'Si encontramos una compra con el código ingresado'
             If MyDataTable.Rows.Count > 0 Then
                 'Hacemos visible el groupbox con los elementos que muestran los datos de la comora'
-                DevolucionesBuscar.GroupBoxDatosCompra.Visible = True
+                LabelNumFac.Text = "Factura: #" & (Val(MyDataTable.Rows(0).Item("MAX(idCompra)").ToString) + 1)
+                Compras.IDCompra = Val(MyDataTable.Rows(0).Item("MAX(idCompra)").ToString) + 1
+            Else
+                MsgBox("El número de la orden ingresada no se encuentra registrada.", 16)
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection_db.Dispose()
+        End Try
+    End Sub
 
+    Public Sub getCantidadesCompradas(ByVal IdCompra As Integer, ByVal IdProducto As Integer)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("SELECT cantidad FROM comprasdetalle WHERE idCompra = " & IdCompra & " and idProducto = " & IdProducto & ";", connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            If MyDataTable.Rows.Count > 0 Then
 
+                DevolucionesRegistrar.NumericUpDownCantDevoluciones.Maximum = MyDataTable.Rows(0).Item("cantidad")
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            connection_db.Dispose()
+        End Try
+
+    End Sub
+
+    Public Sub BuscarCompra(ByVal IdCompra As Integer)
+        Try
+            Dim adaptador As MySqlDataAdapter
+            adaptador = New MySqlDataAdapter("SELECT compras.idCompra, compras.fecha, compras.idproveedor, comprasdetalle.cantidad,compras.nombre, comprasdetalle.idProducto,comprasdetalle.nombreProducto, comprasdetalle.precioUnitario, comprasdetalle.precioTotal, compras.tipoCompra,compras.totalCompra, saldos.saldoActual FROM compras INNER JOIN saldos ON compras.idCompra = saldos.idCompra AND compras.idCompra = " & IdCompra & " INNER JOIN comprasdetalle ON compras.idCompra = comprasdetalle.idCompra AND compras.idCompra = " & IdCompra, connection_db)
+            MyDataTable = New DataTable
+            adaptador.Fill(MyDataTable)
+            'Si encontramos una compra con el código ingresado'
+            If MyDataTable.Rows.Count > 0 Then
+                'Hacemos visible el groupbox con los elementos que muestran los datos de la comora'
+                CompraBuscar.GroupBoxDatosCompra.Visible = True
 
                 'Compras.txtprecio.Text = MyDataTable.Rows(0).Item("precio").ToString
-                DevolucionesBuscar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
-                DevolucionesBuscar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
-                DevolucionesBuscar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
-                DevolucionesBuscar.LabelProductoCompra.Text = "Producto: " & MyDataTable.Rows(0).Item("producto").ToString
-                DevolucionesBuscar.LabelCantidadCompra.Text = "Cantidad: " & MyDataTable.Rows(0).Item("cantidad").ToString
-                DevolucionesBuscar.LabelCostoUnitario.Text = "Costo Unitario: " & FormatCurrency(MyDataTable.Rows(0).Item("costoUnitario").ToString)
-                DevolucionesBuscar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
-                DevolucionesBuscar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
+                CompraBuscar.LabelProveedorCompra.Text = "Proveedor: " & MyDataTable.Rows(0).Item("nombre").ToString
+                CompraBuscar.LabelFechaCompra.Text = "Fecha: " & MyDataTable.Rows(0).Item("fecha").ToString
+                CompraBuscar.LabelFormaDePago.Text = "Forma de Pago: " & MyDataTable.Rows(0).Item("tipoCompra").ToString
+                CompraBuscar.LabelCostoTotal.Text = "Costo Total: " & FormatCurrency(MyDataTable.Rows(0).Item("totalCompra").ToString)
+                CompraBuscar.LabelSaldoActual.Text = "Saldo Actual: " & FormatCurrency(MyDataTable.Rows(0).Item("saldoActual").ToString)
             Else
                 MsgBox("El número de la orden ingresada no se encuentra registrada.", 16)
             End If

@@ -49,7 +49,11 @@
 
     End Sub
 
-    Private Sub GroupBoxDatosCompra_Enter(sender As Object, e As EventArgs) Handles GroupBoxDatosCompra.Enter
+    Private Sub GroupBoxDatosCompra_Enter(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub PagoRegistrar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
 End Class

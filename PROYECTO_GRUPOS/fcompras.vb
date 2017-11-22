@@ -6,7 +6,7 @@ Public Class fcompras
     Public Sub Consulta()
 
         Try
-            Dim sql As String = "SELECT nombre FROM proveedores where idproveedor = ?ident"
+            Dim sql As String = "SELECT nombre FROM proveedores where codigo = ?ident"
             Dim cmd As New MySqlCommand(sql, connection_db)
             cmd.Parameters.AddWithValue("?ident", Compras.txtidprovee.Text)
 
@@ -17,9 +17,11 @@ Public Class fcompras
             If dt.Rows.Count > 0 Then
 
                 Dim row As DataRow = dt.Rows(0)
-                Compras.lbn.Text = CStr(row("Nombre"))
-
+                Compras.NombreProveedor = CStr(row("nombre"))
+            Else
+                MsgBox("El código de proveedor ingresado no se encuentra registrado en la base de datos. Por favor, intente con otro código.", 48, "No se encontró proveedor")
             End If
+
         Catch ex As MySqlException
             MsgBox(ex.ToString)
         Finally
@@ -27,6 +29,35 @@ Public Class fcompras
 
         End Try
     End Sub
+
+    Public Sub ConsultaProducto()
+
+        Try
+            Dim sql As String = "SELECT id_articulo,nombre_art,precio FROM articulos where id_articulo = ?ident"
+            Dim cmd As New MySqlCommand(sql, connection_db)
+            cmd.Parameters.AddWithValue("?ident", Compras.txtidproduc.Text)
+
+            Dim DataAdapter As New MySqlDataAdapter(cmd)
+            Dim dt As New DataTable
+            DataAdapter.Fill(dt)
+
+            If dt.Rows.Count > 0 Then
+
+                Dim row As DataRow = dt.Rows(0)
+                Compras.NombreProducto = CStr(row("nombre_art"))
+                Compras.PrecioProducto = CStr(row("precio"))
+            Else
+                MsgBox("El código del artículo ingresado no se encuentra registrado en la base de datos. Por favor, intente con otro código.", 48, "No se encontró artículo")
+            End If
+
+        Catch ex As MySqlException
+            MsgBox(ex.ToString)
+        Finally
+            connection_db.Dispose()
+
+        End Try
+    End Sub
+
     Public Function insert_comp(ByVal dts As Datos_Compras) As Boolean
         Try
 
@@ -38,19 +69,15 @@ Public Class fcompras
             cmd.Parameters.AddWithValue("@_idprovee", dts.idproveedor)
             cmd.Parameters.AddWithValue("@_nombre", dts.nombre)
             cmd.Parameters.AddWithValue("@_fecha", dts.fecha)
-            cmd.Parameters.AddWithValue("@_idproduc", dts.idproducto)
-            cmd.Parameters.AddWithValue("@_produc", dts.producto)
-            cmd.Parameters.AddWithValue("@_cant", dts.cantidad)
-            cmd.Parameters.AddWithValue("@_costouni", dts.costounidad)
-            cmd.Parameters.AddWithValue("@_totalcompr", dts.totalcompra)
-            cmd.Parameters.AddWithValue("@_tipocompr", dts.tipocompra)
+            cmd.Parameters.AddWithValue("@_totalcompra", dts.totalcompra)
+            cmd.Parameters.AddWithValue("@_tipocompra", dts.tipocompra)
             cmd.Parameters.AddWithValue("@_cxp", dts.cxp)
             If cmd.ExecuteNonQuery Then
                 Return True
             Else
                 Return False
             End If
-        Catch ex As Exception
+        Catch ex As MySqlException
 
             MsgBox(ex.Message)
             Return False

@@ -25,32 +25,29 @@ Partial Class PagoBuscar
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PagoBuscar))
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridViewHistorialPagos = New System.Windows.Forms.DataGridView()
-        Me.GroupBoxDatosCompra = New System.Windows.Forms.GroupBox()
-        Me.LabelSaldoActual = New System.Windows.Forms.Label()
-        Me.LabelFormaDePago = New System.Windows.Forms.Label()
-        Me.LabelCostoTotal = New System.Windows.Forms.Label()
-        Me.LabelCostoUnitario = New System.Windows.Forms.Label()
-        Me.LabelCantidadCompra = New System.Windows.Forms.Label()
-        Me.LabelProductoCompra = New System.Windows.Forms.Label()
-        Me.LabelProveedorCompra = New System.Windows.Forms.Label()
-        Me.LabelFechaCompra = New System.Windows.Forms.Label()
         Me.ButtonBuscar = New System.Windows.Forms.Button()
         Me.TextBoxBuscarCompra = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.GroupBoxDatosCompra = New System.Windows.Forms.GroupBox()
+        Me.LabelSaldoActual = New System.Windows.Forms.Label()
+        Me.LabelFormaDePago = New System.Windows.Forms.Label()
+        Me.LabelCostoTotal = New System.Windows.Forms.Label()
+        Me.LabelProveedorCompra = New System.Windows.Forms.Label()
+        Me.LabelFechaCompra = New System.Windows.Forms.Label()
         CType(Me.DataGridViewHistorialPagos, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBoxDatosCompra.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBoxDatosCompra.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(375, 509)
+        Me.Label3.Location = New System.Drawing.Point(394, 474)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(228, 29)
         Me.Label3.TabIndex = 22
@@ -59,104 +56,12 @@ Partial Class PagoBuscar
         'DataGridViewHistorialPagos
         '
         Me.DataGridViewHistorialPagos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridViewHistorialPagos.Location = New System.Drawing.Point(84, 550)
+        Me.DataGridViewHistorialPagos.Location = New System.Drawing.Point(84, 522)
         Me.DataGridViewHistorialPagos.Name = "DataGridViewHistorialPagos"
         Me.DataGridViewHistorialPagos.RowTemplate.Height = 24
         Me.DataGridViewHistorialPagos.Size = New System.Drawing.Size(847, 212)
         Me.DataGridViewHistorialPagos.TabIndex = 21
         Me.DataGridViewHistorialPagos.Visible = False
-        '
-        'GroupBoxDatosCompra
-        '
-        Me.GroupBoxDatosCompra.BackColor = System.Drawing.Color.Gainsboro
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelSaldoActual)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFormaDePago)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCostoTotal)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCostoUnitario)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCantidadCompra)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProductoCompra)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProveedorCompra)
-        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFechaCompra)
-        Me.GroupBoxDatosCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(84, 156)
-        Me.GroupBoxDatosCompra.Name = "GroupBoxDatosCompra"
-        Me.GroupBoxDatosCompra.Size = New System.Drawing.Size(847, 339)
-        Me.GroupBoxDatosCompra.TabIndex = 20
-        Me.GroupBoxDatosCompra.TabStop = False
-        Me.GroupBoxDatosCompra.Text = "Datos de la Compra"
-        Me.GroupBoxDatosCompra.Visible = False
-        '
-        'LabelSaldoActual
-        '
-        Me.LabelSaldoActual.AutoSize = True
-        Me.LabelSaldoActual.Location = New System.Drawing.Point(319, 299)
-        Me.LabelSaldoActual.Name = "LabelSaldoActual"
-        Me.LabelSaldoActual.Size = New System.Drawing.Size(142, 25)
-        Me.LabelSaldoActual.TabIndex = 8
-        Me.LabelSaldoActual.Text = "Saldo Actual:"
-        '
-        'LabelFormaDePago
-        '
-        Me.LabelFormaDePago.AutoSize = True
-        Me.LabelFormaDePago.Location = New System.Drawing.Point(481, 96)
-        Me.LabelFormaDePago.Name = "LabelFormaDePago"
-        Me.LabelFormaDePago.Size = New System.Drawing.Size(166, 25)
-        Me.LabelFormaDePago.TabIndex = 7
-        Me.LabelFormaDePago.Text = "Forma de Pago:"
-        '
-        'LabelCostoTotal
-        '
-        Me.LabelCostoTotal.AutoSize = True
-        Me.LabelCostoTotal.Location = New System.Drawing.Point(319, 262)
-        Me.LabelCostoTotal.Name = "LabelCostoTotal"
-        Me.LabelCostoTotal.Size = New System.Drawing.Size(131, 25)
-        Me.LabelCostoTotal.TabIndex = 6
-        Me.LabelCostoTotal.Text = "Costo Total:"
-        '
-        'LabelCostoUnitario
-        '
-        Me.LabelCostoUnitario.AutoSize = True
-        Me.LabelCostoUnitario.Location = New System.Drawing.Point(319, 225)
-        Me.LabelCostoUnitario.Name = "LabelCostoUnitario"
-        Me.LabelCostoUnitario.Size = New System.Drawing.Size(156, 25)
-        Me.LabelCostoUnitario.TabIndex = 5
-        Me.LabelCostoUnitario.Text = "Costo Unitario:"
-        '
-        'LabelCantidadCompra
-        '
-        Me.LabelCantidadCompra.AutoSize = True
-        Me.LabelCantidadCompra.Location = New System.Drawing.Point(481, 140)
-        Me.LabelCantidadCompra.Name = "LabelCantidadCompra"
-        Me.LabelCantidadCompra.Size = New System.Drawing.Size(106, 25)
-        Me.LabelCantidadCompra.TabIndex = 4
-        Me.LabelCantidadCompra.Text = "Cantidad:"
-        '
-        'LabelProductoCompra
-        '
-        Me.LabelProductoCompra.AutoSize = True
-        Me.LabelProductoCompra.Location = New System.Drawing.Point(6, 96)
-        Me.LabelProductoCompra.Name = "LabelProductoCompra"
-        Me.LabelProductoCompra.Size = New System.Drawing.Size(105, 25)
-        Me.LabelProductoCompra.TabIndex = 3
-        Me.LabelProductoCompra.Text = "Producto:"
-        '
-        'LabelProveedorCompra
-        '
-        Me.LabelProveedorCompra.AutoSize = True
-        Me.LabelProveedorCompra.Location = New System.Drawing.Point(6, 49)
-        Me.LabelProveedorCompra.Name = "LabelProveedorCompra"
-        Me.LabelProveedorCompra.Size = New System.Drawing.Size(118, 25)
-        Me.LabelProveedorCompra.TabIndex = 2
-        Me.LabelProveedorCompra.Text = "Proveedor:"
-        '
-        'LabelFechaCompra
-        '
-        Me.LabelFechaCompra.AutoSize = True
-        Me.LabelFechaCompra.Location = New System.Drawing.Point(484, 49)
-        Me.LabelFechaCompra.Name = "LabelFechaCompra"
-        Me.LabelFechaCompra.Size = New System.Drawing.Size(79, 25)
-        Me.LabelFechaCompra.TabIndex = 1
-        Me.LabelFechaCompra.Text = "Fecha:"
         '
         'ButtonBuscar
         '
@@ -218,16 +123,78 @@ Partial Class PagoBuscar
         Me.PictureBox1.TabIndex = 30
         Me.PictureBox1.TabStop = False
         '
+        'GroupBoxDatosCompra
+        '
+        Me.GroupBoxDatosCompra.BackColor = System.Drawing.Color.Gainsboro
+        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelSaldoActual)
+        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFormaDePago)
+        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelCostoTotal)
+        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelProveedorCompra)
+        Me.GroupBoxDatosCompra.Controls.Add(Me.LabelFechaCompra)
+        Me.GroupBoxDatosCompra.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBoxDatosCompra.Location = New System.Drawing.Point(84, 207)
+        Me.GroupBoxDatosCompra.Name = "GroupBoxDatosCompra"
+        Me.GroupBoxDatosCompra.Size = New System.Drawing.Size(847, 226)
+        Me.GroupBoxDatosCompra.TabIndex = 31
+        Me.GroupBoxDatosCompra.TabStop = False
+        Me.GroupBoxDatosCompra.Text = "Datos de la Compra"
+        Me.GroupBoxDatosCompra.Visible = False
+        '
+        'LabelSaldoActual
+        '
+        Me.LabelSaldoActual.AutoSize = True
+        Me.LabelSaldoActual.Location = New System.Drawing.Point(310, 175)
+        Me.LabelSaldoActual.Name = "LabelSaldoActual"
+        Me.LabelSaldoActual.Size = New System.Drawing.Size(142, 25)
+        Me.LabelSaldoActual.TabIndex = 8
+        Me.LabelSaldoActual.Text = "Saldo Actual:"
+        '
+        'LabelFormaDePago
+        '
+        Me.LabelFormaDePago.AutoSize = True
+        Me.LabelFormaDePago.Location = New System.Drawing.Point(474, 44)
+        Me.LabelFormaDePago.Name = "LabelFormaDePago"
+        Me.LabelFormaDePago.Size = New System.Drawing.Size(166, 25)
+        Me.LabelFormaDePago.TabIndex = 7
+        Me.LabelFormaDePago.Text = "Forma de Pago:"
+        '
+        'LabelCostoTotal
+        '
+        Me.LabelCostoTotal.AutoSize = True
+        Me.LabelCostoTotal.Location = New System.Drawing.Point(310, 138)
+        Me.LabelCostoTotal.Name = "LabelCostoTotal"
+        Me.LabelCostoTotal.Size = New System.Drawing.Size(131, 25)
+        Me.LabelCostoTotal.TabIndex = 6
+        Me.LabelCostoTotal.Text = "Costo Total:"
+        '
+        'LabelProveedorCompra
+        '
+        Me.LabelProveedorCompra.AutoSize = True
+        Me.LabelProveedorCompra.Location = New System.Drawing.Point(103, 44)
+        Me.LabelProveedorCompra.Name = "LabelProveedorCompra"
+        Me.LabelProveedorCompra.Size = New System.Drawing.Size(118, 25)
+        Me.LabelProveedorCompra.TabIndex = 2
+        Me.LabelProveedorCompra.Text = "Proveedor:"
+        '
+        'LabelFechaCompra
+        '
+        Me.LabelFechaCompra.AutoSize = True
+        Me.LabelFechaCompra.Location = New System.Drawing.Point(523, 0)
+        Me.LabelFechaCompra.Name = "LabelFechaCompra"
+        Me.LabelFechaCompra.Size = New System.Drawing.Size(79, 25)
+        Me.LabelFechaCompra.TabIndex = 1
+        Me.LabelFechaCompra.Text = "Fecha:"
+        '
         'PagoBuscar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1013, 774)
+        Me.Controls.Add(Me.GroupBoxDatosCompra)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.DataGridViewHistorialPagos)
-        Me.Controls.Add(Me.GroupBoxDatosCompra)
         Me.Controls.Add(Me.ButtonBuscar)
         Me.Controls.Add(Me.TextBoxBuscarCompra)
         Me.Controls.Add(Me.Label2)
@@ -237,10 +204,10 @@ Partial Class PagoBuscar
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
         Me.Text = "Consultar Pago"
         CType(Me.DataGridViewHistorialPagos, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBoxDatosCompra.ResumeLayout(False)
-        Me.GroupBoxDatosCompra.PerformLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBoxDatosCompra.ResumeLayout(False)
+        Me.GroupBoxDatosCompra.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -248,19 +215,16 @@ Partial Class PagoBuscar
 
     Friend WithEvents Label3 As Label
     Friend WithEvents DataGridViewHistorialPagos As DataGridView
-    Friend WithEvents GroupBoxDatosCompra As GroupBox
-    Friend WithEvents LabelSaldoActual As Label
-    Friend WithEvents LabelFormaDePago As Label
-    Friend WithEvents LabelCostoTotal As Label
-    Friend WithEvents LabelCostoUnitario As Label
-    Friend WithEvents LabelCantidadCompra As Label
-    Friend WithEvents LabelProductoCompra As Label
-    Friend WithEvents LabelProveedorCompra As Label
-    Friend WithEvents LabelFechaCompra As Label
     Friend WithEvents ButtonBuscar As Button
     Friend WithEvents TextBoxBuscarCompra As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents GroupBoxDatosCompra As GroupBox
+    Friend WithEvents LabelSaldoActual As Label
+    Friend WithEvents LabelFormaDePago As Label
+    Friend WithEvents LabelCostoTotal As Label
+    Friend WithEvents LabelProveedorCompra As Label
+    Friend WithEvents LabelFechaCompra As Label
 End Class

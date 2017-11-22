@@ -6,75 +6,86 @@ PROYECTO_GRUPOS
 </name>
 </assembly>
 <members>
-<member name="T:PROYECTO_GRUPOS.My.Resources.Resources">
-<summary>
-  Clase de recurso fuertemente tipado, para buscar cadenas traducidas, etc.
-</summary>
-</member>
 <member name="P:PROYECTO_GRUPOS.My.Resources.Resources.ResourceManager">
-<summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Culture">
-<summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso fuertemente tipado.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources._Stop">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources._Stop">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Add">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Box">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Box">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Delete">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Checkmark">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Edit">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Checkmark2">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Delete">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money_64">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Edit">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money_64a">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Play">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money_64">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Search">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Money_64a">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
-</member>
-<member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Shopping">
-<summary>
-  Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.paying">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.PayOptions">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Play">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.prove_phixr">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.proveedores">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Search">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:PROYECTO_GRUPOS.My.Resources.Resources.Shopping">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:PROYECTO_GRUPOS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
 </summary>
 </member>
 </members>

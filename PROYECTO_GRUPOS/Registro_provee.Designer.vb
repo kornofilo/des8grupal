@@ -41,16 +41,18 @@ Partial Class Registro_provee
         Me.txtdv = New System.Windows.Forms.TextBox()
         Me.txtruc = New System.Windows.Forms.TextBox()
         Me.txtcodigo = New System.Windows.Forms.TextBox()
-        Me.btregi = New System.Windows.Forms.Button()
-        Me.btsal = New System.Windows.Forms.Button()
         Me.btmodif = New System.Windows.Forms.Button()
+        Me.btregi = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btsal = New System.Windows.Forms.Button()
         Me.PROVEEDOR.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(112, 34)
+        Me.Label1.Location = New System.Drawing.Point(204, 64)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(49, 13)
         Me.Label1.TabIndex = 0
@@ -59,7 +61,7 @@ Partial Class Registro_provee
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(67, 88)
+        Me.Label2.Location = New System.Drawing.Point(60, 130)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(30, 13)
         Me.Label2.TabIndex = 1
@@ -68,7 +70,7 @@ Partial Class Registro_provee
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(279, 88)
+        Me.Label3.Location = New System.Drawing.Point(272, 130)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(22, 13)
         Me.Label3.TabIndex = 2
@@ -77,7 +79,7 @@ Partial Class Registro_provee
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(41, 144)
+        Me.Label4.Location = New System.Drawing.Point(44, 173)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(54, 13)
         Me.Label4.TabIndex = 3
@@ -86,7 +88,7 @@ Partial Class Registro_provee
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(43, 193)
+        Me.Label5.Location = New System.Drawing.Point(46, 222)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(64, 13)
         Me.Label5.TabIndex = 4
@@ -95,7 +97,7 @@ Partial Class Registro_provee
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(41, 242)
+        Me.Label6.Location = New System.Drawing.Point(44, 271)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(27, 13)
         Me.Label6.TabIndex = 5
@@ -104,7 +106,7 @@ Partial Class Registro_provee
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(41, 284)
+        Me.Label7.Location = New System.Drawing.Point(44, 313)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(66, 13)
         Me.Label7.TabIndex = 6
@@ -113,7 +115,7 @@ Partial Class Registro_provee
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(41, 327)
+        Me.Label8.Location = New System.Drawing.Point(44, 356)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(39, 13)
         Me.Label8.TabIndex = 7
@@ -123,7 +125,7 @@ Partial Class Registro_provee
         '
         Me.cmtipoprovee.FormattingEnabled = True
         Me.cmtipoprovee.Items.AddRange(New Object() {"MANTENIMIENTO", "LABORATORIO", "FARMACIA", "DIETETICA", "TECNOLOGIA"})
-        Me.cmtipoprovee.Location = New System.Drawing.Point(138, 369)
+        Me.cmtipoprovee.Location = New System.Drawing.Point(141, 387)
         Me.cmtipoprovee.Name = "cmtipoprovee"
         Me.cmtipoprovee.Size = New System.Drawing.Size(185, 21)
         Me.cmtipoprovee.TabIndex = 8
@@ -131,6 +133,8 @@ Partial Class Registro_provee
         '
         'PROVEEDOR
         '
+        Me.PROVEEDOR.Controls.Add(Me.PictureBox1)
+        Me.PROVEEDOR.Controls.Add(Me.btsal)
         Me.PROVEEDOR.Controls.Add(Me.ID)
         Me.PROVEEDOR.Controls.Add(Me.txtemail)
         Me.PROVEEDOR.Controls.Add(Me.txtdireccion)
@@ -167,86 +171,102 @@ Partial Class Registro_provee
         '
         'txtemail
         '
-        Me.txtemail.Location = New System.Drawing.Point(138, 320)
+        Me.txtemail.Location = New System.Drawing.Point(141, 349)
         Me.txtemail.Name = "txtemail"
         Me.txtemail.Size = New System.Drawing.Size(185, 20)
         Me.txtemail.TabIndex = 16
         '
         'txtdireccion
         '
-        Me.txtdireccion.Location = New System.Drawing.Point(138, 277)
+        Me.txtdireccion.Location = New System.Drawing.Point(141, 306)
         Me.txtdireccion.Name = "txtdireccion"
         Me.txtdireccion.Size = New System.Drawing.Size(185, 20)
         Me.txtdireccion.TabIndex = 15
         '
         'txtfax
         '
-        Me.txtfax.Location = New System.Drawing.Point(138, 235)
+        Me.txtfax.Location = New System.Drawing.Point(141, 264)
         Me.txtfax.Name = "txtfax"
         Me.txtfax.Size = New System.Drawing.Size(185, 20)
         Me.txtfax.TabIndex = 14
         '
         'txttelefono
         '
-        Me.txttelefono.Location = New System.Drawing.Point(138, 186)
+        Me.txttelefono.Location = New System.Drawing.Point(141, 215)
         Me.txttelefono.Name = "txttelefono"
         Me.txttelefono.Size = New System.Drawing.Size(185, 20)
         Me.txttelefono.TabIndex = 13
         '
         'txtnombre
         '
-        Me.txtnombre.Location = New System.Drawing.Point(138, 137)
+        Me.txtnombre.Location = New System.Drawing.Point(141, 166)
         Me.txtnombre.Name = "txtnombre"
         Me.txtnombre.Size = New System.Drawing.Size(185, 20)
         Me.txtnombre.TabIndex = 12
         '
         'txtdv
         '
-        Me.txtdv.Location = New System.Drawing.Point(307, 85)
+        Me.txtdv.Location = New System.Drawing.Point(300, 127)
         Me.txtdv.Name = "txtdv"
         Me.txtdv.Size = New System.Drawing.Size(67, 20)
         Me.txtdv.TabIndex = 11
         '
         'txtruc
         '
-        Me.txtruc.Location = New System.Drawing.Point(115, 85)
+        Me.txtruc.Location = New System.Drawing.Point(108, 127)
         Me.txtruc.Name = "txtruc"
         Me.txtruc.Size = New System.Drawing.Size(108, 20)
         Me.txtruc.TabIndex = 10
         '
         'txtcodigo
         '
-        Me.txtcodigo.Location = New System.Drawing.Point(174, 31)
+        Me.txtcodigo.Location = New System.Drawing.Point(275, 64)
         Me.txtcodigo.Name = "txtcodigo"
-        Me.txtcodigo.Size = New System.Drawing.Size(149, 20)
+        Me.txtcodigo.Size = New System.Drawing.Size(59, 20)
         Me.txtcodigo.TabIndex = 9
-        '
-        'btregi
-        '
-        Me.btregi.Location = New System.Drawing.Point(48, 473)
-        Me.btregi.Name = "btregi"
-        Me.btregi.Size = New System.Drawing.Size(106, 39)
-        Me.btregi.TabIndex = 10
-        Me.btregi.Text = "&Registrar"
-        Me.btregi.UseVisualStyleBackColor = True
-        '
-        'btsal
-        '
-        Me.btsal.Location = New System.Drawing.Point(432, 473)
-        Me.btsal.Name = "btsal"
-        Me.btsal.Size = New System.Drawing.Size(106, 39)
-        Me.btsal.TabIndex = 11
-        Me.btsal.Text = "&Salir"
-        Me.btsal.UseVisualStyleBackColor = True
         '
         'btmodif
         '
-        Me.btmodif.Location = New System.Drawing.Point(232, 473)
+        Me.btmodif.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Edit
+        Me.btmodif.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btmodif.Location = New System.Drawing.Point(322, 465)
         Me.btmodif.Name = "btmodif"
-        Me.btmodif.Size = New System.Drawing.Size(106, 39)
+        Me.btmodif.Size = New System.Drawing.Size(112, 55)
         Me.btmodif.TabIndex = 12
         Me.btmodif.Text = "&Modificar"
+        Me.btmodif.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.btmodif.UseVisualStyleBackColor = True
+        '
+        'btregi
+        '
+        Me.btregi.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Add
+        Me.btregi.Location = New System.Drawing.Point(100, 465)
+        Me.btregi.Name = "btregi"
+        Me.btregi.Size = New System.Drawing.Size(118, 55)
+        Me.btregi.TabIndex = 10
+        Me.btregi.Text = "&Registrar"
+        Me.btregi.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.btregi.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.proveedores
+        Me.PictureBox1.Location = New System.Drawing.Point(28, 12)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(137, 112)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 17
+        Me.PictureBox1.TabStop = False
+        '
+        'btsal
+        '
+        Me.btsal.Image = Global.PROYECTO_GRUPOS.My.Resources.Resources.Box
+        Me.btsal.Location = New System.Drawing.Point(389, 356)
+        Me.btsal.Name = "btsal"
+        Me.btsal.Size = New System.Drawing.Size(106, 55)
+        Me.btsal.TabIndex = 11
+        Me.btsal.Text = "&Monstrar"
+        Me.btsal.UseVisualStyleBackColor = True
         '
         'Registro_provee
         '
@@ -254,13 +274,13 @@ Partial Class Registro_provee
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(587, 536)
         Me.Controls.Add(Me.btmodif)
-        Me.Controls.Add(Me.btsal)
         Me.Controls.Add(Me.btregi)
         Me.Controls.Add(Me.PROVEEDOR)
         Me.Name = "Registro_provee"
         Me.Text = "Form3"
         Me.PROVEEDOR.ResumeLayout(False)
         Me.PROVEEDOR.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -286,4 +306,5 @@ Partial Class Registro_provee
     Public WithEvents txtdv As System.Windows.Forms.TextBox
     Public WithEvents txtruc As System.Windows.Forms.TextBox
     Public WithEvents txtcodigo As System.Windows.Forms.TextBox
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

@@ -76,7 +76,14 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompraBuscar.Designer.vb">
+      <DependentUpon>CompraBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CompraBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ConnectionDB.vb" />
+    <Compile Include="DatosCompraDetalle.vb" />
     <Compile Include="Datos_Compras.vb" />
     <Compile Include="Datos_Devoluciones.vb" />
     <Compile Include="Datos_Pagos.vb" />
@@ -94,6 +101,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="fcompras.vb" />
+    <Compile Include="fcomprasDetalles.vb" />
     <Compile Include="fdevoluciones.vb" />
     <Compile Include="fpagos.vb" />
     <Compile Include="Menu.vb">
@@ -151,6 +159,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="CompraBuscar.resx">
+      <DependentUpon>CompraBuscar.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DevolucionesBuscar.resx">
       <DependentUpon>DevolucionesBuscar.vb</DependentUpon>
     </EmbeddedResource>
@@ -225,6 +236,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Box.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Checkmark2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\PayOptions.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paying.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\proveedores.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\prove_phixr.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
